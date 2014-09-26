@@ -1,35 +1,46 @@
 /*��¼ҳ��css*/
+
+
 /*reg page css style create by laike*/
-.mgtl-login-panel{
-  padding:pxTorem(30px) pxTorem(5px) 0 pxTorem(5px);
+
+.mgtl-login-panel {
+    padding: pxTorem(30px) pxTorem(5px) 0 pxTorem(5px);
 }
-a.aui-btn-register,a.aui-btn-forget,a.aui-btn-login-in{
-  max-width:pxTorem(100px);
-  border:1px solid #7C1916;
-  color:#A50017;
-  background:#010005;
+
+a.aui-btn-register,
+a.aui-btn-forget,
+a.aui-btn-login-in {
+    max-width: pxTorem(100px);
+    border: 1px solid #7C1916;
+    color: #A50017;
+    background: #010005;
 }
-a.aui-btn-forget{
-  border:1px solid #5B5B5B;
-  width:pxTorem(100px);
+
+a.aui-btn-forget {
+    border: 1px solid #5B5B5B;
+    width: pxTorem(100px);
 }
-button.aui-btn-login-in{
-  background: #951E1A;
-  color:#fff;
-  width:pxTorem(100px);
-  border:1px solid #5B5B5B;
+
+button.aui-btn-login-in {
+    background: #951E1A;
+    color: #fff;
+    width: pxTorem(100px);
+    border: 1px solid #5B5B5B;
 }
-.mgtl-login-left{
-  img{
-    width:pxTorem(91px);
-    height:pxTorem(82px);
-  }
-}
-.mgtl-login-right{
-  .mgtl-login-footer{
-    a {
-      color:#fff;
-      font-size: pxTorem(12px);
+
+.mgtl-login-left {
+    img {
+        width: pxTorem(91px);
+        height: pxTorem(82px);
     }
-  }
+}
+
+.mgtl-login-right {
+    padding-right: pxTorem(10px);
+    .mgtl-login-footer {
+        a {
+            color: #fff;
+            font-size: pxTorem(12px);
+        }
+    }
 }

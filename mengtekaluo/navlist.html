@@ -1,166 +1,170 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
-    <link rel="stylesheet" href="aui/css/aui.2.0.css"/>
-    <link rel="stylesheet" href="aui/css/aui-slide.css"/>
-    <link rel="stylesheet" href="fontawesome/css/font-awesome.css"/>
-    <link rel="stylesheet" href="scss/custom-aui-skin.scss"/>
-    <link rel="stylesheet" href="css/mengtekaluo.css"/>
+    <link rel="stylesheet" href="aui/css/aui.2.0.css" />
+    <link rel="stylesheet" href="aui/css/aui-slide.css" />
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="scss/custom-aui-skin.scss" />
+    <link rel="stylesheet" href="css/mengtekaluo.css" />
     <!--引入jquery-->
     <script src="lib/jquery-1.10.0.min.js"></script>
+    <script src="iscroll/build/iscroll.js"></script>
     <title>mobile</title>
 </head>
+
 <body>
-<!--提示用户使用竖屏-->
-<div class="landscape"></div>
-<!--首页加载效果-->
-<div class="loader">
+    <!--提示用户使用竖屏-->
+    <div class="landscape"></div>
+    <!--首页加载效果-->
+    <div class="loader">
 
-    <div class="logo aui-text-center">
-        <img src="images/montecarlo_ver2.png" alt=""/>
-    </div>
-    <div class="loading aui-text-center">
-        <div class="loading-progress"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
-        <div class="text">LOADING</div>
-        <div class="version">版本1.0</div>
-    </div>
+        <div class="logo aui-text-center">
+            <img src="images/montecarlo_ver2.png" alt="" />
+        </div>
+        <div class="loading aui-text-center">
+            <div class="loading-progress"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
+            <div class="text">LOADING</div>
+            <div class="version">版本1.0</div>
+        </div>
 
-</div>
-<header class="aui-bar aui-bar-nav aui-bar-light mgtl-header">
-    <a class="aui-pull-left aui-btn">
-        <span class="aui-iconfont aui-icon-left"></span>
-    </a>
-    <div class="aui-title">
-        <img src="images/montecarlo_ver2.png" alt="" class="mgtl-logo"/>
     </div>
-    <div class="aui-pull-right aui-btn">
-        <a href="" class="mgtl-sitemap"><i class="aui-iconfont aui-icon-menu "></i></a>
-    </div>
-    <div class="aui-pull-right aui-btn ">
-        <div class="language">
-            <a href="" ><span class="icon-lang lang-zh"></span></a>
-            <div class="language-list">
-                <a href="" ><span class="icon-lang lang-tw"></span></a>
-                <a href="" ><span class="icon-lang lang-zh"></span></a>
-                <a href="" ><span class="icon-lang lang-en"></span></a>
+    <header class="aui-bar aui-bar-nav aui-bar-light mgtl-header">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">
+            <img src="images/montecarlo_ver2.png" alt="" class="mgtl-logo" />
+        </div>
+        <div class="aui-pull-right aui-btn">
+            <a href="" class="mgtl-sitemap"><i class="aui-iconfont aui-icon-menu "></i></a>
+        </div>
+        <div class="aui-pull-right aui-btn ">
+            <div class="language">
+                <a href=""><span class="icon-lang lang-zh"></span></a>
+                <div class="language-list">
+                    <a href=""><span class="icon-lang lang-tw"></span></a>
+                    <a href=""><span class="icon-lang lang-zh"></span></a>
+                    <a href=""><span class="icon-lang lang-en"></span></a>
+                </div>
             </div>
         </div>
-    </div>
-</header>
-<!--内容显示区域-->
-<section class="aui-grid mgtl-content-bg mgtl-content-fixed">
-    <div class="aui-row pdlr20 mgtl-navlist">
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-home"></i></a></div>
-            <div class="aui-grid-label">首页</div>
+    </header>
+    <!--内容显示区域-->
+    <section class="aui-grid mgtl-content-bg mgtl-content-fixed">
+        <div class="aui-row pdlr20 mgtl-navlist">
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-home"></i></a></div>
+                <div class="aui-grid-label">首页</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-sports"></i></a></div>
+                <div class="aui-grid-label">体育投注</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-bbsports"></i></a></div>
+                <div class="aui-grid-label">bb体育</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-bbin"></i></a></div>
+                <div class="aui-grid-label">bb视讯</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-lotery"></i></a></div>
+                <div class="aui-grid-label">彩票游戏</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-bbcasino"></i></a></div>
+                <div class="aui-grid-label">bb电子</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-mgcasino"></i></a></div>
+                <div class="aui-grid-label">mg电子</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-aglive"></i></a></div>
+                <div class="aui-grid-label">ag视讯</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-gdlive"></i></a></div>
+                <div class="aui-grid-label">gd视讯</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-paycompany"></i></a></div>
+                <div class="aui-grid-label">公司入款</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-withdraw"></i></a></div>
+                <div class="aui-grid-label">线上取款</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-switchmoney"></i></a></div>
+                <div class="aui-grid-label">额度转换</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-ucenter"></i></a></div>
+                <div class="aui-grid-label">会员中心</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-kefu"></i></a></div>
+                <div class="aui-grid-label">在线客服</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-promotion"></i></a></div>
+                <div class="aui-grid-label">优惠活动</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-collect"></i></a></div>
+                <div class="aui-grid-label">我的最爱</div>
+            </div>
+            <div class="aui-col-xs-3 ">
+                <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-forgetpwd"></i></a></div>
+                <div class="aui-grid-label">取款密码</div>
+            </div>
         </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-sports"></i></a></div>
-            <div class="aui-grid-label">体育投注</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-bbsports"></i></a></div>
-            <div class="aui-grid-label">bb体育</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-bbin"></i></a></div>
-            <div class="aui-grid-label">bb视讯</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-lotery"></i></a></div>
-            <div class="aui-grid-label">彩票游戏</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-bbcasino"></i></a></div>
-            <div class="aui-grid-label">bb电子</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-mgcasino"></i></a></div>
-            <div class="aui-grid-label">mg电子</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-aglive"></i></a></div>
-            <div class="aui-grid-label">ag视讯</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-gdlive"></i></a></div>
-            <div class="aui-grid-label">gd视讯</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-paycompany"></i></a></div>
-            <div class="aui-grid-label">公司入款</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-withdraw"></i></a></div>
-            <div class="aui-grid-label">线上取款</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-switchmoney"></i></a></div>
-            <div class="aui-grid-label">额度转换</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-ucenter"></i></a></div>
-            <div class="aui-grid-label">会员中心</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-kefu"></i></a></div>
-            <div class="aui-grid-label">在线客服</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-promotion"></i></a></div>
-            <div class="aui-grid-label">优惠活动</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-collect"></i></a></div>
-            <div class="aui-grid-label">我的最爱</div>
-        </div>
-        <div class="aui-col-xs-3 ">
-            <div class="aui-grid-label"><a href=""><i class="icon-nav icon-nav-forgetpwd"></i></a></div>
-            <div class="aui-grid-label">取款密码</div>
-        </div>
-    </div>
-</section>
-<!--底部工具栏-->
+    </section>
+    <!--底部工具栏-->
 
-<!--底部工具栏-->
-<div class="mgtl-footer-navbar"></div>
-<footer class="aui-bar aui-bar-tab" id="footer">
-    <div class="aui-bar-tab-item aui-active" tapmode>
+    <!--底部工具栏-->
+    <div class="mgtl-footer-navbar"></div>
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item aui-active" tapmode>
 
-        <i class="aui-iconfont aui-icon-home"></i>
-        <div class="aui-bar-tab-label">首页</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <i class="aui-iconfont aui-icon-comment"></i>
-        <div class="aui-bar-tab-label">在线客服</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <i class="aui-iconfont aui-icon-search"></i>
-        <div class="aui-bar-tab-label">搜寻</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <i class="fa  fa-dollar"></i>
-        <div class="aui-bar-tab-label">入款</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <div class="aui-dot"></div>
-        <i class="aui-iconfont aui-icon-my"></i>
-        <div class="aui-bar-tab-label">登入</div>
-    </div>
-</footer>
-<script src="aui/script/api.js"></script>
-<script src="aui/script/aui-dialog.js"></script>
-<script src="aui/script/aui-popup.js"></script>
-<script src="aui/script/aui-pull-refresh.js"></script>
-<script src="aui/script/aui-range.js"></script>
-<script src="aui/script/aui-scroll.js"></script>
-<script src="aui/script/aui-skin.js"></script>
-<script src="aui/script/aui-slide.js"></script>
-<script src="aui/script/aui-tab.js"></script>
-<script src="aui/script/aui-toast.js"></script>
-<script src="js/mengtekaluo.js" defer></script>
+            <i class="aui-iconfont aui-icon-home"></i>
+            <div class="aui-bar-tab-label">首页</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-iconfont aui-icon-comment"></i>
+            <div class="aui-bar-tab-label">在线客服</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-iconfont aui-icon-search"></i>
+            <div class="aui-bar-tab-label">搜寻</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="fa  fa-dollar"></i>
+            <div class="aui-bar-tab-label">入款</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <div class="aui-dot"></div>
+            <i class="aui-iconfont aui-icon-my"></i>
+            <div class="aui-bar-tab-label">登入</div>
+        </div>
+    </footer>
+    <script src="aui/script/api.js"></script>
+    <script src="aui/script/aui-dialog.js"></script>
+    <script src="aui/script/aui-popup.js"></script>
+    <script src="aui/script/aui-pull-refresh.js"></script>
+    <script src="aui/script/aui-range.js"></script>
+    <script src="aui/script/aui-scroll.js"></script>
+    <script src="aui/script/aui-skin.js"></script>
+    <script src="aui/script/aui-slide.js"></script>
+    <script src="aui/script/aui-tab.js"></script>
+    <script src="aui/script/aui-toast.js"></script>
+    <script src="js/mengtekaluo.js" defer></script>
 </body>
+
 </html>

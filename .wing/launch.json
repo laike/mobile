@@ -1,15 +1,16 @@
 {
     "version": "0.2.0",
-    "configurations": [
-         {
+    "configurations": [{
             "name": "使用本机 Chrome 调试",
             "type": "chrome",
             "request": "launch",
             "file": "index.html",
-            "runtimeExecutable": "",
+            "runtimeExecutable": "C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
             "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
             "preLaunchTask": "build",
+            "useBuildInServer": true,
+            "sourceMaps": true,
             "userDataDir": "${tmpdir}",
             "port": 3003
         },

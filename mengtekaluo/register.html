@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
-    <link rel="stylesheet" href="aui/css/aui.2.0.css"/>
-    <link rel="stylesheet" href="aui/css/aui-slide.css"/>
-    <link rel="stylesheet" href="fontawesome/css/font-awesome.css"/>
-    <link rel="stylesheet" href="css/mengtekaluo.css"/>
+    <link rel="stylesheet" href="aui/css/aui.2.0.css" />
+    <link rel="stylesheet" href="aui/css/aui-slide.css" />
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/mengtekaluo.css" />
     <!--引入jquery-->
     <script src="lib/jquery-1.10.0.min.js"></script>
+    <script src="iscroll/build/iscroll.js"></script>
     <title>mobile</title>
 </head>
+
 <body>
-<!--提示用户使用竖屏-->
-<div class="landscape"></div>
-<!--首页加载效果-->
-<div class="loader">
+    <!--提示用户使用竖屏-->
+    <div class="landscape"></div>
+    <!--首页加载效果-->
+    <div class="loader">
 
-    <div class="logo aui-text-center">
-        <img src="images/montecarlo_ver2.png" alt=""/>
-    </div>
-    <div class="loading aui-text-center">
-        <div class="loading-progress"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
-        <div class="text">LOADING</div>
-        <div class="version">版本1.0</div>
-    </div>
+        <div class="logo aui-text-center">
+            <img src="images/montecarlo_ver2.png" alt="" />
+        </div>
+        <div class="loading aui-text-center">
+            <div class="loading-progress"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
+            <div class="text">LOADING</div>
+            <div class="version">版本1.0</div>
+        </div>
 
-</div>
-<header class="aui-bar aui-bar-nav aui-bar-light">
-    <a class="aui-pull-left aui-btn">
-        <span class="fa fa-home mgtl-home-icon"></span>
-    </a>
-    <div class="aui-title">
-        <img src="images/montecarlo_ver2.png" alt="" class="mgtl-logo"/>
     </div>
-    <div class="aui-clearfix"></div>
-    <div  class="aui-btn aui-btn-block aui-btn-danger">注册账号</div>
-</header>
-<!--内容显示区域-->
-<section class="mgtl-main-content mgtl-content-register-fixed  mgtl-content-panel aui-clearfix ">
-    <div class="aui-content-padded">
-    <h2>世界十大赌城之一 蒙特卡罗赌城竭诚欢迎您的光临！</h2>
-    <p>『&nbsp;<span class="col-red" >国际品牌，玩家首选，信誉第一，大额无忧，安全可靠</span>&nbsp;』</p>
-    <p>官方易记网址：<span class="col-yellow">www.5759.com</span></p>
-    <p><span class="col-red" >每月免费</span>帮老客户代充话费，<span class="col-red">高达800元</span></p>
-    <p>全面招收代理，<span class="col-yellow">0投资0风险</span>，保底收益</p>
-    <p>畅玩电子游艺 &nbsp;<span class="col-yellow">投注</span><span >1元</span><span class="col-yellow">起，返水</span><span class="col-red">1.5%</span></p>
-    <p>2016<span class="col-red">亿万现金大回馈</span>&nbsp;派发时间已公布</p>
-            <form name="regsiterForm" id="regsiterForm" action="" method="post" novalidate >
+    <header class="aui-bar aui-bar-nav aui-bar-light">
+        <a class="aui-pull-left aui-btn">
+            <span class="fa fa-home mgtl-home-icon"></span>
+        </a>
+        <div class="aui-title">
+            <img src="images/montecarlo_ver2.png" alt="" class="mgtl-logo" />
+        </div>
+        <div class="aui-clearfix"></div>
+        <div class="aui-btn aui-btn-block aui-btn-danger">注册账号</div>
+    </header>
+    <!--内容显示区域-->
+    <section class="mgtl-main-content mgtl-content-register-fixed  mgtl-content-panel aui-clearfix ">
+        <div class="aui-content-padded">
+            <h2>世界十大赌城之一 蒙特卡罗赌城竭诚欢迎您的光临！</h2>
+            <p>『&nbsp;<span class="col-red">国际品牌，玩家首选，信誉第一，大额无忧，安全可靠</span>&nbsp;』</p>
+            <p>官方易记网址：<span class="col-yellow">www.5759.com</span></p>
+            <p><span class="col-red">每月免费</span>帮老客户代充话费，<span class="col-red">高达800元</span></p>
+            <p>全面招收代理，<span class="col-yellow">0投资0风险</span>，保底收益</p>
+            <p>畅玩电子游艺 &nbsp;<span class="col-yellow">投注</span><span>1元</span><span class="col-yellow">起，返水</span><span class="col-red">1.5%</span></p>
+            <p>2016<span class="col-red">亿万现金大回馈</span>&nbsp;派发时间已公布</p>
+            <form name="regsiterForm" id="regsiterForm" action="" method="post" novalidate>
                 <div class="aui-content aui-margin-l-5 aui-margin-r-5 ">
                     <ul class="aui-list aui-form-list">
                         <li class="aui-list-header aui-padded-b-10 col-red">账号</li>
@@ -71,7 +74,8 @@
                             </div>
                         </li>
                         <li class="aui-list-header  aui-padded-b-10 col-red ">
-                            密码规则：须为<font color="red"><b>6~12码英文或数字</b></font>且符合0~9或a~z字元
+                            密码规则：须为
+                            <font color="red"><b>6~12码英文或数字</b></font>且符合0~9或a~z字元
                         </li>
                         <li class="aui-list-header aui-padded-b-10 col-red">确认密码</li>
                         <li class="aui-list-item aui-margin-t-10">
@@ -82,7 +86,7 @@
                             </div>
                         </li>
                         <li class="aui-list-header  aui-padded-b-10 col-red ">
-                             输入的确认密码和密码不相同！
+                            输入的确认密码和密码不相同！
                         </li>
                         <li class="aui-list-header aui-padded-b-10 col-red">货币</li>
                         <li class="aui-list-item aui-margin-t-10 pd0 aui-list-item-reset">
@@ -107,7 +111,7 @@
                                     <input name="rmNum" id="rmNum" type="text" placeholder="验证码">
                                 </div>
                                 <div class="aui-list-item-label-icon">
-                                    <img src="http://5759ee.com/m/verify/macpic?SR=eb99caee11a9685e7af4" alt=""/>
+                                    <img src="http://5759ee.com/m/verify/macpic?SR=eb99caee11a9685e7af4" alt="" />
                                 </div>
                             </div>
                         </li>
@@ -145,7 +149,7 @@
                                         <div class="aui-col-xs-3">
                                             <div class="ui-select">
                                                 <span>0</span>
-                                                <select  name="pwd1" id="pwd1">
+                                                <select name="pwd1" id="pwd1">
                                                     <option value="0" label="0">0</option>
                                                     <option value="1" label="1">1</option>
                                                     <option value="2" label="2">2</option>
@@ -163,7 +167,7 @@
                                         <div class="aui-col-xs-3">
                                             <div class="ui-select">
                                                 <span>0</span>
-                                                <select  name="pwd2" id="pwd2">
+                                                <select name="pwd2" id="pwd2">
                                                     <option value="0" label="0">0</option>
                                                     <option value="1" label="1">1</option>
                                                     <option value="2" label="2">2</option>
@@ -180,7 +184,7 @@
                                         <div class="aui-col-xs-3">
                                             <div class="ui-select">
                                                 <span>0</span>
-                                                <select  name="pwd3" id="pwd3">
+                                                <select name="pwd3" id="pwd3">
                                                     <option value="0" label="0">0</option>
                                                     <option value="1" label="1">1</option>
                                                     <option value="2" label="2">2</option>
@@ -197,7 +201,7 @@
                                         <div class="aui-col-xs-3">
                                             <div class="ui-select">
                                                 <span>0</span>
-                                                <select  name="pwd4" id="pwd4">
+                                                <select name="pwd4" id="pwd4">
                                                     <option value="0" label="0">0</option>
                                                     <option value="1" label="1">1</option>
                                                     <option value="2" label="2">2</option>
@@ -228,7 +232,7 @@
                         </li>
                         <li class="aui-list-item aui-list-item-reset aui-padded-b-10 aui-margin-t-10">
                             <div class="aui-list-item-label">
-                                <input class="aui-radio" type="checkbox" name="agree"  checked >
+                                <input class="aui-radio" type="checkbox" name="agree" checked>
                             </div>
                             <div class="aui-list-item-inner">
                                 <div class="aui-list-item-text">
@@ -263,65 +267,66 @@
                     </ul>
                 </div>
             </form>
-</div>
-<div class="concept dn">
-    <p>立即开通蒙特卡罗娱乐城帐户，享受最优惠的各项红利!</p>
-    <ol>
-        <li>蒙特卡罗娱乐城只接受合法博彩年龄的客户申请。同时我们保留要求客户提供其年龄证明的权利。</li>
-        <li>在蒙特卡罗娱乐城进行注册时所提供的全部信息必须在各个方面都是准确和完整的。在使用借记卡或信用卡时，持卡人的姓名必须与在网站上注册时的一致。</li>
-        <li>在开户后进行一次有效存款，恭喜您成为蒙特卡罗娱乐城有效会员!</li>
-        <li>存款免手续费，开户最低入款金额100人民币，最高单次入款金额50000人民币。</li>
-        <li>成为蒙特卡罗娱乐城有效会员后，客户有责任以电邮、联系在线客服、在蒙特卡罗娱乐城网站上留言等方式，随时向本公司提供最新的个人资料。</li>
-        <li>经蒙特卡罗娱乐城发现会员有重复申请帐号行为时，有权将这些帐户视为一个联合帐户。我们保留取消、收回会员所有优惠红利，以及优惠红利所产生的盈利之权利。每位玩家、每一住址、每一电子邮箱、每一电话号码、相同支付卡/信用卡号码，以及共享计算机环境 (例如:网吧、其他公共用计算机等)只能够拥有一个会员帐号，各项优惠只适用于每位客户在蒙特卡罗娱乐城唯一的帐户。</li>
-        <li>蒙特卡罗娱乐城是提供互联网投注服务的机构。请会员在注册前参考当地政府的法律，在博彩不被允许的地区，如有会员在蒙特卡罗娱乐城注册、下注，为会员个人行为，蒙特卡罗娱乐城不负责、承担任何相关责任。</li>
-        <li>无论是个人或是团体，如有任何威胁、滥用蒙特卡罗娱乐城优惠的行为，蒙特卡罗娱乐城保留杈利取消、收回由优惠产生的红利，并保留权利追讨最高50%手续费。</li>
-        <li>所有蒙特卡罗娱乐城的优惠是特别为玩家而设，在玩家注册信息有争议时，为确保双方利益、杜绝身份盗用行为，蒙特卡罗娱乐城保留权利要求客户向我们提供充足有效的文件， 并以各种方式辨别客户是否符合资格享有我们的任何优惠。</li>
-        <li>客户一经注册开户，将被视为接受所有颁布在蒙特卡罗娱乐城网站上的规则与条例。 </li>
-    </ol>
-    <p style="color:#FF0000;">本公司是使用BBIN所提供的在线娱乐软件，若发现您在同系统的娱乐城上开设多个会员帐户，并进行套利下注；本公司有权取消您的会员帐号并将所有下注营利取消！ </p>
-</div>
-</section>
+        </div>
+        <div class="concept dn">
+            <p>立即开通蒙特卡罗娱乐城帐户，享受最优惠的各项红利!</p>
+            <ol>
+                <li>蒙特卡罗娱乐城只接受合法博彩年龄的客户申请。同时我们保留要求客户提供其年龄证明的权利。</li>
+                <li>在蒙特卡罗娱乐城进行注册时所提供的全部信息必须在各个方面都是准确和完整的。在使用借记卡或信用卡时，持卡人的姓名必须与在网站上注册时的一致。</li>
+                <li>在开户后进行一次有效存款，恭喜您成为蒙特卡罗娱乐城有效会员!</li>
+                <li>存款免手续费，开户最低入款金额100人民币，最高单次入款金额50000人民币。</li>
+                <li>成为蒙特卡罗娱乐城有效会员后，客户有责任以电邮、联系在线客服、在蒙特卡罗娱乐城网站上留言等方式，随时向本公司提供最新的个人资料。</li>
+                <li>经蒙特卡罗娱乐城发现会员有重复申请帐号行为时，有权将这些帐户视为一个联合帐户。我们保留取消、收回会员所有优惠红利，以及优惠红利所产生的盈利之权利。每位玩家、每一住址、每一电子邮箱、每一电话号码、相同支付卡/信用卡号码，以及共享计算机环境 (例如:网吧、其他公共用计算机等)只能够拥有一个会员帐号，各项优惠只适用于每位客户在蒙特卡罗娱乐城唯一的帐户。</li>
+                <li>蒙特卡罗娱乐城是提供互联网投注服务的机构。请会员在注册前参考当地政府的法律，在博彩不被允许的地区，如有会员在蒙特卡罗娱乐城注册、下注，为会员个人行为，蒙特卡罗娱乐城不负责、承担任何相关责任。</li>
+                <li>无论是个人或是团体，如有任何威胁、滥用蒙特卡罗娱乐城优惠的行为，蒙特卡罗娱乐城保留杈利取消、收回由优惠产生的红利，并保留权利追讨最高50%手续费。</li>
+                <li>所有蒙特卡罗娱乐城的优惠是特别为玩家而设，在玩家注册信息有争议时，为确保双方利益、杜绝身份盗用行为，蒙特卡罗娱乐城保留权利要求客户向我们提供充足有效的文件， 并以各种方式辨别客户是否符合资格享有我们的任何优惠。</li>
+                <li>客户一经注册开户，将被视为接受所有颁布在蒙特卡罗娱乐城网站上的规则与条例。 </li>
+            </ol>
+            <p style="color:#FF0000;">本公司是使用BBIN所提供的在线娱乐软件，若发现您在同系统的娱乐城上开设多个会员帐户，并进行套利下注；本公司有权取消您的会员帐号并将所有下注营利取消！ </p>
+        </div>
+    </section>
 
-<!--底部工具栏-->
-<div class="mgtl-footer-navbar"></div>
-<footer class="aui-bar aui-bar-tab" id="footer">
-    <div class="aui-bar-tab-item aui-active" tapmode>
+    <!--底部工具栏-->
+    <div class="mgtl-footer-navbar"></div>
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item aui-active" tapmode>
 
-        <i class="aui-iconfont aui-icon-home"></i>
-        <div class="aui-bar-tab-label">首页</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <i class="aui-iconfont aui-icon-comment"></i>
-        <div class="aui-bar-tab-label">在线客服</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <i class="aui-iconfont aui-icon-search"></i>
-        <div class="aui-bar-tab-label">搜寻</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <i class="fa  fa-dollar"></i>
-        <div class="aui-bar-tab-label">入款</div>
-    </div>
-    <div class="aui-bar-tab-item" tapmode>
-        <div class="aui-dot"></div>
-        <i class="aui-iconfont aui-icon-my"></i>
-        <div class="aui-bar-tab-label">登入</div>
-    </div>
-</footer>
-<script src="aui/script/api.js"></script>
-<script src="aui/script/aui-dialog.js"></script>
-<script src="aui/script/aui-popup.js"></script>
-<script src="aui/script/aui-pull-refresh.js"></script>
-<script src="aui/script/aui-range.js"></script>
-<script src="aui/script/aui-scroll.js"></script>
-<script src="aui/script/aui-skin.js"></script>
-<script src="aui/script/aui-slide.js"></script>
-<script src="aui/script/aui-tab.js"></script>
-<script src="aui/script/aui-toast.js"></script>
-<!--引入验证插件-->
-<script src="lib/jquery-validation-1.15.0/dist/jquery.validate.js"></script>
-<script src="lib/jquery-validation-1.15.0/dist/additional-methods.js"></script>
-<script src="lib/jquery-validation-1.15.0/dist/localization/messages_zh.js"></script>
-<script src="js/mengtekaluo.js" defer charset="utf-8"></script>
+            <i class="aui-iconfont aui-icon-home"></i>
+            <div class="aui-bar-tab-label">首页</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-iconfont aui-icon-comment"></i>
+            <div class="aui-bar-tab-label">在线客服</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-iconfont aui-icon-search"></i>
+            <div class="aui-bar-tab-label">搜寻</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="fa  fa-dollar"></i>
+            <div class="aui-bar-tab-label">入款</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <div class="aui-dot"></div>
+            <i class="aui-iconfont aui-icon-my"></i>
+            <div class="aui-bar-tab-label">登入</div>
+        </div>
+    </footer>
+    <script src="aui/script/api.js"></script>
+    <script src="aui/script/aui-dialog.js"></script>
+    <script src="aui/script/aui-popup.js"></script>
+    <script src="aui/script/aui-pull-refresh.js"></script>
+    <script src="aui/script/aui-range.js"></script>
+    <script src="aui/script/aui-scroll.js"></script>
+    <script src="aui/script/aui-skin.js"></script>
+    <script src="aui/script/aui-slide.js"></script>
+    <script src="aui/script/aui-tab.js"></script>
+    <script src="aui/script/aui-toast.js"></script>
+    <!--引入验证插件-->
+    <script src="lib/jquery-validation-1.15.0/dist/jquery.validate.js"></script>
+    <script src="lib/jquery-validation-1.15.0/dist/additional-methods.js"></script>
+    <script src="lib/jquery-validation-1.15.0/dist/localization/messages_zh.js"></script>
+    <script src="js/mengtekaluo.js" defer charset="utf-8"></script>
 </body>
+
 </html>

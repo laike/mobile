@@ -1,0 +1,23 @@
+{
+  "name": "mengtekaluo mobile app",
+  "version": "1.0.0",
+  "description": "mobile app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laike/mobile.git"
+  },
+  "keywords": [
+    "mobile",
+    "app"
+  ],
+  "author": "lebo front end team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laike/mobile/issues"
+  },
+  "homepage": "https://github.com/laike/mobile#readme"
+}

@@ -61,7 +61,26 @@ app.initFooterBar=function(opt){
        },opts.duration);
     });
 }
+//语言下拉效果
+app.initLanguageDownList=function(opt){
+    var opts = $.extend({
+        cls:'.language',
+        triggerele:'.language a:first',
+        listcls:'.language-list',
+        speed:'slow',
+        effect:'swing',
+        duration:3000
+    },opt);
+    var triggerele = $(opts.triggerele);
+    var lanList = $(opts.listcls);
+    var _timeout = null;
+    triggerele.click(function(event){
+        event.preventDefault();
+        lanList.slideToggle(opts.speed);
+    });
+}
 jQuery(function(){
     app.initSlider();
     app.initFooterBar();
+    app.initLanguageDownList();
 });

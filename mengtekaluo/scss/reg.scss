@@ -1,0 +1,19 @@
+.mgtl-home-icon{
+   display: inline-block;
+   padding:pxTorem(5px);
+   border-radius:50%;
+   background: rgba(0,0,0,0.5);
+}
+.mgtl-content-register-fixed{
+  padding:pxTorem(100px) 0 0 0 ;
+}
+.mgtl-content-panel{
+    h2{
+      font-family: Arial;
+      font-weight: 700;
+    }
+    p{
+      line-height: pxTorem(24px);
+      padding:pxTorem(5px) 0;
+    }
+}

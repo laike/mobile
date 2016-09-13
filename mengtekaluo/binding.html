@@ -2,9 +2,250 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="aui/css/aui.2.0.css"/>
+    <link rel="stylesheet" href="aui/css/aui-slide.css"/>
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/mengtekaluo.css"/>
+    <!--引入jquery-->
+    <script src="lib/jquery-1.10.0.min.js"></script>
+    <title>mobile</title>
 </head>
 <body>
+<!--提示用户使用竖屏-->
+<div class="landscape"></div>
+<!--首页加载效果-->
+<div class="loader">
 
+    <div class="logo aui-text-center">
+        <img src="images/montecarlo_ver2.png" alt=""/>
+    </div>
+    <div class="loading aui-text-center">
+        <div class="loading-progress"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
+        <div class="text">LOADING</div>
+        <div class="version">版本1.0</div>
+    </div>
+
+</div>
+<header class="aui-bar aui-bar-nav aui-bar-light mgtl-header">
+    <a class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        账号绑定
+    </div>
+    <div class="aui-pull-right aui-btn">
+        <a href="" class="mgtl-sitemap"><i class="aui-iconfont aui-icon-menu "></i></a>
+    </div>
+    <div class="aui-pull-right aui-btn ">
+        <div class="language">
+            <a href="" ><span class="icon-lang lang-zh"></span></a>
+            <div class="language-list">
+                <a href="" ><span class="icon-lang lang-tw"></span></a>
+                <a href="" ><span class="icon-lang lang-zh"></span></a>
+                <a href="" ><span class="icon-lang lang-en"></span></a>
+            </div>
+        </div>
+    </div>
+</header>
+<!--内容显示区域-->
+<div class="mgtl-main-content mgtl-content-fixed  mgtl-content-panel aui-clearfix ">
+    <div class="aui-content-padded">
+
+        <form name="loginForm" id="loginForm" action="" method="POST" >
+            <div class="aui-content aui-margin-l-5 aui-margin-r-5 ">
+                <ul class="aui-list aui-form-list">
+                    <li class="aui-list-header aui-padded-b-10 col-red">真实姓名</li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-input">
+                                <input type="text" placeholder="真实姓名">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="aui-list-header aui-padded-b-10 col-red">出款银行</li>
+                    <li class="aui-list-item aui-margin-t-10 pd0 aui-list-item-reset">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-input pd0 ">
+                                <div class="ui-select">
+                                    <span><i class="iconfont icon-gongshangyinxing col-red aui-font-size-20 aui-padded-r-5"></i>工商银行</span>
+                                    <select  name="bank"  >
+                                        <option selected="selected" value="8" data-icon="gongshangyinxing">工商银行</option>
+                                        <option value="0" data-icon="nongyeyinxing1">农业银行</option>
+                                        <option value="1" data-icon="zhaoshangyinxing">招商银行</option>
+                                        <option value="2" data-icon="shanghaiyinhang">上海银行</option>
+                                        <option value="3" data-icon="guangfayinxing">广发银行</option>
+                                        <option value="4" data-icon="xiningyinhang">西宁农商银行</option>
+                                        <option value="5" data-icon="jiaotongyinxing">交通银行</option>
+                                        <option value="6" data-icon="chengduyinxing">成都银行</option>
+                                        <option value="7" data-icon="pufayinxing">浦发银行</option>
+                                        <option value="9" data-icon="zhongguoyinhangbank1193437easyiconnet">中国银行</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="aui-list-header aui-padded-b-10 col-red">省</li>
+                    <li class="aui-list-item aui-margin-t-10">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-input">
+                                <input type="text" placeholder="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-header aui-padded-b-10 col-red">县/市</li>
+                    <li class="aui-list-item aui-margin-t-10">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-input">
+                                <input type="text" placeholder="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-header aui-padded-b-10 col-red">账号</li>
+                    <li class="aui-list-item aui-margin-t-10">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-input">
+                                <input type="text" placeholder="账号">
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="aui-list-header aui-padded-b-10 col-red">取款密码</li>
+                    <li class="aui-list-item aui-margin-t-10 pd0 aui-list-item-reset">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-input pd0 ">
+                                <div class="aui-row ">
+                                    <div class="aui-col-xs-3">
+                                        <div class="ui-select">
+                                            <span>-</span>
+                                            <select  name="pwd1">
+                                                <option value="0" label="0">0</option>
+                                                <option value="1" label="1">1</option>
+                                                <option value="2" label="2">2</option>
+                                                <option value="3" label="3">3</option>
+                                                <option value="4" label="4">4</option>
+                                                <option value="5" label="5">5</option>
+                                                <option value="6" label="6">6</option>
+                                                <option value="7" label="7">7</option>
+                                                <option value="8" label="8">8</option>
+                                                <option value="9" label="9">9</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="aui-col-xs-3">
+                                        <div class="ui-select">
+                                            <span>-</span>
+                                            <select  name="pwd2">
+                                                <option value="0" label="0">0</option>
+                                                <option value="1" label="1">1</option>
+                                                <option value="2" label="2">2</option>
+                                                <option value="3" label="3">3</option>
+                                                <option value="4" label="4">4</option>
+                                                <option value="5" label="5">5</option>
+                                                <option value="6" label="6">6</option>
+                                                <option value="7" label="7">7</option>
+                                                <option value="8" label="8">8</option>
+                                                <option value="9" label="9">9</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="aui-col-xs-3">
+                                        <div class="ui-select">
+                                            <span>-</span>
+                                            <select  name="pwd3">
+                                                <option value="0" label="0">0</option>
+                                                <option value="1" label="1">1</option>
+                                                <option value="2" label="2">2</option>
+                                                <option value="3" label="3">3</option>
+                                                <option value="4" label="4">4</option>
+                                                <option value="5" label="5">5</option>
+                                                <option value="6" label="6">6</option>
+                                                <option value="7" label="7">7</option>
+                                                <option value="8" label="8">8</option>
+                                                <option value="9" label="9">9</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="aui-col-xs-3">
+                                        <div class="ui-select">
+                                            <span>-</span>
+                                            <select  name="pwd4">
+                                                <option value="0" label="0">0</option>
+                                                <option value="1" label="1">1</option>
+                                                <option value="2" label="2">2</option>
+                                                <option value="3" label="3">3</option>
+                                                <option value="4" label="4">4</option>
+                                                <option value="5" label="5">5</option>
+                                                <option value="6" label="6">6</option>
+                                                <option value="7" label="7">7</option>
+                                                <option value="8" label="8">8</option>
+                                                <option value="9" label="9">9</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="text" size="0" class="HiddenInput" value="" name="MultiPwd">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-header  aui-padded-b-10 col-red ">
+                        为保护您的资金安全，请确实填写您的出款银行资料信息！
+                    </li>
+                    <li class="aui-list-item aui-list-item-reset">
+                        <div class="aui-list-item-inner aui-list-item-center aui-list-item-btn">
+                            <div class="aui-btn  aui-btn-submit aui-margin-r-5">提交</div>
+                            <div class="aui-btn aui-btn-reset aui-margin-l-5">取消</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </form>
+    </div>
+
+    </section>
+    <!--底部工具栏-->
+    <div class="mgtl-footer-navbar"></div>
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item aui-active" tapmode>
+
+            <i class="aui-iconfont aui-icon-home"></i>
+            <div class="aui-bar-tab-label">首页</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-iconfont aui-icon-comment"></i>
+            <div class="aui-bar-tab-label">在线客服</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-iconfont aui-icon-search"></i>
+            <div class="aui-bar-tab-label">搜寻</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="fa  fa-dollar"></i>
+            <div class="aui-bar-tab-label">入款</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <div class="aui-dot"></div>
+            <i class="aui-iconfont aui-icon-my"></i>
+            <div class="aui-bar-tab-label">登入</div>
+        </div>
+    </footer>
+    <script src="aui/script/api.js"></script>
+    <script src="aui/script/aui-dialog.js"></script>
+    <script src="aui/script/aui-popup.js"></script>
+    <script src="aui/script/aui-pull-refresh.js"></script>
+    <script src="aui/script/aui-range.js"></script>
+    <script src="aui/script/aui-scroll.js"></script>
+    <script src="aui/script/aui-skin.js"></script>
+    <script src="aui/script/aui-slide.js"></script>
+    <script src="aui/script/aui-tab.js"></script>
+    <script src="aui/script/aui-toast.js"></script>
+    <script src="js/mengtekaluo.js" defer></script>
 </body>
 </html>

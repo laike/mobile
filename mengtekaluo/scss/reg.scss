@@ -5,7 +5,7 @@
    background: rgba(0,0,0,0.5);
 }
 .mgtl-content-register-fixed{
-  padding:pxTorem(100px) 0 0 0 ;
+  padding:0 0 2.25rem 0 ;
 }
 .mgtl-content-panel{
     h2{
@@ -17,3 +17,19 @@
       padding:pxTorem(5px) 0;
     }
 }
+  select[name^=pwd]{
+    width:90%;
+  }
+  .aui-btn-submit{
+    background: linear-gradient(to top,#951E1A 0,#7C1916 100%);
+    color:#fff;
+    border:1px solid #5B5B5B;
+    width:pxTorem(130px);
+  }
+  .aui-btn-reset{
+    background: linear-gradient(to top,#313131 0,#010005 100%);
+    color:#A50017;
+    border:1px solid #5B5B5B;
+    width:pxTorem(130px);
+    padding:pxTorem(6px) pxTorem(12px);
+  }

@@ -13,6 +13,21 @@ body,html{
   font-family: STHeiti,"Microsoft YaHei",SimSun,arial;
   height:100%;
 }
+.w100{
+  width:100%;
+}
+.mc{
+  margin:0 auto;
+}
+.textIndent10{
+  text-indent: 10px;
+}
+.textIndent15{
+  text-indent: 15px;
+}
+.textIndent20{
+  text-indent: 20px;
+}
 .rel{
   position: relative;
 }
@@ -21,6 +36,12 @@ body,html{
 }
 .pdlr20{
   padding:0 pxTorem(20px) 0 pxTorem(20px);
+}
+.mg0{
+  margin:0!important;
+}
+.pd0{
+  padding:0!important;
 }
 .mgtl-header{
   position: fixed;
@@ -261,14 +282,69 @@ body,html{
 /*reg*/
 .mgtl-main-content{
   background: #222;
-  height:100%;
+}
+.aui-list-item-reset{
+  background: none!important;
+  border:none!important;
 }
 /*默认颜色值 要新增请在这里新增*/
-.col-gre{color: #58ffcc;}
-.col-blue{color: #00ff00;}
-.col-blu{color: #00ffff;}
+.col-gre{color: #58ffcc!important;}
+.col-blue{color: #00ff00!important;}
+.col-blu{color: #00ffff!important;}
 .col-red{}
 .col-green{}
 .col-light-green{}
 .col-purple{}
-.col-yellow{}
+.col-yellow{color:#ffc40d!important;}
+.col-red{color:#ff0000!important;}
+
+/*select下拉框居中显示问题*/
+.ui-select{
+  text-align: center;
+  background-image: linear-gradient(to top,#313131 0,#010005 100%);
+  border: pxTorem(1px) solid #C82721;
+  color:#fff;
+  text-align: center;
+  font-size: pxTorem(14px);
+  padding:pxTorem(8px) 0;
+   select{
+     position: absolute;
+     left:0;
+     top:0;
+     width:100%;
+     opacity: 0;
+     color:#fff;
+     option{
+       background: #010005;
+       width:100%;
+     }
+   }
+}
+/*iconfonts alibaba */
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1473670741_436886.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1473670741_436886.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1473670741_436886.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1473670741_436886.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1473670741_436886.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-zhaoshangyinxing:before { content: "\e600"; }
+.icon-guangfayinxing:before { content: "\e601"; }
+.icon-pufayinxing:before { content: "\e602"; }
+.icon-nongyeyinxing1:before { content: "\e603"; }
+.icon-gongshangyinxing:before { content: "\e604"; }
+.icon-jiaotongyinxing:before { content: "\e605"; }
+.icon-nongyeyinxing:before { content: "\e606"; }
+.icon-xiningyinhang:before { content: "\e607"; }
+.icon-zhongguoyinhangbank1193437easyiconnet:before { content: "\e608"; }
+.icon-shanghaiyinhang:before { content: "\e609"; }
+.icon-chengduyinxing:before { content: "\e60a"; }

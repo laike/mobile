@@ -9,6 +9,21 @@ body, html {
   font-family: STHeiti,"Microsoft YaHei",SimSun,arial;
   height: 100%; }
 
+.w100 {
+  width: 100%; }
+
+.mc {
+  margin: 0 auto; }
+
+.textIndent10 {
+  text-indent: 10px; }
+
+.textIndent15 {
+  text-indent: 15px; }
+
+.textIndent20 {
+  text-indent: 20px; }
+
 .rel {
   position: relative; }
 
@@ -17,6 +32,12 @@ body, html {
 
 .pdlr20 {
   padding: 0 1rem 0 1rem; }
+
+.mg0 {
+  margin: 0 !important; }
+
+.pd0 {
+  padding: 0 !important; }
 
 .mgtl-header {
   position: fixed;
@@ -235,18 +256,96 @@ body, html {
     opacity: 0; } }
 /*reg*/
 .mgtl-main-content {
-  background: #222;
-  height: 100%; }
+  background: #222; }
+
+.aui-list-item-reset {
+  background: none !important;
+  border: none !important; }
 
 /*默认颜色值 要新增请在这里新增*/
 .col-gre {
-  color: #58ffcc; }
+  color: #58ffcc !important; }
 
 .col-blue {
-  color: #00ff00; }
+  color: #00ff00 !important; }
 
 .col-blu {
-  color: #00ffff; }
+  color: #00ffff !important; }
+
+.col-yellow {
+  color: #ffc40d !important; }
+
+.col-red {
+  color: #ff0000 !important; }
+
+/*select下拉框居中显示问题*/
+.ui-select {
+  text-align: center;
+  background-image: -webkit-linear-gradient(bottom, #313131 0, #010005 100%);
+  background-image: linear-gradient(to top, #313131 0, #010005 100%);
+  border: 0.05rem solid #C82721;
+  color: #fff;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.4rem 0; }
+  .ui-select select {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    color: #fff; }
+    .ui-select select option {
+      background: #010005;
+      width: 100%; }
+
+/*iconfonts alibaba */
+@font-face {
+  font-family: 'iconfont';
+  src: url("//at.alicdn.com/t/font_1473670741_436886.eot");
+  /* IE9*/
+  src: url("//at.alicdn.com/t/font_1473670741_436886.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1473670741_436886.woff") format("woff"), url("//at.alicdn.com/t/font_1473670741_436886.ttf") format("truetype"), url("//at.alicdn.com/t/font_1473670741_436886.svg#iconfont") format("svg")
+  /* iOS 4.1- */ }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-zhaoshangyinxing:before {
+  content: "\e600"; }
+
+.icon-guangfayinxing:before {
+  content: "\e601"; }
+
+.icon-pufayinxing:before {
+  content: "\e602"; }
+
+.icon-nongyeyinxing1:before {
+  content: "\e603"; }
+
+.icon-gongshangyinxing:before {
+  content: "\e604"; }
+
+.icon-jiaotongyinxing:before {
+  content: "\e605"; }
+
+.icon-nongyeyinxing:before {
+  content: "\e606"; }
+
+.icon-xiningyinhang:before {
+  content: "\e607"; }
+
+.icon-zhongguoyinhangbank1193437easyiconnet:before {
+  content: "\e608"; }
+
+.icon-shanghaiyinhang:before {
+  content: "\e609"; }
+
+.icon-chengduyinxing:before {
+  content: "\e60a"; }
 
 /*import aui custom css style this a*/
 /*body背景色及色值*/
@@ -317,8 +416,9 @@ a {
 /*单选选中样式*/
 .aui-radio:checked,
 .aui-radio.aui-checked {
-  background-color: #edfb3f;
-  border: solid 1px #edfb3f; }
+  background-color: #C82721;
+  border: solid 1px #C82721;
+  color: #C82721; }
 
 /* 单选选中时中间对号颜色*/
 .aui-radio:checked:before,
@@ -491,7 +591,8 @@ a {
 .aui-list .aui-list-item-label,
 .aui-list .aui-list-item-label-icon {
   color: #d1d1d1;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  width: 14%; }
 
 /*卡片列表顶部字体*/
 .aui-card-list-header {
@@ -579,7 +680,7 @@ a.aui-btn-login-in {
   background: rgba(0, 0, 0, 0.5); }
 
 .mgtl-content-register-fixed {
-  padding: 5rem 0 0 0; }
+  padding: 0 0 2.25rem 0; }
 
 .mgtl-content-panel h2 {
   font-family: Arial;
@@ -587,5 +688,25 @@ a.aui-btn-login-in {
 .mgtl-content-panel p {
   line-height: 1.2rem;
   padding: 0.25rem 0; }
+
+select[name^=pwd] {
+  width: 90%; }
+
+.aui-btn-submit {
+  background: -webkit-linear-gradient(bottom, #951E1A 0, #7C1916 100%);
+  background: linear-gradient(to top, #951E1A 0, #7C1916 100%);
+  color: #fff;
+  border: 1px solid #5B5B5B;
+  width: 6.5rem; }
+
+.aui-btn-reset {
+  background: -webkit-linear-gradient(bottom, #313131 0, #010005 100%);
+  background: linear-gradient(to top, #313131 0, #010005 100%);
+  color: #A50017;
+  border: 1px solid #5B5B5B;
+  width: 6.5rem;
+  padding: 0.3rem 0.6rem; }
+
+/*there can import your own scss stylesheet  register style sheet*/
 
 /*# sourceMappingURL=mengtekaluo.css.map */

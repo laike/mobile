@@ -66,8 +66,9 @@ a {
 /*单选选中样式*/
 .aui-radio:checked,
 .aui-radio.aui-checked {
-  background-color: #edfb3f;
-  border: solid 1px #edfb3f;
+  background-color: #C82721;
+  border: solid 1px #C82721;
+  color:#C82721;
 }
 /* 单选选中时中间对号颜色*/
 .aui-radio:checked:before,
@@ -240,6 +241,7 @@ a {
 .aui-list .aui-list-item-label-icon {
   color: #d1d1d1;
   line-height: pxTorem(30px);
+  width:14%;
 }
 /*卡片列表顶部字体*/
 .aui-card-list-header {

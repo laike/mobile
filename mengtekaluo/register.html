@@ -28,7 +28,7 @@
     </div>
 
 </div>
-<header class="aui-bar aui-bar-nav aui-bar-light mgtl-header">
+<header class="aui-bar aui-bar-nav aui-bar-light">
     <a class="aui-pull-left aui-btn">
         <span class="fa fa-home mgtl-home-icon"></span>
     </a>
@@ -36,31 +36,31 @@
         <img src="images/montecarlo_ver2.png" alt="" class="mgtl-logo"/>
     </div>
     <div class="aui-clearfix"></div>
-    <a href="" class="aui-btn aui-btn-block aui-btn-danger">注册账号</a>
+    <div  class="aui-btn aui-btn-block aui-btn-danger">注册账号</div>
 </header>
 <!--内容显示区域-->
-<section class="mgtl-main-content mgtl-content-register-fixed aui-content-padded mgtl-content-panel ">
+<div class="mgtl-main-content mgtl-content-register-fixed  mgtl-content-panel aui-clearfix ">
+    <div class="aui-content-padded">
     <h2>世界十大赌城之一 蒙特卡罗赌城竭诚欢迎您的光临！</h2>
-    <p>『&nbsp;<span >国际品牌，玩家首选，信誉第一，大额无忧，安全可靠</span>&nbsp;』</p>
-    <p>官方易记网址：<span >www.5759.com</span></p>
-    <p><span >每月免费</span>帮老客户代充话费，<span >高达800元</span></p>
-    <p>全面招收代理，<span >0投资0风险</span>，保底收益</p>
-    <p>畅玩电子游艺 &nbsp;<span >投注</span><span >1元</span><span >起，返水</span><span >1.5%</span></p>
-    <p>2016<span >亿万现金大回馈</span>&nbsp;派发时间已公布</p>
-            <form name="loginForm" id="loginForm" action="" method="POST">
-                <div class="aui-content aui-margin-l-5 aui-margin-r-5">
+    <p>『&nbsp;<span class="col-red" >国际品牌，玩家首选，信誉第一，大额无忧，安全可靠</span>&nbsp;』</p>
+    <p>官方易记网址：<span class="col-yellow">www.5759.com</span></p>
+    <p><span class="col-red" >每月免费</span>帮老客户代充话费，<span class="col-red">高达800元</span></p>
+    <p>全面招收代理，<span class="col-yellow">0投资0风险</span>，保底收益</p>
+    <p>畅玩电子游艺 &nbsp;<span class="col-yellow">投注</span><span >1元</span><span class="col-yellow">起，返水</span><span class="col-red">1.5%</span></p>
+    <p>2016<span class="col-red">亿万现金大回馈</span>&nbsp;派发时间已公布</p>
+            <form name="loginForm" id="loginForm" action="" method="post" novalidate >
+                <div class="aui-content aui-margin-l-5 aui-margin-r-5 ">
                     <ul class="aui-list aui-form-list">
+                        <li class="aui-list-header aui-padded-b-10 col-red">账号</li>
                         <li class="aui-list-item">
                             <div class="aui-list-item-inner">
-
                                 <div class="aui-list-item-input">
                                     <input type="text" placeholder="账号">
                                 </div>
-                                <div class="aui-list-item-label-icon">
-                                   @mon
-                                </div>
                             </div>
                         </li>
+                        <li class="aui-list-header  aui-padded-b-10 col-red ">帐号：请输入4-12个字元, 仅可输入英文字母以及数字的组合!!</li>
+                        <li class="aui-list-header aui-padded-b-10 col-red">密码</li>
                         <li class="aui-list-item aui-margin-t-10">
                             <div class="aui-list-item-inner">
 
@@ -70,9 +70,39 @@
 
                             </div>
                         </li>
+                        <li class="aui-list-header  aui-padded-b-10 col-red ">
+                            密码规则：须为<font color="red"><b>6~12码英文或数字</b></font>且符合0~9或a~z字元
+                        </li>
+                        <li class="aui-list-header aui-padded-b-10 col-red">确认密码</li>
                         <li class="aui-list-item aui-margin-t-10">
                             <div class="aui-list-item-inner">
+                                <div class="aui-list-item-input">
+                                    <input type="password" placeholder="密码">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="aui-list-header  aui-padded-b-10 col-red ">
+                             输入的确认密码和密码不相同！
+                        </li>
+                        <li class="aui-list-header aui-padded-b-10 col-red">货币</li>
+                        <li class="aui-list-item aui-margin-t-10 pd0 aui-list-item-reset">
+                            <div class="aui-list-item-inner ">
 
+                                <div class="aui-list-item-input pd0">
+                                    <div class="ui-select">
+                                        <span>RMB</span>
+                                        <select>
+                                            <option>RMB</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="aui-list-header aui-padded-b-10 col-red">验证码</li>
+                        <li class="aui-list-item aui-margin-t-10">
+                            <div class="aui-list-item-inner">
                                 <div class="aui-list-item-input">
                                     <input type="text" placeholder="验证码">
                                 </div>
@@ -81,22 +111,160 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="aui-list-item" style="background: none;border:none;">
-                            <div class="aui-list-item-inner aui-list-item-center aui-list-item-btn">
-                                <a class="aui-btn  aui-margin-r-5 aui-btn-forget">忘记密码</a>
-                                <a class="aui-btn  aui-margin-l-5 aui-btn-login-in">登入</a>
+
+                    </ul>
+                </div>
+                <div class="aui-btn aui-btn-block aui-btn-danger aui-margin-t-10">会员资料</div>
+                <div class="aui-content aui-margin-l-5 aui-margin-r-5 ">
+                    <ul class="aui-list aui-form-list">
+                        <li class="aui-list-header aui-padded-b-10 col-red">真实姓名</li>
+                        <li class="aui-list-item">
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-input">
+                                    <input type="text" placeholder="真实姓名">
+                                </div>
                             </div>
                         </li>
-                        <li class="aui-list-item aui-padded-l-10 aui-padded-r-10" style="background: none;border:none;">
-                            <div class="aui-list-item-inner aui-text-justify mgtl-register-footer">
-                                <a href=""> <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>&nbsp;存储账号</a>
-                                <a href=""> <i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;前往电脑版</a>
+                        <li class="aui-list-header  aui-padded-b-10 col-red ">必须与您的银行帐户名称相同，否则不能出款!</li>
+                        <li class="aui-list-header aui-padded-b-10 col-red">手机</li>
+                        <li class="aui-list-item aui-margin-t-10">
+                            <div class="aui-list-item-inner">
+
+                                <div class="aui-list-item-input">
+                                    <input type="password" placeholder="手机号码">
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="aui-list-header aui-padded-b-10 col-red">取款密码</li>
+                        <li class="aui-list-item aui-margin-t-10 pd0 aui-list-item-reset">
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-input pd0 ">
+                                    <div class="aui-row ">
+                                        <div class="aui-col-xs-3">
+                                            <div class="ui-select">
+                                                <span>-</span>
+                                                <select  name="pwd1">
+                                                    <option value="0" label="0">0</option>
+                                                    <option value="1" label="1">1</option>
+                                                    <option value="2" label="2">2</option>
+                                                    <option value="3" label="3">3</option>
+                                                    <option value="4" label="4">4</option>
+                                                    <option value="5" label="5">5</option>
+                                                    <option value="6" label="6">6</option>
+                                                    <option value="7" label="7">7</option>
+                                                    <option value="8" label="8">8</option>
+                                                    <option value="9" label="9">9</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div class="aui-col-xs-3">
+                                            <div class="ui-select">
+                                                <span>-</span>
+                                                <select  name="pwd2">
+                                                    <option value="0" label="0">0</option>
+                                                    <option value="1" label="1">1</option>
+                                                    <option value="2" label="2">2</option>
+                                                    <option value="3" label="3">3</option>
+                                                    <option value="4" label="4">4</option>
+                                                    <option value="5" label="5">5</option>
+                                                    <option value="6" label="6">6</option>
+                                                    <option value="7" label="7">7</option>
+                                                    <option value="8" label="8">8</option>
+                                                    <option value="9" label="9">9</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="aui-col-xs-3">
+                                            <div class="ui-select">
+                                                <span>-</span>
+                                                <select  name="pwd3">
+                                                    <option value="0" label="0">0</option>
+                                                    <option value="1" label="1">1</option>
+                                                    <option value="2" label="2">2</option>
+                                                    <option value="3" label="3">3</option>
+                                                    <option value="4" label="4">4</option>
+                                                    <option value="5" label="5">5</option>
+                                                    <option value="6" label="6">6</option>
+                                                    <option value="7" label="7">7</option>
+                                                    <option value="8" label="8">8</option>
+                                                    <option value="9" label="9">9</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="aui-col-xs-3">
+                                            <div class="ui-select">
+                                                <span>-</span>
+                                                <select  name="pwd4">
+                                                    <option value="0" label="0">0</option>
+                                                    <option value="1" label="1">1</option>
+                                                    <option value="2" label="2">2</option>
+                                                    <option value="3" label="3">3</option>
+                                                    <option value="4" label="4">4</option>
+                                                    <option value="5" label="5">5</option>
+                                                    <option value="6" label="6">6</option>
+                                                    <option value="7" label="7">7</option>
+                                                    <option value="8" label="8">8</option>
+                                                    <option value="9" label="9">9</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" size="0" class="HiddenInput" value="" name="MultiPwd">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="aui-list-header aui-padded-b-10 col-red">邮箱</li>
+                        <li class="aui-list-item aui-margin-t-10">
+                            <div class="aui-list-item-inner">
+
+                                <div class="aui-list-item-input">
+                                    <input type="text" placeholder="邮箱">
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="aui-list-item aui-list-item-reset aui-padded-b-10 aui-margin-t-10">
+                            <div class="aui-list-item-label">
+                                <input class="aui-radio" type="radio" name="radio" checked >
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    我已届满合法博彩年龄﹐且同意各项开户条约。
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="aui-list-item aui-list-item-reset">
+                            <p class="aui-text-right w100"><a href="javascript://" class="col-yellow">开户协议</a></p>
+                        </li>
+                        <li class="aui-list-item aui-list-item-reset">
+                            <div class="aui-list-item-inner aui-list-item-center aui-list-item-btn">
+                                <div class="aui-btn  aui-btn-submit aui-margin-r-5">提交</div>
+                                <div class="aui-btn aui-btn-reset aui-margin-l-5">取消</div>
+                            </div>
+                        </li>
+                        <li class="aui-list-item aui-list-item-reset ">
+
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div>
+                                        <p>備註：</p>
+                                        <p class="col-red textIndent20">•1.標記有 * 者為必填項目。</p>
+                                        <p class="col-red textIndent20"> •2.取款密碼為取款金額時的憑證,請會員務必填寫詳細資料。</p>
+                                        <p class="col-red textIndent20">•3.若公司有其它活動會官方QQ通知，請客戶务必添加 QQ:15109999</p>
+                                        <p class="col-red textIndent20">•4.請會員填寫真實資料，如查出非本人使用，一律不出款處理。</p>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </form>
-
+</div>
 
 </section>
 <!--底部工具栏-->

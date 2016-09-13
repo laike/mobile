@@ -79,8 +79,26 @@ app.initLanguageDownList=function(opt){
         lanList.slideToggle(opts.speed);
     });
 }
+//初始化ui-select
+app.initUiSelect=function(opt){
+    var opts = $.extend({
+        cls:'.ui-select',
+    },opt);
+    var _select = $(opts.cls);
+    _select.change(function(){
+        var _this = this;
+        var _span = $(_this).find('span');
+        var _curitem = $(_this).find('option:selected');
+        _span.html('<i class=\"iconfont icon-'+_curitem.data('icon')+' col-red aui-font-size-20 aui-padded-r-5\"></i>'+_curitem.text());
+    });
+}
+//注册页面初始化验证
+app.initRegsiter=function(){
+    
+}
 jQuery(function(){
     app.initSlider();
     app.initFooterBar();
     app.initLanguageDownList();
+    app.initUiSelect();
 });

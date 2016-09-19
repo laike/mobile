@@ -50,17 +50,17 @@
     </div>
 </header>
 <!--内容显示区域-->
-<div class="mgtl-main-content mgtl-content-fixed  mgtl-content-panel aui-clearfix ">
+<section class="mgtl-main-content mgtl-content-fixed  mgtl-content-panel aui-clearfix ">
     <div class="aui-content-padded">
 
-        <form name="loginForm" id="loginForm" action="" method="POST" >
+        <form name="bindingForm" id="bindingForm" action="" method="POST" >
             <div class="aui-content aui-margin-l-5 aui-margin-r-5 ">
                 <ul class="aui-list aui-form-list">
                     <li class="aui-list-header aui-padded-b-10 col-red">真实姓名</li>
                     <li class="aui-list-item">
                         <div class="aui-list-item-inner">
                             <div class="aui-list-item-input">
-                                <input type="text" placeholder="真实姓名">
+                                <input name="real_name" type="text" placeholder="真实姓名">
                             </div>
                         </div>
                     </li>
@@ -93,7 +93,7 @@
                     <li class="aui-list-item aui-margin-t-10">
                         <div class="aui-list-item-inner">
                             <div class="aui-list-item-input">
-                                <input type="text" placeholder="">
+                                <input name="province" type="text" placeholder="">
                             </div>
                         </div>
                     </li>
@@ -101,7 +101,7 @@
                     <li class="aui-list-item aui-margin-t-10">
                         <div class="aui-list-item-inner">
                             <div class="aui-list-item-input">
-                                <input type="text" placeholder="">
+                                <input name="town" type="text" placeholder="">
                             </div>
                         </div>
                     </li>
@@ -109,7 +109,7 @@
                     <li class="aui-list-item aui-margin-t-10">
                         <div class="aui-list-item-inner">
                             <div class="aui-list-item-input">
-                                <input type="text" placeholder="账号">
+                                <input name="username" type="text" placeholder="账号">
                             </div>
                         </div>
                     </li>
@@ -122,7 +122,7 @@
                                 <div class="aui-row ">
                                     <div class="aui-col-xs-3">
                                         <div class="ui-select">
-                                            <span>-</span>
+                                            <span>0</span>
                                             <select  name="pwd1">
                                                 <option value="0" label="0">0</option>
                                                 <option value="1" label="1">1</option>
@@ -140,7 +140,7 @@
                                     </div>
                                     <div class="aui-col-xs-3">
                                         <div class="ui-select">
-                                            <span>-</span>
+                                            <span>0</span>
                                             <select  name="pwd2">
                                                 <option value="0" label="0">0</option>
                                                 <option value="1" label="1">1</option>
@@ -157,7 +157,7 @@
                                     </div>
                                     <div class="aui-col-xs-3">
                                         <div class="ui-select">
-                                            <span>-</span>
+                                            <span>0</span>
                                             <select  name="pwd3">
                                                 <option value="0" label="0">0</option>
                                                 <option value="1" label="1">1</option>
@@ -174,7 +174,7 @@
                                     </div>
                                     <div class="aui-col-xs-3">
                                         <div class="ui-select">
-                                            <span>-</span>
+                                            <span>0</span>
                                             <select  name="pwd4">
                                                 <option value="0" label="0">0</option>
                                                 <option value="1" label="1">1</option>
@@ -199,8 +199,8 @@
                     </li>
                     <li class="aui-list-item aui-list-item-reset">
                         <div class="aui-list-item-inner aui-list-item-center aui-list-item-btn">
-                            <div class="aui-btn  aui-btn-submit aui-margin-r-5">提交</div>
-                            <div class="aui-btn aui-btn-reset aui-margin-l-5">取消</div>
+                            <button  type="submit" class="aui-btn  aui-btn-submit aui-margin-r-5">提交</button>
+                            <button type="reset" class="aui-btn aui-btn-reset aui-margin-l-5">取消</button>
                         </div>
                     </li>
                 </ul>
@@ -214,7 +214,6 @@
     <div class="mgtl-footer-navbar"></div>
     <footer class="aui-bar aui-bar-tab" id="footer">
         <div class="aui-bar-tab-item aui-active" tapmode>
-
             <i class="aui-iconfont aui-icon-home"></i>
             <div class="aui-bar-tab-label">首页</div>
         </div>
@@ -246,6 +245,11 @@
     <script src="aui/script/aui-slide.js"></script>
     <script src="aui/script/aui-tab.js"></script>
     <script src="aui/script/aui-toast.js"></script>
+<!--引入验证插件-->
+<script src="lib/jquery-validation-1.15.0/dist/jquery.validate.js"></script>
+<script src="lib/jquery-validation-1.15.0/dist/additional-methods.js"></script>
+<script src="lib/jquery-validation-1.15.0/dist/localization/messages_zh.js"></script>
     <script src="js/mengtekaluo.js" defer></script>
+
 </body>
 </html>

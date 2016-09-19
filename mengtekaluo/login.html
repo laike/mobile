@@ -63,7 +63,7 @@
                         <div class="aui-list-item-inner">
 
                             <div class="aui-list-item-input">
-                                <input type="text" placeholder="账号">
+                                <input name="username" id="username" type="text" placeholder="账号">
                             </div>
                             <div class="aui-list-item-label-icon">
                                 @mon
@@ -72,18 +72,15 @@
                     </li>
                     <li class="aui-list-item aui-margin-t-10">
                         <div class="aui-list-item-inner">
-
                             <div class="aui-list-item-input">
-                                <input type="password" placeholder="密码">
+                                <input name="password" id="password" type="password" placeholder="密码">
                             </div>
-
                         </div>
                     </li>
                     <li class="aui-list-item aui-margin-t-10">
                         <div class="aui-list-item-inner">
-
                             <div class="aui-list-item-input">
-                                <input type="text" placeholder="验证码">
+                                <input name="rmNum" id="rmNum" type="text" placeholder="验证码">
                             </div>
                             <div class="aui-list-item-label-icon">
                                 <img src="http://5759ee.com/m/verify/macpic?SR=eb99caee11a9685e7af4" alt=""/>
@@ -93,7 +90,7 @@
                     <li class="aui-list-item" style="background: none;border:none;">
                         <div class="aui-list-item-inner aui-list-item-center aui-list-item-btn">
                             <a class="aui-btn  aui-margin-r-5 aui-btn-forget">忘记密码</a>
-                            <a class="aui-btn  aui-margin-l-5 aui-btn-login-in">登入</a>
+                            <button type="submit" class="aui-btn  aui-margin-l-5 aui-btn-login-in">登入</button>
                         </div>
                     </li>
                     <li class="aui-list-item aui-padded-l-10 aui-padded-r-10" style="background: none;border:none;">
@@ -144,6 +141,10 @@
 <script src="aui/script/aui-slide.js"></script>
 <script src="aui/script/aui-tab.js"></script>
 <script src="aui/script/aui-toast.js"></script>
+<!--引入验证插件-->
+<script src="lib/jquery-validation-1.15.0/dist/jquery.validate.js"></script>
+<script src="lib/jquery-validation-1.15.0/dist/additional-methods.js"></script>
+<script src="lib/jquery-validation-1.15.0/dist/localization/messages_zh.js"></script>
 <script src="js/mengtekaluo.js" defer></script>
 </body>
 </html>

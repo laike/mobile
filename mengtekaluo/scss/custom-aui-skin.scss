@@ -227,7 +227,7 @@ a {
 }
 
 .aui-list .aui-list-item:active {
-  background-color: #ff2600;
+  background:none!important;
 }
 
 .aui-list .aui-list-item-media {
@@ -329,4 +329,7 @@ textarea {
 }
 .aui-slide-page-wrap{
   z-index: 9;
+}
+.aui-mask{
+background: rgba(0, 0, 0, 0.7)
 }

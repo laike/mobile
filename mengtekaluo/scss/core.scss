@@ -305,11 +305,11 @@ body{
 }
 /*common color*/
 .col-white{color: #ffffff!important;}
-.col-gre{color: #58ffcc!important;}
+.col-green{color: #58ffcc!important;}
 .col-blue{color: #00ff00!important;}
 .col-blu{color: #00ffff!important;}
 .col-red{}
-.col-green{}
+.col-gray{color:#5B5B5B!important;}
 .col-light-green{}
 .col-purple{}
 .col-yellow{color:#ffc40d!important;}
@@ -401,4 +401,20 @@ body{
 /*common bg*/
 .bgred{
   background: linear-gradient(to top, #96110C 0%, #C82721 100%)!important;
+}
+/*common font-size rem version*/
+.rem11{
+  font-size: 1.1rem!important;
+}
+.rem12{
+  font-size: 1.2rem!important;
+}
+.rem13{
+  font-size: 1.3rem!important;
+}
+.rem14{
+  font-size: 1.4rem!important;
+}
+.rem15{
+  font-size: 1.5rem!important;
 }

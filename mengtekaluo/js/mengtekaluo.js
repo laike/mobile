@@ -325,9 +325,89 @@ app.loading=function(opt){
             buttons:['确定']
         },function(ret){
 
+              //这里调用成功了以后然后通过ajax请求看看是否还有公告等提示信息依次显示出来
+            $.get('login.html',function(data){
+                data =  {
+                    error:0,
+                    hasannounce:1,
+                    title:'敬请注意: 维护中的游戏，暂时无法显示游戏的实际有效投注额',
+                    msg:'<p>SA视讯 - 維護時間(北京時間) 2016-09-19 10:30 ~ 14:00<br>维护时间(美东时间):2016-09-18 22:30:00 ~ 2016-09-19 02:00:00</p>'
+                    +'<p class="col-red"> 敬请注意: 维护中的游戏，暂时无法显示游戏的实际有效投注额。</p>'
+                };
+                if(data.error===0 && data.hasannounce===1){
+                    //弹出提示框
+                    var _timeout=null;
+                    _timeout=setTimeout(function(){
+                       dialog.alert({
+                           title:data.title,
+                           msg: data.msg,
+                           buttons:['确定']
+                       },function(ret){
+                           clearTimeout(_timeout);
+                       });
+                   },1000);
+                }
+            })
         });
         //这里是取款页面的逻辑
-        $('.mgtl-withdraw-continue').click(function(event){
+        //绑定input输入框的keyup事件
+        $('input[name=pwd]').keyup(function(event){
+             var _this = this;
+             var pattern = /^\d*$/;
+             var txt = $.trim($(_this).val());
+             if(txt == ""){
+                 $(_this).parent().siblings('.aui-list-item-label-icon').find('i').removeClass('col-red col-white').addClass('col-gray');
+                 return;
+             }
+        if(!pattern.test(txt)){
+            $(_this).val('');
+            $(_this).parent().siblings('.aui-list-item-label-icon').find('i').removeClass('col-gray col-white').addClass('col-red');
+            return;
+        }
+            $(_this).parent().siblings('.aui-list-item-label-icon').find('i').removeClass('col-gray col-red').addClass('col-white');
+        }).focus(function(){
+            var _this = this;
+            var txt = $.trim($(_this).val());
+            if(txt == ""){
+                $(_this).parent().siblings('.aui-list-item-label-icon').find('i').removeClass('col-red col-white').addClass('col-gray');
+                return;
+            }
+        });
+
+        $('input[name=money]').keyup(function(event){
+            var _this = this;
+            var pattern = /^\d*$/;
+            var txt = $.trim($(_this).val());
+            if(txt == ""){
+                $(_this).parent().siblings('.aui-list-item-label-icon').find('i').removeClass('col-red col-white').addClass('col-gray');
+                return;
+            }
+            if(!pattern.test(txt)){
+                $(_this).val('');
+                $(_this).parent().siblings('.aui-list-item-label-icon').find('i').removeClass('col-gray col-white').addClass('col-red');
+                return;
+            }
+            if(parseInt(txt)>=2000000){
+                if($('body').has('.aui-dialog').length === 0){
+                    dialog.alert({
+                        title:'提醒您',
+                        msg: '您提款金额超过$2000000需经过审核，将于24小时内到帐，请耐心等候!',
+                        buttons:['确定']
+                    });
+                }
+            }
+            $('#actual-money').html(parseInt(txt));
+            $(_this).parent().siblings('.aui-list-item-label-icon').find('i').removeClass('col-gray col-red').addClass('col-white');
+        }).focus(function(){
+            var _this = this;
+            var txt = $.trim($(_this).val());
+            if(txt == ""){
+                $(_this).parent().siblings('.aui-list-item-label-icon').find('i').removeClass('col-red col-white').addClass('col-gray');
+                return;
+            }
+        });
+        //第一个页面逻辑
+        $('#mgtl-widthdraw-step1 .mgtl-withdraw-continue').click(function(event){
             event.preventDefault();
             toast.loading({
                 title:"努力加载中...",
@@ -341,6 +421,9 @@ app.loading=function(opt){
                     data = JSON.parse(JSON.stringify(data));
                     setTimeout(function(){
                         toast.hide(500);
+                        //显示第二个窗口出来
+                        $('#mgtl-widthdraw-step1').slideToggle(500);
+                        $('#mgtl-widthdraw-step2').slideToggle(1500);
                     }, 3000)
                 });
 
@@ -348,6 +431,16 @@ app.loading=function(opt){
 
         });
     }
+    //第二个页面逻辑
+    //绑定页面中的
+    $('#mgtl-widthdraw-step2 .mgtl-withdraw-continue').click(function(event){
+            event.preventDefault();
+            dialog.alert({
+                title:'提醒您',
+                msg: '确定要写入么？',
+                buttons:['确定','取消']
+            });
+    });
     window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", orientatechange, false);
 }
 //金额模拟函数
@@ -377,7 +470,6 @@ app.initMemberCenter=function(){
 }
 jQuery(function(){
     app.initSlider();
-
     app.initLanguageDownList();
     app.initUiSelect();
     $('.mgtl-concept').click(function(){

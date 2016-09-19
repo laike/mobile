@@ -116,33 +116,91 @@
             <div class="aui-info-item"><i class="fa fa-refresh" aria-hidden="true"></i></div>
         </div>
         <!--基本视讯-->
-        <h2 class="mgtl-withdraw-title">稽核手续费</h2>
-        <ul class="mgtl-withdraw-infolist aui-clearfix">
-            <li class="aui-clearfix">
-                <span class="aui-pull-left col-white">优惠稽核</span>
-                <span class="aui-pull-right col-red">不需要</span>
-            </li>
-            <li  class="aui-clearfix">
-                <span class="aui-pull-left col-white">常态性稽核</span>
-                <span class="aui-pull-right col-red">不需要</span>
-            </li>
-        </ul>
-        <h2 class="mgtl-withdraw-title aui-clearfix mgtl-border-gray">
-            <span class="aui-pull-left">费用总计</span>
-            <span class="aui-pull-right">0.00</span>
-        </h2>
-        <p class="mgtl-withdraw-p">此次出款稽核时间</p>
-        <p class="mgtl-withdraw-p">美东时间 2016-09-18 03:45:36</p>
-        <div class="mgtl-withdraw-control aui-text-center aui-row">
-            <div class="aui-col-xs-6">
-                <a href="index.html" class="aui-btn  mgtl-withdraw-btn aui-btn-block">返回</a>
+        <div id="mgtl-widthdraw-step1">
+            <h2 class="mgtl-withdraw-title">稽核手续费</h2>
+            <ul class="mgtl-withdraw-infolist aui-clearfix">
+                <li class="aui-clearfix">
+                    <span class="aui-pull-left col-white">优惠稽核</span>
+                    <span class="aui-pull-right col-red">不需要</span>
+                </li>
+                <li  class="aui-clearfix">
+                    <span class="aui-pull-left col-white">常态性稽核</span>
+                    <span class="aui-pull-right col-red">不需要</span>
+                </li>
+            </ul>
+            <h2 class="mgtl-withdraw-title aui-clearfix mgtl-border-gray">
+                <span class="aui-pull-left">费用总计</span>
+                <span class="aui-pull-right">0.00</span>
+            </h2>
+            <p class="mgtl-withdraw-p">此次出款稽核时间</p>
+            <p class="mgtl-withdraw-p">美东时间 2016-09-18 03:45:36</p>
+            <div class="mgtl-withdraw-control aui-text-center aui-row">
+                <div class="aui-col-xs-6">
+                    <a href="index.html" class="aui-btn  mgtl-withdraw-btn aui-btn-block">返回</a>
+                </div>
+                <div class="aui-col-xs-6">
+                    <a href="javascript:void(0);" class="aui-btn  mgtl-withdraw-btn aui-btn-block mgtl-withdraw-continue">继续</a>
+                </div>
             </div>
-            <div class="aui-col-xs-6">
-                <a href="javascript:void(0);" class="aui-btn  mgtl-withdraw-btn aui-btn-block mgtl-withdraw-continue">继续</a>
-            </div>
+        </div>
+        <div id="mgtl-widthdraw-step2">
+            <p class="mgtl-withdraw-p aui-clearfix"><span class="aui-pull-left">提款人</span><span class="aui-pull-right">laikedou</span></p>
 
+            <p class="mgtl-withdraw-p aui-clearfix"><span class="aui-pull-left">出款银行</span><span class="aui-pull-right">工商银行</span></p>
+
+            <p class="mgtl-withdraw-p aui-clearfix"><span class="aui-pull-left">银行省分</span><span class="aui-pull-right">福建省</span></p>
+
+            <p class="mgtl-withdraw-p aui-clearfix"><span class="aui-pull-left">银行县市</span><span class="aui-pull-right">厦门市</span></p>
+
+            <p class="mgtl-withdraw-p aui-clearfix"><span class="aui-pull-left">取款帐号</span><span class="aui-pull-right">6212263602006485288</span></p>
+            <ul class="aui-list aui-form-list aui-clearfix">
+                <li class="aui-list-header">请输入取款密码</li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label-icon  ">
+                            <i class="fa fa-check-circle-o col-gray rem15" aria-hidden="true"></i>
+                        </div>
+                        <div class="aui-list-item-input">
+                            <input type="password" placeholder="" class="mgtl-input" name="pwd" maxlength="4">
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-header">请输入取款金额</li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label-icon  ">
+                            <i class="fa fa-check-circle-o col-gray rem15" aria-hidden="true"></i>
+                        </div>
+                        <div class="aui-list-item-input">
+                            <input type="text" placeholder="" class="mgtl-input" name="money" maxlength="10">
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+
+            <p class=" aui-clearfix aui-font-size-16"><span class="aui-pull-left">手续费</span><span class="aui-pull-right col-red">---</span></p>
+
+            <p class=" aui-clearfix aui-font-size-16"><span class="aui-pull-left">实收金额</span><span class="aui-pull-right col-red" id="actual-money">---</span></p>
+            <div class="aui-padded-t-15 aui-font-size-12">
+                <p class="aui-clearfix mgtl-withdraw-p">
+                    <span class="aui-pull-left">取款金额下限</span><span class="num">&nbsp;100</span>
+                </p>
+                <p class="aui-clearfix mgtl-withdraw-p">
+                    <span class="aui-pull-left">取款金额上限</span><span class="num">&nbsp;1000000</span>
+                </p>
+            </div>
+            <div class="mgtl-withdraw-control aui-text-center aui-row">
+                <div class="aui-col-xs-6">
+                    <a href="index.html" class="aui-btn  mgtl-withdraw-btn aui-btn-block">返回</a>
+                </div>
+                <div class="aui-col-xs-6">
+                    <a href="javascript:void(0);" class="aui-btn  mgtl-withdraw-btn aui-btn-block mgtl-withdraw-continue">继续</a>
+                </div>
+            </div>
 
         </div>
+
     </div>
 </section>
 <!--底部工具栏-->

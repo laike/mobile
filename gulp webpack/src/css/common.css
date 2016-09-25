@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: bold 14px/1.5 Arial;
+    color: #000;
+}

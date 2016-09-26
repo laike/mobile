@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="page-group">
-    <div id="page-withdraw" class="page">
+    <div class="page">
         <!-- 标题栏 -->
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left  ">
@@ -94,6 +94,22 @@
 </div>
 
 </div>
-<script src="../js/app.js"></script>
+<script>
+    (function($){
+        $('#add-card-list').click(function(event){
+            $('#pj-wtdCard-container').hide();
+            $('#card-list-container').show('slow');
+        });
+        $('#add-card-submit-btn').click(function(event){
+
+        });
+        $('#add-card-cancel-btn').click(function(event){
+            $('#card-list-container').hide();
+            $('#pj-wtdCard-container').show('slow');
+
+        });
+    })(Zepto);
+
+</script>
 </body>
 </html>

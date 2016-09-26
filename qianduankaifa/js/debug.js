@@ -1,0 +1,20 @@
+/**
+ * Created by Administrator on 2016/7/7.
+ */
+if(document.addEventListener){
+    document.addEventListener('DOMNodeRemoved',function(event){
+         console.log('-----------------');
+         console.log(event.target);
+         console.log("已经被移除了");
+         console.log('-----------------');
+    })
+    document.addEventListener('DOMAttrModified',function(event){
+        console.log('-----------------');
+        console.log(event.target);
+        console.log("属性被修改了");
+        console.log('-----------------');
+    })
+    document.addEventListener('click',function(){
+        alert('ok');
+    })
+}

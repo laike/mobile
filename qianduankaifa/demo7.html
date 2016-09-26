@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>demo7</title>
+</head>
+<body>
+<select name="change" id="change">
+    <option>北京</option>
+    <option>上海</option>
+    <option>广州</option>
+    <option>深圳</option>
+    <option>厦门</option>
+    <option>海沧</option>
+</select>
+<div id="txtinfo" style="width:500px;height:400px;border:1px solid #eee;">
+
+</div>
+<script>
+    var city = document.getElementById('change');
+    city.onchange=function(){
+        document.getElementById('txtinfo').innerHTML = city.options[city.selectedIndex].text;
+    }
+    function dispatchChangeEvent(){
+        //还有两种MouseEvents 以及 UIEvents
+        var changeEvent = document.createEvent('HtmlEvents');
+        changeEvent.initEvent('change',true,true);
+        city.dispatchEvent(changeEvent)
+    }
+    dispatchChangeEvent()
+</script>
+</body>
+</html>

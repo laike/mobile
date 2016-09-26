@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>测试</title>
+		<script src="js/demo1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var  singleTon = function(name){
+				 var instance = null;
+				 if(!instance){
+				 	instance = new singleTon(name);
+				 }
+				 return instance;
+			}
+			//console.log(new singleTon('demo'));
+		</script>
+	</head>
+	<body>
+		我是皇帝
+		<iframe src="frames/zuhou.html" width="500" height="600"></iframe>
+	</body>
+</html>

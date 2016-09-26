@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script src="http://localhost:808/news1.php" type="text/javascript" charset="utf-8"></script>
+		
+		<!--<script type="text/laike">
+			<ul>
+			  {
+			  	 alert(123);
+			  }
+			</ul>
+		</script>-->
+		<ul>
+			
+		</ul>
+		<script type="text/javascript">
+			 var news = eval('{'+news+'}');
+			 for (var i=0;i<news.length;i++) {
+						
+						$('ul').append('<li>'+news[i].title+'</li>');
+			 }
+		</script>
+<!--		
+		<script type="text/javascript">
+
+			$.ajax({
+				type:'get',
+				url:'http://localhost:808/news.php',
+				dataType:'json',
+				success:function(data){
+					console.log(data.length);
+					for (var i=0;i<data.length;i++) {
+						
+						$('ul').append('<li>'+data[i].title+'</li>');
+					}
+				}
+				
+			});
+			
+		</script>-->
+	</body>
+</html>

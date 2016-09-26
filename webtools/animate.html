@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<style type="text/css">
+			#ball{
+				width:200px;
+				height: 200px;
+				background: #F08080;
+				border-radius: 50%;
+				margin:100px auto;
+			}
+		</style>
+		<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="animated bounceIn" id="ball">
+			
+		</div>
+		<div class="input-ui">
+			 <input type="text" name="" id="" value="" class="input-ui-txt" />
+			 <input type="button" name="" id="changeanimation" value="改变动画" />
+		</div>
+		<script type="text/javascript">
+			(function($){
+				//console.log($('.ball'));
+				function changeAnimations(ele,type){
+					if(typeof ele === 'string'){
+						$(ele).removeClass().addClass(type + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+						  $(this).removeClass();
+						});
+						return;
+					}
+					ele.removeClass().addClass(type + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+					  $(this).removeClass();
+					});
+				}
+				var input = $('.input-ui-txt');
+				var ball = $('#ball');
+				$("#changeanimation").click(function(event){
+					event.preventDefault();
+					event.stopPropagation();
+					var val = input.val();
+					changeAnimations(ball,val);
+				});
+				
+				
+			})($);
+		</script>
+	</body>
+</html>

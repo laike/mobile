@@ -1,0 +1,92 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/update.js",
+			"list.html"
+		],
+		"refer": [
+			"index-menu.html",
+			"list.html"
+		]
+	},
+	"examples/tab-webview-subpage-contact.html": {
+		"resources": [
+			"images/60x60.gif"
+		]
+	},
+	"examples/tab-webview-main.html": {
+		"resources": [
+			"examples/tab-webview-subpage-about.html"
+		],
+		"refer": [
+			"examples/tab-webview-subpage-setting.html",
+			"examples/tab-webview-subpage-chat.html",
+			"examples/tab-webview-subpage-contact.html",
+			"examples/tab-webview-subpage-about.html"
+		]
+	},
+	"list.html": {
+		"refer": [
+			"examples/template.html",
+			"examples/tab-webview-main.html",
+			"examples/pullrefresh_main.html",
+			"examples/guide.html",
+			"examples/dialog.html",
+			"examples/slider-table-pagination.html",
+			"examples/im-chat.html",
+			"examples/imageviewer.html",
+			"examples/echarts.html",
+			"examples/ad.html"
+		]
+	},
+	"examples/pullrefresh_main.html": {
+		"resources": [
+			"examples/pullrefresh_sub.html"
+		],
+		"refer": [
+			"examples/pullrefresh_sub.html"
+		]
+	},
+	"examples/dialog.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/app.css",
+			"css/mui.min.css"
+		]
+	},
+	"examples/slider-table-pagination.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"images/yuantiao.jpg",
+			"images/muwu.jpg",
+			"fonts/mui.ttf",
+			"images/shuijiao.jpg"
+		]
+	},
+	"examples/im-chat.html": {
+		"resources": [
+			"js/mui.imageViewer.js",
+			"images/logo.png",
+			"css/mui.imageviewer.css",
+			"js/arttmpl.js"
+		]
+	},
+	"examples/imageviewer.html": {
+		"resources": [
+			"js/mui.zoom.js",
+			"js/mui.previewimage.js"
+		]
+	},
+	"examples/echarts.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"libs/echarts-all.js"
+		]
+	}
+}

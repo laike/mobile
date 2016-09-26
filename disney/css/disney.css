@@ -1,0 +1,244 @@
+/*样式重置*/
+body{
+    font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+}
+.container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+/*弹窗组件*/
+.ed-ui-mask{
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9998;
+    display: none;
+}
+.ed-ui-popwindow{
+    z-index: 9999;
+    background: #fff;
+    font-size: 16px;
+}
+@media (max-width: 680px) {
+    .ed-ui-popwindow {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 7%;
+        display: none;
+        overflow:hidden;
+    }
+
+}
+@media (min-width: 680px) {
+    .ed-ui-popwindow {
+        width: 680px;
+        height: auto;
+        position: absolute;
+        top: 7%;
+        display: none;
+        overflow:hidden;
+        margin-left: 50%;
+        left: -340px;
+    }
+}
+
+.ed-ui-pop-content{
+    height:95%;
+    overflow: hidden;
+}
+.ed-ui-poptitle{
+    margin:0;
+    margin:0;
+    border-bottom: 2px solid #eee;
+    font-size: 16px;
+}
+.ed-ui-poptitle .close{
+    margin: 10px 10px 0 0;
+}
+.ed-ui-poptitle  div.title{
+    padding:5px;
+    line-height: 20px;
+}
+/*公共样式*/
+.bdgray{
+    border-bottom: 2px solid #eee;
+}
+.bddark{
+    border: 1px solid #eee;
+}
+.bggray{
+    background: #eee;
+}
+.bgblue{
+    background: #85b3ea;
+}
+.w140{
+    width:140px;
+}
+.w120{
+    width:120px;
+}
+.w115{
+    width:115px;
+}
+
+.l{
+    float:left;
+}
+.r{
+    float:right;
+}
+.ovf-visible{
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.pdt-10{
+    padding-top:10px;
+}
+.pd10{
+    padding: 10px 0 10px 0;
+}
+.pd0{
+    padding:0;
+}
+.pdl5{
+    padding-left:5px;
+}
+.pdlr0{
+    padding-left:0;
+    padding-right:0;
+}
+.pdlr10{
+    padding-left:10px;
+    padding-right:10px;
+}
+.pdtb10{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.mg10{
+    margin: 10px 0 10px 0;
+}
+.mgr10{
+    margin-right: 10px;
+}
+.mgt10{
+    margin-top: 10px;
+}
+.mgb10{
+    margin-bottom: 10px;
+}
+.fb{
+    font-weight: bold;
+}
+.tc{
+    text-align: center;
+}
+.tl{
+    text-align: left;
+}
+.tr{
+    text-align: right;
+}
+.tj{
+    text-align: justify;
+}
+.liheight30{
+    line-height: 30px;
+}
+.col-green{
+    color:#299a26;
+}
+.col-red{
+    color:#ff0000;
+}
+@media screen and (max-width: 374px) {
+   .navbar-brand{
+       display:none;
+   }
+    .pdt-10{
+        padding:10px 0 0 10px;
+    }
+}
+
+#dn-app-content{
+    width:100%;
+    height:100%;
+    padding-top:50px;
+    overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  #dn-app-content{
+    padding-top: 152px;
+  }
+}
+.dn-periods-numbers{
+    padding-top:10px;
+}
+.dn-order-bet-item{
+    border:2px solid #46b8da;
+    border-radius: 5px;
+    margin:5px;
+    padding:0px;
+    width:100%;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+}
+.dn-order-bet-item .dn-bet-active-arrow{
+    position: absolute;
+    right:-10px;
+    bottom:2px;
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    border:1px solid #0062e0;
+    background: #fff;
+    color:#000;
+    font-size:16px;
+    display: none;
+}
+.dn-bet-active{
+    background: #123380;
+    color:#fff;
+}
+.dn-order-bet-item .title{
+    margin:7px 0 0 0;
+}
+#dn-order-panel{
+    height:100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 130px;
+}
+.dn-order-top{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 99;
+}
+.dn-page-input{
+    width:100px;
+    text-align: center;
+    display: inline-block;
+}

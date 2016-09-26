@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<h2>6.2.3属性访问错误</h2>
+		<p>
+			属性访问并不总是返回或设置一个值。本节讲述查询或设置属性时的一些出错情况。查询一个不存在的属性并不会报错，如果在对象o自身的属性
+			或继承的属性中均未找到属性x，属性访问表达式o.x返回undefined 。回想一下我们的book对象有属性 “sub-title” ，而没有属性 “subtitle”
+		</p>
+		<script type="text/javascript">
+			book.subtitle;//undefined 属性不存在
+		</script>
+		<p>
+		  但是，如果对象不存在，那么试图查询这个不存在的对象的属性就会报错。null和undefined值没有属性，因此查询这些值的属性会报错。null和undefined
+		  值都没有属性，因此查询这些值的属性会报错，接上例：
+		  
+		</p>
+		<script type="text/javascript">
+			//抛出一个类型错误异常 undefined 没有length 属性 
+			var len = book.subtittle.length;
+		</script>
+		<p>
+			除非确定book和book.subtitle 都是（或在行为上）对象，否则不能这样写表达式book.subtitle.length，因为这样会报错，下面提供了两种避免
+			出错的方法：
+		</p>
+		<script type="text/javascript">
+			//一种冗余但很易懂的方法
+			var len = undefined;
+			if(book){
+				if(book.subtitle){
+					len = book.subtitle.length;
+				}
+			}
+			//一种更简练的常用方法，获取subtitle的length属性或undefined
+			var len = book && book.subtitle && book.subtitle.length;
+			
+		</script>
+	   <p>
+	   	为了理解为什么这里的第二种方法可以避免类型错误异常，可以参照4.10.1节中关于 && 运算符的短路行为。当然给null和undefined 设置属性也会报
+	   	类型错误。给其他值设置属性也不总是成功，有一些属性时只读的，不能重新赋值，有一些对象不允许新增属性，但让人颇感意外的是，这些设置属性
+	   	的失败操作不会报错。
+	   </p>
+	   <script type="text/javascript">
+	   	Object.prototype = o;//赋值失败，但没有报错，Object.prototype没有修改
+	   </script>
+	   <p>
+	     这是一个历史遗留问题，这个bug在ECMScript 5 的严格模式已经修复。在严格模式中，任何失败的属性设置操作都会抛出一个类型错误异常。
+	     尽管属性赋值成功或失败的规律看起来很简单，但要描述清楚并不容易。在这些场景下给对象o设置属性p会失败：
+	   </p>
+	   <p>
+	   	 1. o中的属性p是只读的：不能给只读属性重新赋值（defineProperty()方法中有一个例外，可以对可配置的只读属性重新赋值）。
+	   	 2. o中的属性p是继承属性，且它是只读的：不能通过同名自有属性覆盖只读的继承属性
+	   	 3. o中不存在自有属性p：o没有使用setter方法继承属性p，并且o的可拓展性（extensible attribute） 是false 。如果o中不存在p，而且没有
+	   	 setter方法可供调用，则p一定会添加到o 中。但如果o不是可拓展的，那么在o中不能定义新属性
+	   </p>
+		<h2>6.3 删除属性</h2>
+		<p>
+			delete 运算符 可以删除对象的属性。它的操作数应当是一个属性访问表达式。让人感到意外的是，delete只是断开属性和宿主对象的联系，而不会
+			去操作属性中的属性：
+			
+		</p>
+		<script type="text/javascript">
+			delete book.author;//book 不再拥有属性author
+			delete book['main title'];//book不再拥有属性 “main title”
+		</script>
+		<p>
+			delete 运算符只能删除自有属性，不能删除继承属性（要删除继承属性必须从定义这个属性的原型对象上面删除它，而且这会影响到所有继承自这个原型
+			的对象）
+			当delete 表达式删除成功或没有任何副作用（比如删除不存在的属性）时，它返回true，如果delete后不是一个属性访问表达式，delete同样
+			返回true
+		</p>
+		<script type="text/javascript">
+			o = {x:1};//o有一个属性x，并继承属性toString
+			delete o.x;//删除x 返回true
+			delete o.x; //什么都没有做 x已经不存在了 返回true
+			delete o.toString;//什么也没有做 toString是继承而来的，返回true
+		</script>
+		<p>
+			delete 不能够删除那些可配置性为false的属性（尽管可以删除不可拓展对象的可配置属性）。某些内置对象的属性时不可配置的，比如
+			通过变量声明和函数声明创建的全局对象的属性。在严格模式中，删除一个不可配置的属性会报一个类型错误。在非严格模式中在这些情况下delete
+			操作会返回 false
+		</p>
+		<script type="text/javascript">
+			delete Object.prototype ;//不能删除，属性时不可配置的
+		    var x = 1;//声明一个全局变量
+		    delete this.x;//不能删除这个属性
+		    function f(){};//声明一个全局函数
+		    delete this.f;//也不能删除全局函数
+		</script>
+		<p>
+			当在非严格模式中删除全局对象的可配置属性时，可以省略对全局对象的引用，直接在delete操作符后跟要删除的属性名即可：
+		</p>
+		<script type="text/javascript">
+			this.x = 1;
+			delet x;//将它删除
+		</script>
+		<p>
+			然而在严格模式中，delete后跟随一个非法的操作数（比如x），则会报一个语法错误，因此必须显示指定对象及其属性：
+			
+		</p>
+		<script type="text/javascript">
+			delete x;//在严格模式下会报语法错误
+			delete this.x;//正常工作
+		</script>
+		propertyIsEnumerable()是hasOwnProperty()的增强版，只有检测到是自有属性且这个属性的可枚举性（enumerable attribute）为true时他才会
+		返回true。某些内置属性时不可枚举的。通常由JavaScript代码创建的属性都是可枚举的，除非在ECMScript5中使用一个特殊的方法
+	</body>
+
+</html>

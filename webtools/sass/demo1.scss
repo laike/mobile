@@ -1,0 +1,39 @@
+$color-stack:
+    (group: orange, id: normal, color: #e67835),
+    (group: orange, id: pale, color: #f8a878),
+    (group: orange, id: dark, color: #ad490c),
+    (group: blue, id: normal, color: #426682);
+
+// Color  Function
+@function color($group, $shade:normal, $transparency:1){
+  @each $color in $color-stack{
+    $c-group: map-get($color, group);
+    $c-shade: map-get($color, id);
+    @if($group == map-get($color, group) and $shade == map-get($color, id)){
+      @return rgba(map-get($color, color), $transparency);
+    }
+  }
+}
+
+
+$media-stack:
+  (group: tablet, id: general, rule: "only screen and (min-device-width: 700px)"),
+  (group: small, id: general, rule: "only screen and(min-device-width: 1100px)"),
+  (group: small, id: inbetween, rule: "only screen and(min-device-width: 1100px) and (max-device-width: 1400px)"),
+  (group: large, id: general, rule: "only screen and(min-device-width: 1400px)"),
+  (group: print, id: general, rule: "only print");
+
+@mixin media($group, $id: general){
+  @each $media in $media-stack{
+    @if($group == map-get($media, group) and $id == map-get($media, id)){
+      $rule: map-get($media, rule);
+      @media #{$rule} {@content}
+    }
+  }
+}
+
+
+
+body{
+    background: color(blue, normal,.8);
+}

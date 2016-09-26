@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="page-group">
-    <div id="page-transfer" class="page">
+    <div class="page">
         <!-- 标题栏 -->
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left  ">
@@ -219,6 +219,121 @@
 </div>
 
 </div>
-<script src="../js/app.js"></script>
+<script>
+    (function($){
+
+        $("#transfer-in").click(function(event){
+            var buttons1 = [
+                {
+                    text: '转入平台',
+                    label: true
+                },
+                {
+                    text: '主账户'
+                },
+                {
+                    text: 'MG'
+                }
+                ,
+                {
+                    text: '沙巴体育'
+                }
+                ,
+                {
+                    text: 'GD真人'
+                }
+                ,
+                {
+                    text: 'BBIN'
+                }
+                ,
+                {
+                    text: '欧博真人'
+                }
+                ,
+                {
+                    text: '皇冠彩票'
+                }
+                ,
+                {
+                    text: 'PT'
+                }
+                ,
+                {
+                    text: '皇冠体育'
+                }
+                ,
+                {
+                    text: 'AG真人'
+                }
+            ];
+            var buttons2 = [
+                {
+                    text: '取消',
+                    bg: 'danger'
+                }
+            ];
+            var groups = [buttons1, buttons2];
+            $.actions(groups);
+
+        });
+        $("#transfer-out").click(function(event){
+            var buttons1 = [
+                {
+                    text: '转出平台',
+                    label: true
+                },
+                {
+                    text: '主账户'
+                },
+                {
+                    text: 'MG'
+                }
+                ,
+                {
+                    text: '沙巴体育'
+                }
+                ,
+                {
+                    text: 'GD真人'
+                }
+                ,
+                {
+                    text: 'BBIN'
+                }
+                ,
+                {
+                    text: '欧博真人'
+                }
+                ,
+                {
+                    text: '皇冠彩票'
+                }
+                ,
+                {
+                    text: 'PT'
+                }
+                ,
+                {
+                    text: '皇冠体育'
+                }
+                ,
+                {
+                    text: 'AG真人'
+                }
+            ];
+            var buttons2 = [
+                {
+                    text: '取消',
+                    bg: 'danger'
+                }
+            ];
+            var groups = [buttons1, buttons2];
+            $.actions(groups);
+
+        });
+    })(Zepto);
+
+</script>
 </body>
 </html>

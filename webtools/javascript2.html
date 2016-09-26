@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>6.1.3原型</h2>
+		<p>
+			在讲述第三种对象创建术之前，我们应当首先解释下原型。每一个JavaScript对象（null除外）都和另一个对象相关联。
+			"另一个"对象就是我们熟知的原型，每一个对象都从原型继承属性。
+			所有通过对象直接量创建的对象都具有同一个原型对象，并可以通过JavaScript代码Object.prototype获得原型对象的引用。
+			通过关键字new和构造函数调用创建的对象的原型就是构造函数的prototype属性的值。因此，通使用{}创建对象一样，通过new
+			Object()创建的对象也几成自Object.prototype。同样通过 new Array() 创建的对象的原型就是Array.prototype，通过new 
+			Date()创建的对象的原型是Date.prototype;
+			
+			没有原型的对象为数不多，Object.prototype就是其中之一。它不继承任何属性。其他原型对象都是普通对象，普通对象都具有原型。所有的内置
+			构造函数（以及大部分自定义的构造函数）都具有一个继承自Object.prototype的原型。例如，Data.prototype的属性继承自Object.prototype，
+			因此由new Date()创建的Date对象的属性同时继承自Date.prototype 和Object.prototype。这一系列链接的原型对象就是所谓的 "原型链"（prototype chain）
+			6.2.2节讲述属性继承的工作机制。6.8.1节将会降到如何获取对象的原型。第九章将会更详细地讨论原型和构造函数，包括如何通过编写构造函数定义对象的"类"，
+			以及给构造函数的prototype属性赋值可以让其"实例"直接使用这个原型上的属性和方法。
+		</p>
+		<h2>6.1.4Object.create()</h2>
+		<p>
+			ECMScript 5 定义了一个名为Object.create()的方法，它创建一个新对象，其中第一个参数是这个对象的原型。Object.create()提供第二个参数
+			可选，用以对对象的属性进行进一步描述。6.7节会讲述第二个参数。
+			Object.create() 是一个静态函数，而不是提供给某个对象调用的方法。使用它的方法很简单，只须传入所需的原型对象即可：
+			
+		</p>
+		<script type="text/javascript">
+			var o1 = Object.create({x:1,y:2});//o1继承了属性x和y
+		</script>
+		<p>
+			可以通过传入参数null来创建一个没有原型的新对象，但通过这种方式创建的对象不会继承任何东西，甚至不包括基础方法，比如toString()，也就是
+			说，他将不能喝"+"运算符一起工作。
+			
+		</p>
+		<script type="text/javascript">
+			var o2 = Object.create(null);//o2不继承任何属性和方法
+		</script>
+		<p>
+			如果想要创建一个普通的空对象（比如通过{}或者 new Object()创建的对象），需要传入Object.prototype:
+			
+		</p>
+		<script type="text/javascript">
+			var o2 = Object.create(Object.prototype);//o3 和 {}和 new Object()一样
+		</script>
+		<p>
+			可以通过任意原型创建新对象（换句话说，可以使任意对象继承），这是一个强大的特性。在ECMScript 3 中可以使用类似下面的代码来模拟原型
+			继承
+		</p>
+		<script type="text/javascript">
+			//通过原型继承创建一个新对象 
+			//inherit()返回一个继承自原型对象p的属性的新对象 
+			//这里使用ECMScript 5 中的Object.create()函数（如果存在的话）
+			//如果不存在就 退化使用其他方法
+			function inherit(p){
+				//如果对象为null抛出错误
+				if(p == null) throw TypeError();
+				if(Object.create){
+					return Object.create(p);
+				}
+				var t = typeof p;
+				//进一步检测
+				if(t !=='object' && t !== 'function'){
+					throw TypeError();
+				}
+				//定义一个空的构造函数
+				function f(){};
+				f.prototype = p;
+				return new f();
+			}
+		</script>
+		<p>
+		   在看完第九章关于构造函数的内容后，例6-1中的inherit()函数会更容易理解。现在只要知道它返回的新对象继承了参数对象的属性就可以了。
+		   注意，inherit()并不能完全代替 Object.create()，它不能够通过传入null原型来创建对象，而且不能够接收可选的第二个参数。不过我们
+		   仍会在本章和第九章的示例代码中多次用到inherit();
+		   inherit()函数的其中一个用途就是防止库函数无意间（非恶意的）修改那些不受你控制的对象。不是将对象直接作为参数传入函数，而是将它
+		   的继承对象传入函数。当函数读取继承对象的属性时，实际上读取的是继承来的值。如果给继承对象的属性赋值，则这些属性只会影响这个继承对象
+		   自身，而不是原始对象。
+		</p>
+		<script type="text/javascript">
+			var o = {x:"dont't change this value!"};
+			library_function(inherit(o));//防止对o的意外修改
+		</script>
+		<p>
+			了解其工作原理，需要首先了解JavaScript中属性的查询和设置机制。接下来会讲到。
+		</p>
+		<h2>6.2 属性的查询和设置</h2>
+		<p>
+			4.4节已经提到，可以通过点(.) 或方括号([])运算符来获取属性的值。运算符左侧应当是一个表达式，它返回一个对象。对于点(.)来说，
+			右侧必须是一个以属性名称命名的简单标识符。对于方括号([])来说，方括号内必须是一个计算结果为字符串的表达式，这个字符串就是属性
+			的名字：
+			
+		</p>
+		<script type="text/javascript">
+			var author = book.author;
+			var name = author.surname;
+			var title = book['main title'];
+			
+		</script>
+		<p>
+		  和查询属性值的写法一样，通过点和方括号也可以创建属性或给属性值赋值，但需要将它们放在赋值表达式的左侧：
+		</p>
+		<script type="text/javascript">
+			book.edition = 6;//给book创建一个名为‘edition’的属性
+			book['main title'] = 'ECMScript';//给main title 属性赋值
+		</script>
+		<p>
+			在ECMAScript 3 中，点运算符后的标识符不能够是保留字，比如，o.for或者 o.class 是非法的，因为for是JavaScript的关键字，class是保留字
+			如果一个对象的属性名是保留字，则必须使用方括号的形式访问他们。比如o['for'] 和o['class'] 。ECMAScript5对此放宽了限制（包括ECMAScript3 
+			的某些实现），可以在点运算符后直接使用保留字。
+			当使用方括号时，我们说方括号内的表达式必须返回字符串。其实更严格讲，表达式必须返回字符串或者一个可以转换成字符串的值。在第七章
+			里面有些例子中的方括号内使用了数字，这情况是非常常见的。
+			
+		</p>
+	</body>
+
+</html>

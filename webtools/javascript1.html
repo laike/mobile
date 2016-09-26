@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>6.1 创建对象</h2>
+		<p>
+			可以通过对象直接量、关键字new和（ECMScript5 中的） Object.create 函数来创建对象。接下来几节将对这些技术一一讲述。
+		</p>
+		<h2>6.1.1对象直接量</h2>
+		<p>
+		  创建对象最简单的方式就是在JavaScript 代码中使用对象直接量。对象直接量是由若干名/值对组成的映射表，名/值对中间用冒号分隔，名/值对之间
+		  用逗号分隔，整个映射表用花括号括起来。属性名可以使JavaScript标识符也可以是字符串直接量（包括空字符串）。属性的值可以使任意类型的JavaScript
+		  表达式，表达式的值（可以使原始值也可以是对象值）。下面是一些例子：
+		</p>
+		<script type="text/javascript">
+			var empty = {};
+			var point = {x:0,y:0};
+			var point2 = {x:point.x,y:point.y};
+			var book = {
+				'main title':'javascript',
+				'sub-title':'the definitive guide',
+				'for':'all audiences',
+				'authour':{
+					firstname:'David',
+					surname:'Flanagan'
+				}
+			};
+			
+		</script>
+		<p>
+			在ECMScript5（以及ECMScript3的一些实现）中，保留字可以用做不带引号的属性名。然而对于ECMScript3来说，使用保留字作为属性名必须使用
+			引号括起来，在ECMScript5中，对象直接量中的最后一个属性后的逗号将忽略，且在ECMScript3的大部分实现中也可以忽略这个逗号，但在IE中则报错
+			对象直接量是一个表达式，这个表达式的每次运算都创建并初始化一个新对象。每次计算对象直接量的时候，也都会计算它的每个属性的值。也就是说，
+			如果在一个重复调用的函数中的循环体内使用了对象直接量，它将创建很多新对象，并且每次创建的对象属性值也有可能不同。
+		</p>
+		<h2>6.1.2 通过new 创建对象</h2>
+		<p>
+			new 运算符创建并初始化一个新对象。关键字new后跟随一个函数调用。这里的函数称作构造函数（constructor），构造函数用以初始化一个新创建的对象。
+			JavaScript 语言核心中的原始类型都包含内置构造函数。例如：
+			
+		</p>
+		<script type="text/javascript">
+			var o = new Object();//创建一个空对象和{}一样
+			var a = new Array();
+			var d = new Date();
+			var r = new RegExp('/js/ig');
+		</script>
+		<p>除了这些内置构造函数，用自定义构造函数来初始化新对象也是非常常见的。</p>
+
+	</body>
+</html>

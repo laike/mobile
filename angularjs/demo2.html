@@ -1,0 +1,58 @@
+<html ng-app="UserInfoModule">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container"  ng-controller="UserInfoCtrl">
+         <div class="row">
+             <form>
+                 <div class="form-group row">
+                     <label for="inputEmail3" class="col-sm-2 form-control-label">Email</label>
+                     <div class="col-sm-10">
+                         <input type="email" class="form-control" id="inputEmail3" placeholder="Email" ng-model="userinfo.email">
+                     </div>
+                 </div>
+                 <div class="form-group row">
+                     <label for="inputPassword3" class="col-sm-2 form-control-label">Password</label>
+                     <div class="col-sm-10">
+                         <input type="password" class="form-control" id="inputPassword3" placeholder="Password" ng-model="userinfo.password">
+                     </div>
+                 </div>
+
+                 <div class="form-group row">
+                     <label class="col-sm-2">Checkbox</label>
+                     <div class="col-sm-10">
+                         <div class="checkbox">
+                             <label>
+                                 <input type="checkbox" ng-model="userinfo.autologin"> Check me out
+                             </label>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="form-group row">
+                     <div class="col-sm-offset-2 col-sm-2">
+                         <button type="submit" class="btn btn-secondary" ng-click="getFormData()">获取</button>
+                     </div>
+                     <div class="col-sm-offset-2 col-sm-2">
+                         <button type="submit" class="btn btn-secondary" ng-click="setFormData()">设置</button>
+                     </div>
+                     <div class="col-sm-offset-2 col-sm-2">
+                         <button type="submit" class="btn btn-secondary" ng-click="resetFormData()">重置</button>
+                     </div>
+                 </div>
+             </form>
+         </div>
+
+</div>
+
+
+
+
+<script src="js/angular.js"></script>
+<script src="js/demo2.js"></script>
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

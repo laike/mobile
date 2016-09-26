@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				font-size:16px;
+			}
+		  .swiper-wrapper {
+		    -webkit-perspective: 1200px;
+		    -moz-perspective: 1200px;
+		    -ms-perspective: 1200px;
+		    perspective: 1200px;
+		  }
+		  .swiper-slide {
+		    position: relative;
+		    -webkit-transform-style: preserve-3d;
+		    -moz-transform-style: preserve-3d;
+		    -ms-transform-style: preserve-3d;
+		    transform-style: preserve-3d;
+		   background-size:100% auto;
+		   overflow:hidden;
+		   text-align:center;
+		   line-height:300px;
+		  }
+		.swiper-slide img{
+			width:100%;
+			height: 100%;
+		}
+        .tc{
+        	text-align: center;
+        }
+        .mc{
+        	margin: 0 auto;
+        }
+        .tl{
+        	text-align: left;
+        }
+        .tr{
+        	text-align: right;
+        }
+        .rel{position: relative;}
+        .abs{position: absolute;}
+        .l{float: left;}
+        .r{float: right;}
+        .abs-c{position: absolute;width:100%;left: 50%;margin-left: -50%;}
+        .col-white{color: #fff;}
+        .col-blue{color:blue;}
+        .col-purple{color:purple;}
+        .col-orange{color:orange;}
+        .ft16{font-size: 2em;}
+        .ft18{font-size: 3em;}
+        .ft20{font-size: 4em;}
+        .ft22{font-size: 5em;}
+        .lineheight25{line-height: 2em;}
+        
+		</style>
+	</head>
+	<body>
+	<div style="width:100%;margin:0 auto;">
+	<div class="swiper-container">
+	  <div class="swiper-wrapper">
+	  <div class="swiper-slide">
+	  	<img src="img/zhiling1.jpg" >
+	  		<h1 class="ani abs-c col-white ft22 " swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="top:0" >关于我们</h1>
+	  	    <p class=" ani abs-c col-white ft18  lineheight25" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:300px;">
+	  	    	赖家大院是集休闲娱乐、养老住宿、餐饮的一个休闲农庄，农庄内设有自动棋牌室、餐厅、可钓鱼、春天看桃花、夏季摘桃子。距离黄龙溪几分钟车程就能感受这座古老而有富有现代化气息的乡镇。 同时到本农庄也是非常方便，空气清新，景色宜人，这样好的空气和环境人都要多活好几年。受够了城市空气的你是不是也想来体验下，住了一次你就会爱上乡下的空气和氛围。同时本农庄的建筑 类似别野，每层单独设阳台可以喝茶聊天，早晨看日出，傍晚看日出，想想就有多惬意。如果你也想体验赶紧联系我们。
+	  	    </p>
+	  </div>
+	    <div class="swiper-slide"><img src="img/zhiling2.jpg" ></div>
+	    <div class="swiper-slide"><img src="img/zhiling3.jpg" ></div>
+	  </div>
+	</div>
+	</div>
+
+		
+     <script src="js/ziling.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

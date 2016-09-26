@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>彩票页面</title>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--是否引入主题-->
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>-->
+    <!--引入页面重置样式-->
+    <link rel="stylesheet" href="css/disney.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <!--针对苹果设备的一些优化和功能体验-->
+    <link rel="apple-touch-icon" href="icon.png" ><!--添加至桌面-->
+    <meta name="apple-mobile-web-app-capable" content="yess"><!--是否允许全屏-->
+</head>
+<body>
+<!--头部-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+         <div class="navbar-header">
+               <a href="#" class="navbar-brand">主页</a>
+               <div class="pull-left pdt-10">
+                   <div class="row">
+                       <div class="col-xs-7">
+                           <div class="dropdown">
+                               <button type="button" id="dn-lottery-type" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                   北京赛车(PK10)
+                                   <span class="caret"></span>
+                               </button>
+                               <ul class="dropdown-menu " aria-labelledby="dn-lottery-type">
+                                   <li><a href="">北京赛车(PK10)</a></li>
+                                   <li><a href="">重庆时时彩</a></li>
+                                   <li><a href="">广东快乐十分</a></li>
+                                   <li><a href="">重庆幸运农场</a></li>
+                                   <li><a href="">新疆时时彩</a></li>
+                                   <li><a href="">天津时时彩</a></li>
+                                   <li><a href="">香港六合彩</a></li>
+                                   <li><a href="">北京快乐8</a></li>
+                                   <li><a href="">福彩3D</a></li>
+                                   <li><a href="">体彩排列3</a></li>
+                                   <li><a href="">广西快3</a></li>
+                                   <li><a href="">广西快乐十分</a></li>
+                                   <li><a href="">广东11选5</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-xs-4">
+                           <div class="dropdown">
+                               <button type="button" id="dn-lottery-son-type" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                   两面盘
+                                   <span class="caret"></span>
+                               </button>
+                               <ul class="dropdown-menu" aria-labelledby="dn-lottery-son-type">
+                                   <li><a href="">两面盘</a></li>
+                                   <li><a href="">单号1 ~ 10</a></li>
+                                   <li><a href="">冠亚军组合</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+
+
+               </div>
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dn-navbar" aria-expanded="false" >
+                   <span class="sr-only">切换菜单</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+
+         </div>
+         <!--菜单导航-->
+         <div id="dn-navbar" class="collapse navbar-collapse">
+             <ul class="nav navbar-nav">
+                 <li><a href=""><span class="">账号：</span><span class="label label-default">免费试玩</span></a></li>
+                 <li><a href="index.html"><span class="fa fa-home"></span>&nbsp;&nbsp;主页</a></li>
+                 <li><a href="weijiemingxi.html"><span class="fa fa-file-text-o"></span>&nbsp;&nbsp;未结明细</a></li>
+                 <li><a href="jinriyijie.html"><span class="fa fa-file"></span>&nbsp;&nbsp;今天已结</a></li>
+                 <li><a href="baobiao.html"><span class="fa fa-files-o"></span>&nbsp;&nbsp;两周报表</a></li>
+                 <li><a href="kaijiang.html"><span class="fa fa-star-o"></span>&nbsp;&nbsp;开奖结果</a></li>
+                 <li><a href="guize.html"><span class="fa fa-list-ol"></span>&nbsp;&nbsp;规则</a></li>
+                 <li><a href=""><span class="fa glyphicon glyphicon-headphones"></span>&nbsp;&nbsp;在线客服</a></li>
+                 <li><a href="index.html" class="btn btn-block btn-default ">退出</a></li>
+             </ul>
+         </div>
+    </div>
+</nav>
+<!--应用内容显示部分-->
+<div id="dn-app-content">
+      <div class="container-fluid dn-order-top"  >
+          <div class="row dn-member-info pdt-10">
+              <div class="col-xs-4 col-sm-4">
+                  <div class="dn-info-txt">额度</div>
+                  <div class="dn-info-num">2000</div>
+              </div>
+              <div class="col-xs-4 col-sm-4">
+                  <div class="dn-info-txt">未结算金额</div>
+                  <div class="dn-info-num">0</div>
+              </div>
+              <div class="col-xs-4 col-sm-4">
+                  <div class="dn-info-txt">今日输赢</div>
+                  <div class="dn-info-num">0</div>
+              </div>
+          </div>
+          <div class="row dn-periods-numbers pdt-10">
+              <div class="col-xs-3 col-sm-4 ">
+                  573211期
+              </div>
+              <div class="col-xs-9 col-sm-8">
+
+                       <span class="label label-default">1</span>
+
+                      <span class="label label-primary">2</span>
+
+                      <span class="label label-danger">3</span>
+
+                      <span class="label label-info ">4</span>
+
+                      <span class="label label-default">5</span>
+
+                      <span class="label label-success">6</span>
+
+                      <span class="label label-default">7</span>
+
+                      <span class="label label-warning">8</span>
+
+                      <span class="label label-success">9</span>
+
+                      <span class="label label-primary">10</span>
+
+
+              </div>
+          </div>
+          <div class="row dn-periods-area pdt-10">
+              <div class="col-xs-5 col-sm-5 ">
+                  <span class="col-green fb">573220</span>期
+
+              </div>
+              <div class="col-xs-5 col-sm-5 ">
+                  距离开奖: <span class="col-green fb">00:58</span>
+              </div>
+              <div class="col-xs-2 col-sm-2 pd0">
+                  <i class="fa fa-refresh"></i>
+                  6秒
+              </div>
+          </div>
+
+
+      </div>
+    <div class="container-fluid" id="dn-order-panel">
+        <div class="row dn-order-area pdtb10 ">
+            <div class="col-xs-12 dn-order-title tc mgb10">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-xs btn-info dn-bet-hide">隐藏 <i class="fa fa-minus-square"></i></button>
+                </div>
+                <span class="name">冠，亚军和</span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-xs btn-primary dn-bet-order">下单 <i class="fa fa-arrow-circle-down"></i></button>
+                </div>
+
+            </div>
+            <div class="dn-order-bet-area  ">
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg ">
+                        <div class="title">冠亚大</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚小</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚单</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚双</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row dn-order-area pdtb10 ">
+            <div class="col-xs-12 dn-order-title tc mgb10">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-xs btn-info dn-bet-hide">隐藏 <i class="fa fa-minus-square"></i></button>
+                </div>
+                <span class="name">冠，亚军和</span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-xs btn-primary dn-bet-order">下单 <i class="fa fa-arrow-circle-down"></i></button>
+                </div>
+
+            </div>
+            <div class="dn-order-bet-area  ">
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg ">
+                        <div class="title">冠亚大</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚小</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚单</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚双</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row dn-order-area pdtb10 ">
+            <div class="col-xs-12 dn-order-title tc mgb10">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-xs btn-info dn-bet-hide">隐藏 <i class="fa fa-minus-square"></i></button>
+                </div>
+                <span class="name">冠，亚军和</span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-xs btn-primary dn-bet-order">下单 <i class="fa fa-arrow-circle-down"></i></button>
+                </div>
+
+            </div>
+            <div class="dn-order-bet-area  ">
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg ">
+                        <div class="title">冠亚大</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚小</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚单</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚双</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+                <div class="row dn-order-area pdtb10 ">
+            <div class="col-xs-12 dn-order-title tc mgb10">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-xs btn-info dn-bet-hide">隐藏 <i class="fa fa-minus-square"></i></button>
+                </div>
+                <span class="name">冠，亚军和</span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-xs btn-primary dn-bet-order">下单 <i class="fa fa-arrow-circle-down"></i></button>
+                </div>
+
+            </div>
+            <div class="dn-order-bet-area  ">
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg ">
+                        <div class="title">冠亚大</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚小</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚单</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚双</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+                <div class="row dn-order-area pdtb10 ">
+            <div class="col-xs-12 dn-order-title tc mgb10">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-xs btn-info dn-bet-hide">隐藏 <i class="fa fa-minus-square"></i></button>
+                </div>
+                <span class="name">冠，亚军和</span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-xs btn-primary dn-bet-order">下单 <i class="fa fa-arrow-circle-down"></i></button>
+                </div>
+
+            </div>
+            <div class="dn-order-bet-area  ">
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg ">
+                        <div class="title">冠亚大</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚小</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚单</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚双</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+                <div class="row dn-order-area pdtb10 ">
+            <div class="col-xs-12 dn-order-title tc mgb10">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-xs btn-info dn-bet-hide">隐藏 <i class="fa fa-minus-square"></i></button>
+                </div>
+                <span class="name">冠，亚军和</span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-xs btn-primary dn-bet-order">下单 <i class="fa fa-arrow-circle-down"></i></button>
+                </div>
+
+            </div>
+            <div class="dn-order-bet-area  ">
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg ">
+                        <div class="title">冠亚大</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚小</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚单</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚双</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+                <div class="row dn-order-area pdtb10 ">
+            <div class="col-xs-12 dn-order-title tc mgb10">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-xs btn-info dn-bet-hide">隐藏 <i class="fa fa-minus-square"></i></button>
+                </div>
+                <span class="name">冠，亚军和</span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-xs btn-primary dn-bet-order">下单 <i class="fa fa-arrow-circle-down"></i></button>
+                </div>
+
+            </div>
+            <div class="dn-order-bet-area  ">
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg ">
+                        <div class="title">冠亚大</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚小</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚单</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚双</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+                <div class="row dn-order-area pdtb10 ">
+            <div class="col-xs-12 dn-order-title tc mgb10">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-xs btn-info dn-bet-hide">隐藏 <i class="fa fa-minus-square"></i></button>
+                </div>
+                <span class="name">冠，亚军和</span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-xs btn-primary dn-bet-order">下单 <i class="fa fa-arrow-circle-down"></i></button>
+                </div>
+
+            </div>
+            <div class="dn-order-bet-area  ">
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg ">
+                        <div class="title">冠亚大</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚小</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚单</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚双</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+                <div class="row dn-order-area pdtb10 ">
+            <div class="col-xs-12 dn-order-title tc mgb10">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-xs btn-info dn-bet-hide">隐藏 <i class="fa fa-minus-square"></i></button>
+                </div>
+                <span class="name"><span class="name">冠，亚军和</span></span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-xs btn-primary dn-bet-order">下单 <i class="fa fa-arrow-circle-down"></i></button>
+                </div>
+
+            </div>
+            <div class="dn-order-bet-area  ">
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg ">
+                        <div class="title">冠亚大</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚小</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚单</div>
+                        <div class="num col-red fb">1.79</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dn-order-bet-item  btn-lg">
+                        <div class="title">冠亚双</div>
+                        <div class="num col-red fb">2.2</div>
+                        <div class="dn-bet-active-arrow"><i class="fa fa-check"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="lib/jquery-1.10.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

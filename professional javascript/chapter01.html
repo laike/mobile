@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<!--这里我们要学到几种关于script标签在页面中引入JavaScript的方式
+ 第一种 就是script标签的一些个属性 async charset defer language src type  这里面type 和language这两个属性可以不写了没有必要 默认是 text/javascript 和 JavaScript
+ async这个是异步加载脚本不会影响页面上其它资源的加载比如说图片、css、其它脚本资源等的加载。
+ defer 这个属性以后可能会很常用因为这个属性指定脚本可以延迟到文档完全被解析和显示之后执行。
+ -->
+ <script src="js/chapter02.js" async></script>
+ <script src="js/chapter01.js" defer></script>
+<script>
+	function say(){
+	//alert('<\/script>');
+	//这种方式会导致错误 请使用转移符号来对它进行转义 alert('<\/script>');
+    }
+
+</script>
+<script>
+	//<![CDATA[
+        alert('demo');
+	//]]>
+</script>
+<!--使用外部JavaScript有几个有点：第一：可维护性 第二个：可缓存性 第三个：适应未来-->
+
+<!--文档模式：混杂模式(quirks mode )和标准模式(standards mode) 主要影响css的呈现 但是某些时候也会影响到js执行情况 尽量使用准标准模式！-->
+
+<noscript>
+	您的浏览器不支持JavaScript！或者已经禁用javascript 请使用谷歌火狐或者ie9以上的浏览器浏览网站！
+</noscript>
+</body>
+</html>

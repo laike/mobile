@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="page-group">
-    <div class="page" id="page-register">
+    <div class="page">
         <!-- 标题栏 -->
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left  ">
@@ -163,6 +163,10 @@
 </div>
 
 </div>
-<script src="js/app.js"></script>
+<script>
+    $("input[type='date']").calendar({
+        value: ['2015-12-05']
+    });
+</script>
 </body>
 </html>

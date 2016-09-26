@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:#eee;
+}
+#demo{
+    width:100px;
+    height:100px;
+    background:red;
+    color:#fff;
+    margin: 0 auto;
+    padding:10px;
+    position: absolute;
+}
+.ed-calendar-container{
+    width:350px;
+    height:386px;
+    margin:50px auto;
+}
+.ed-calendar-inner{
+    width:320px;
+    margin:0 auto;
+    background: #fff;
+    position: relative;
+    height:100%;
+}
+.ed-calendar-top-area{
+    width:100%;
+    height:155px;
+    background: url("../img/calendar_bg.png") no-repeat center top;
+    position: relative;
+    text-align: center;
+}
+.ed-calendar-next,.ed-calendar-pre{
+    display: block;
+    position: absolute;
+    top:65px;
+    width:30px;
+    height:30px;
+    opacity: 1;
+    transition: all linear .3s;
+}
+.ed-calendar-next:hover,.ed-calendar-pre:hover{
+    opacity: 0.5;
+}
+.ed-calendar-pre{
+    left:-30px;
+   background: url("../img/pre.png") no-repeat left top;
+}
+.ed-calendar-next{
+    right:-30px;
+    background: url("../img/next.png") no-repeat left top;
+}
+.ed-calendar-txt{
+    display: inline-block;
+    color:#fff;
+    padding-top:46px;
+}
+.ed-calendar-txt span{
+    display: inline-block;
+    width:100%;
+}
+.ed-calendar-txt-day{
+    font-size: 44px;
+    font-weight: bold;
+}
+.ed-calendar-txt-year-month{
+    font-size: 18px;
+}
+.ed-calendar-date{
+    padding:22px 12px;
+    height:187px;
+}
+.ed-calendar-date table{
+   height:100%;
+}
+.ed-calendar-date table tr{
+    height:26px;
+
+}
+.ed-calendar-date table tr td,.ed-calendar-date table tr th{
+    width:26px;
+    height:26px;
+    text-align: center;
+}
+.ed-calendar-date table tr td.cur,.ed-calendar-date table tr td:hover{
+    background: #83c82f;
+    color:#fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.SkewIn{
+    animation-name: skew;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+@keyframes skew {
+    0% {
+        transform: translate3d(20%, 0, 0) skewX(-30deg);
+        opacity: 0;
+    }
+    60% {
+        transform: skewX(20deg);
+        opacity: 1;
+    }
+    80% {
+        transform: skewX(-5deg);
+        opacity: 1;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}

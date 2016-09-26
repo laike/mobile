@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="page-group">
-    <div id="page-settings" class="page">
+    <div class="page">
         <!-- 标题栏 -->
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left  ">
@@ -177,6 +177,21 @@
 </div>
 
 </div>
-<script src="js/app.js"></script>
+<script>
+    (function($){
+        $("#onekey-recycle").click(function(){
+            $.showPreloader('正在回收...');
+            setTimeout(function () {
+                $.toast('回收成功！', 2345, 'success top');
+                $.hidePreloader();
+            }, 2000);
+        });
+        $('.item-link').click(function(){
+            var url = $(this).data('url');
+            $.router.load(url,true);//强制清除缓存
+        });
+    })(Zepto);
+
+</script>
 </body>
 </html>

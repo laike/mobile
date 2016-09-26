@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="page-group">
-    <div id="page-promotion" class="page">
+    <div class="page">
         <!-- 标题栏 -->
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left  ">
@@ -66,7 +66,7 @@
                     <div class="list-block">
                         <ul>
                             <li>
-                                <a href="promotion_info.html" class="item-link item-content">
+                                <a href="#" class="item-link item-content">
                                     <div class="item-media"><i class="icon icon-f7"></i></div>
                                     <div class="item-inner">
                                         <div class="item-title">欧洲杯集结号</div>
@@ -86,7 +86,7 @@
                     <div class="list-block">
                         <ul>
                             <li>
-                                <a href="promotion_info.html" class="item-link item-content">
+                                <a href="#" class="item-link item-content">
                                     <div class="item-media"><i class="icon icon-f7"></i></div>
                                     <div class="item-inner">
                                         <div class="item-title">欧洲杯集结号</div>
@@ -106,7 +106,7 @@
                     <div class="list-block">
                         <ul>
                             <li>
-                                <a href="promotion_info.html" class="item-link item-content">
+                                <a href="#" class="item-link item-content">
                                     <div class="item-media"><i class="icon icon-f7"></i></div>
                                     <div class="item-inner">
                                         <div class="item-title">欧洲杯集结号</div>
@@ -126,7 +126,7 @@
                     <div class="list-block">
                         <ul>
                             <li>
-                                <a href="promotion_info.html" class="item-link item-content">
+                                <a href="#" class="item-link item-content">
                                     <div class="item-media"><i class="icon icon-f7"></i></div>
                                     <div class="item-inner">
                                         <div class="item-title">欧洲杯集结号</div>
@@ -146,7 +146,7 @@
                     <div class="list-block">
                         <ul>
                             <li>
-                                <a href="promotion_info.html" class="item-link item-content">
+                                <a href="#" class="item-link item-content">
                                     <div class="item-media"><i class="icon icon-f7"></i></div>
                                     <div class="item-inner">
                                         <div class="item-title">欧洲杯集结号</div>
@@ -166,7 +166,7 @@
                     <div class="list-block">
                         <ul>
                             <li>
-                                <a href="promotion_info.html" class="item-link item-content">
+                                <a href="#" class="item-link item-content">
                                     <div class="item-media"><i class="icon icon-f7"></i></div>
                                     <div class="item-inner">
                                         <div class="item-title">欧洲杯集结号</div>
@@ -203,6 +203,18 @@
 </div>
 
 </div>
-<script src="js/app.js"></script>
+<script>
+    (function($){
+        $("#onekey-recycle").click(function(){
+            $.showPreloader('正在回收...');
+            setTimeout(function () {
+                $.toast('回收成功！', 2345, 'success top');
+                $.hidePreloader();
+            }, 2000);
+        });
+
+    })(Zepto);
+
+</script>
 </body>
 </html>

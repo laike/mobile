@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>6.2.1作为关联数组的对象</h2>
+		<p>
+			上文提到，下面两个JavaScript表达式的值相同：
+			
+		</p>
+		<script type="text/javascript">
+			object.property
+			object['property']
+		</script>
+		<p>
+			第一种语法使用点运算符和一个标识符，这和C和Java中访问一个结构体或对象的静态字段非常相似。第二种语法使用方括号和一个字符串，看起
+			来更像数组，只是这个数组元素是通过字符串索引而不是数字索引。这种数组就是我们所说的关联数组（associative array），也称作散列、映射
+			或字典(dictionary)。 JavaScript对象都是关联数组，本节将讨论他的重要性。
+		</p>
+		<p>
+			
+			在C、C++和Java和一些强类型（strong typed）语言中，对象只能拥有固定数目的属性，并且这些属性名称必须提前定义好。由于JavaScript
+			是弱类型语言，因此不必遵循这条规定，在任何对象中程序都可以创建任意数量的属性。但通过点运算符(.)访问对象属性时，属性名用一个标识符
+			来表示。标识符必须直接出现在JavaScript程序中，他们不是数据类型，因此程序无法修改他们。
+		</p>
+		<p>
+			反过来讲，当通过[]来访问对象时，属性名通过字符串来表示。字符串是JavaScript的数据类型，在程序运行时可以修改和创建它们。因此可以
+			在JavaScript中使用下面代码：
+			
+		</p>
+		<script type="text/javascript">
+			var addr ="";
+			for(i=0;i<4;i++){
+				addr += customer['address'+i]+'\n';
+			}
+		</script>
+		<p>
+			这段代码读取customer对象的 address0、address1、address2和address3 属性，并将他们链接起来。
+			这个例子主要说明了使用数组写法和用字符串表达式来访问对象的灵活性。这段代码也是可以通过点运算符来重写，但是很多场景只能使用数组写法
+			来完成。假设你正在写一个程序，这个程序利用网络资源计算当前用户股票市场投资的金额。程序允许用户输入每只股票市场投资的金额。程序允许
+			用户输入每只股票的名称和购股份额。改程序使用名为portfolio的对象来存储这些信息。每只股票在这个对象中都有对应的属性，属性名称就是
+			股票名称，属性值就是购股数量，例如，如果用户持有IBM的50股，那么portfolio.ibm属性值就为50 。
+			下面程序的部分代码，这个函数用来给portfolio添加新的股票：
+		</p>
+		<script type="text/javascript">
+			function addstock(portfolio,stockname,shares){
+				portfolio[stockname] = shares;
+			}
+		</script>
+		<p>
+			由于用户在程序运行时输入股票名称，因此在之前无法得知这些股票的名称是什么。而由于在写程序的时候不知道属性名称，因此无法通过点运算符(.)
+			来访问对象 portfolio的属性。但可以使用[]运算符，因为它使用字符串值(字符串值是动态的，可以在运行时更改)而不是标识符(标识符是静态的，
+			必须写死在程序中)作为索引对属性进行访问。
+			
+			第五章介绍了for/in 循环 .当使用for/in 循环遍历关联数组的时候，就可以清晰地体会到for/in的强大之处。下面的例子就是利用for/in 计算
+			portfolio的总计值：
+			
+		</p>
+		<script type="text/javascript">
+			function getvalue(portfolio){
+				var total = 0;
+				for (stock in portfolio) {
+					var shares = portfolio[stock];
+					var price = getquote(stock);
+					total += shares*price;
+				}
+				return total;
+			}
+		</script>
+	</body>
+
+</html>

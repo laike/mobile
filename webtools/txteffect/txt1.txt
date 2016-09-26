@@ -1,0 +1,12 @@
+bounce
+flash
+pulse
+rubberBand
+shake
+swing
+tada
+wobble
+bounceInLeft
+bounceInRight
+bounceIn
+bounceInDown

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			 @media print{
+			 	 div.test{
+			 	 	background: red;
+			 	 	display: none;
+			 	 }
+			 }
+			 @media only screen and (orientation:landscape) {
+			 	div.test{
+			 		display: flex;
+			 		width:100%;
+			 		height:100%;
+			 		background:indianred;
+			 	}
+			 }
+			 div.test{
+			 	width:500px;
+			 	height:500px;
+			 	margin:100px auto;
+			 }
+		</style>
+	</head>
+	<body>
+		<div class="test">
+			ddd
+		</div>
+	</body>
+</html>

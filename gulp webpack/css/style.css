@@ -1,0 +1,9 @@
+body{
+    background: red;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+}
+#demo{
+    background: url("./images/avatar.jpg") no-repeat left top;
+}

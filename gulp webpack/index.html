@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		width: 1000px;
+		height: 200px;
+	}
+	#box{
+		position: absolute;
+		right: 400px;
+		top: 40px;
+		width: 100px;
+		height: 100px;
+		background: red;
+	}
+	
+  </style>
+</head>
+<body>
+<div id="box">
+			
+</div>
+<script>
+	var getCss = function(o,key){
+      return o.currentStyle? o.currentStyle[key] : document.defaultView.getComputedStyle(o,false)[key];
+    }
+	document.addEventListener('DOMContentLoaded', function(event){
+		  var box = document.getElementById("box");
+          console.log('right:'+getCss(box,'right'));
+          console.log('left:'+getCss(box,'left'));
+          console.log('top:'+getCss(box,'top'));
+          console.log('bottom:'+getCss(box,'bottom'));
+	})
+</script>
+</body>
+</html>

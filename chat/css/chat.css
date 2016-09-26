@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/*聊天内容区域自定义板块代码*/
+ .loader {
+     box-sizing: border-box;
+     width:57px;
+     height:57px;
+     position: absolute;
+     left:50%;
+     top:50%;
+     margin:-26px 0 0 -26px;
+     text-align: center;
+     vertical-align: middle;
+ }
+/* overlay at start */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+}
+
+/*评论窗口*/
+#reviewBox{
+    position: fixed;
+    left:50%;
+    bottom:0;
+    width:80%;
+    margin:0 0 0 -40%;
+    bottom:0;
+
+
+}

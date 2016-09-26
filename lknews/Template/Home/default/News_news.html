@@ -1,0 +1,11 @@
+<extend name="Public:base" />
+<block name="title"><title>新闻页面</title></block>
+
+
+<block name="content">
+<volist name="list" id="vo">
+<a href="/new/{$vo.id}">{$vo.title}</a><br/>
+ {$vo.content}
+</volist>
+</block>
+

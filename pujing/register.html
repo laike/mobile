@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/sm.css">
+    <script type='text/javascript' src='js/zepto.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/sm.js' charset='utf-8'></script>
+    <!--如果你用到了拓展包中的组件，还需要引用下面两个-->
+    <link rel="stylesheet" href="css/sm-extend.css">
+    <script type='text/javascript' src='js/sm-extend.js' charset='utf-8'></script>
+    <link rel="stylesheet" href="css/pujing.css"/>
+</head>
+<body>
+<div class="page-group">
+    <div class="page" id="page-register">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left  ">
+                <span class="icon"><img src="images/c21_logo.png" alt="logo"   class="pj-logo"/></span>
+            </a>
+            <span class="icon pull-left">普京国际</span>
+            <div id="pj-top-nav-kefu" class="pull-right">
+                <a  href="#">
+                    <span class="icon icon-message"></span>
+                    <span class="tab-label">客服</span>
+                </a>
+            </div>
+
+        </header>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content" id="pj-register-container">
+            <div class="content-block">
+                <p class="text-center pj-login-p-remind">使用谷歌浏览器访问手机端，获得更好地体验！</p>
+            </div>
+            <div class="list-block">
+                <ul>
+                    <!-- 用户名 -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-name col-red">*</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">用户名</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="4-11个字符长字母或数字组成">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--密码-->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-password col-red">*</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">密码</div>
+                                <div class="item-input">
+                                    <input type="password" placeholder="6-16个字符长度字母或数字组成" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--确认密码-->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-password col-red">*</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">确认密码</div>
+                                <div class="item-input">
+                                    <input type="password" placeholder="重新输入密码" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 真实姓名 -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-name col-red">*</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">真实姓名</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="必须与您的银行账户姓名一致">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 出生日期 -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-calendar col-red">*</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">出生日期</div>
+                                <div class="item-input">
+                                    <input type="date" placeholder="" value="1990-04-30">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 推介代码: -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-name"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">推介代码</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="非必填">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 验证码: -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-name col-red">*</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">验证码</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-100"><a href="register.html" class="button button-big button-fill button-link">注册</a></div>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-100"><a href="login.html" class="button button-big button-fill button-link">已有账号,我要登录</a></div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+<!-- popup, panel 等放在这里 -->
+<div class="panel-overlay"></div>
+<!-- Left Panel with Reveal effect -->
+<div class="panel panel-left panel-reveal">
+    <div class="content-block">
+        <p>这是一个侧栏</p>
+        <p></p>
+        <!-- Click on link with "close-panel" class will close panel -->
+        <p><a href="#" class="close-panel">关闭</a></p>
+    </div>
+</div>
+
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

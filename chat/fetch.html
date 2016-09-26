@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>fetch</title>
+</head>
+<body>
+<script>
+    var obj = fetch('http://localhost:63342/chat/es2015test.html',{
+        method:"POST",
+        body:'id=45&cache=false&username=laike'
+    });
+    obj.then(function(data){
+        if(data.ok){
+//              for(var i in data){
+//                  console.log(data[i]);
+//              }
+            var getTextObj = data.text();
+            getTextObj.then(function(res){
+                console.log(res);
+            });
+        }
+    },function(err){
+
+    });
+</script>
+</body>
+</html>

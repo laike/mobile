@@ -1,0 +1,254 @@
+
+.pj-logo{width:30px}
+.pj-top-nav-money{width:21px;}
+#pj-top-nav .button{color:#000;border:0;padding:0;font-size:.5rem;margin-left:0.2rem;display:inline-block;}
+.pj-bg-light-gray{background-color:#f7f7f8;}
+.pj-bg-white{background-color:#fff;}
+#home-top-menu{border-bottom: 1px solid #d3d3d3;padding:14px 0;margin:0;}
+#home-top-menu  div{text-align: center;}
+#home-top-menu  div a{display: inline-block;color:#000;}
+#home-top-menu  div img{display:inline-block; width:34px;  }
+#home-top-menu  div span{display:inline-block;width:100%;text-align:center;font-size:0.5rem;}
+#pj-content-index{padding:0;margin:0;}
+#home-notice-bar{margin:0;padding:0;}
+h1.pj-notice-title{margin:0;position: relative;height:36px;width:100%;background:#fff;}
+h1.pj-notice-title span{display:block;width:40px;position:absolute;left:10px;top:0;}
+h1.pj-notice-title img{width:40px;float:left;}
+.pj-marquee-wrap{
+    margin:0 10px 0 50px;
+    overflow: hidden;
+}
+.pj-marquee{
+    width:auto;
+    height:36px;
+    color:#000;
+}
+.pj-marquee-row{
+    float: left;
+    font-weight: normal;
+    margin-right:10px;
+    line-height:36px;
+    font-size:0.6rem;
+}
+#home-games{border-bottom: 1px solid #e9e9e9;margin:10px 0;background: #fff;}
+.home-game-menu{padding:0;margin:0;}
+.home-game-menu  div{text-align: center;border-left: 1px solid #e9e9e9; border-top: 1px solid #e9e9e9;}
+.home-game-menu  div a{display: inline-block;color:#000;}
+.home-game-menu  div img{display:inline-block; width:82px;  }
+.home-game-menu  div span{display:inline-block;width:100%;text-align:center;font-size:0.5rem;}
+
+
+#pj-home-promotions{background: #fff;padding:0;margin:10px 0;}
+.home-promotions-menu{padding:0;margin:0;}
+.home-promotions-menu  div.item{text-align: center;border-right: 1px solid #e9e9e9; }
+.home-promotions-menu  div.item a{display: inline-block;color:#000;}
+.home-promotions-menu  div.item img{display:inline-block; width:47%;max-width:222px;  }
+.home-promotions-menu  div.item div{width:45%;margin-top:10px;}
+.home-promotions-menu  div.item span,.home-promotions-menu  div.item em{display:inline-block;width:100%;text-align:center;font-size:0.5rem;}
+.home-promotions-menu  div.item em{color:#ff0000;}
+
+.pj-common-bar{
+    background:#fff;
+    font-size:0.6rem;
+    font-weight: normal;
+    margin:0;
+    border-top:1px solid #dcdcdc;
+    border-bottom:1px solid #dcdcdc;
+    padding:0 10px;
+    height:36px;
+    line-height: 36px;
+}
+#home-tools-menu{border-bottom: 1px solid #d3d3d3;padding:14px 0;margin:0;width:100%;}
+#home-tools-menu  div{text-align: center;}
+#home-tools-menu  div a{display: inline-block;color:#000;}
+#home-tools-menu  div img{display:inline-block; width:70px;  }
+#home-tools-menu  div span{display:inline-block;width:100%;text-align:center;font-size:0.5rem;}
+
+/*登录界面代码*/
+#pj-top-nav-kefu a{
+    color:#000;
+    font-size:0.6rem;
+}
+.pj-login-p-remind{
+    font-size:0.6rem;
+}
+#pj-login-container .content-block,#pj-register-container .content-block{
+    margin:1rem 0;
+}
+#pj-login-container .list-block
+,#pj-register-container .list-block
+,#pj-settings-container .list-block
+,#pj-pswset-container .list-block
+,#pj-wdpwd-container .list-block
+,#card-list-container .list-block{
+    margin:1rem 0.75rem;
+}
+#pj-login-container .list-block .item-title.label,#pj-register-container .list-block .item-title.label{
+    width:25%;
+}
+#pj-login-container .button.button-fill,#pj-register-container .button.button-fill{
+    background: #007aff;
+}
+#pj-login-container .button-white.button-fill,#pj-register-container .button-white.button-fill,#card-list-container .button-white.button-fill{
+    background:#fff;
+    color:#007aff;
+}
+/*注册页面样式*/
+.bold{
+    font-weight:bold!important;
+}
+.col-red{
+    color:#ff0000!important;
+}
+.col-blue{
+    color:#0894ec!important;
+}
+.font-12{
+    font-size:12px!important;
+}
+.font-14{
+    font-size:14px!important;
+}
+.font-16{
+    font-size:16px!important;
+}
+.font-18{
+    font-size:18px!important;
+}
+.font-20{
+    font-size:20px!important;
+}
+#pj-register-container .list-block .item-content{
+    padding-left:0.25rem;
+}
+.inline-block{
+    display:inline-block!important;
+}
+.l{
+    float:left;
+}
+.r{
+    float:right;
+}
+.pdr10{
+    padding-right:10px;
+}
+/*用户中心样式*/
+#pj-settings-container{
+
+}
+#pj-settings-container .pj-settings-badage{
+    background:#ff0000;
+    color:#fff;
+    padding:3px 12px;
+}
+
+#pj-pswset-container .list-block .item-content{
+    padding-left:0;
+}
+#pj-pswset-container .list-block .item-title.label{
+    width:28%;
+}
+
+#pj-wdpwd-container .list-block .item-content{
+    padding-left:0.25rem;
+}
+#pj-wdpwd-container .list-block .item-title.label{
+    width:28%;
+}
+
+#pj-wtdCard-container table{
+   background: #fff;
+    width:100%
+}
+#pj-wtdCard-container table tr > th{
+    background:#dcdcdc;
+    font-size:0.7rem;
+    padding:10px 6px;
+    font-weight: normal;
+}
+#pj-wtdCard-container table tr > td{
+    text-overflow: clip;
+    padding:10px 5px;
+    font-size:0.7rem;
+}
+#pj-wtdCard-container .content-block{
+    margin:0.6rem 0;
+}
+#card-list-container{
+    display:none;
+}
+#pj-helper-container .list-block{
+    margin:0;
+}
+#pj-helper-container .list-block .item-subtitle{
+    font-size:0.6rem;
+    white-space:pre-wrap;
+    color:#999;
+    line-height: 20px;
+}
+#pj-game-container .buttons-row{
+    margin:10px auto 10px auto;
+    width:201px;
+}
+#pj-game-container .tabs{
+   background: #fff;
+    height:100%;
+}
+
+#pj-game-container .tabs .list-block{
+    margin:0;
+}
+#pj-promotion-container img,#pj-promotion-info-container img{
+    width:100%;
+}
+#pj-promotion-container .pj-auto-join-promotion,#pj-promotion-info-container .pj-auto-join-promotion{
+    font-size:0.6rem;
+}
+#pj-promotion-container  .list-block,#pj-promotion-info-container .list-block{
+    margin:0;
+}
+#pj-promotion-container  .list-block .item-inner,#pj-promotion-info-container .list-block .item-inner{
+    margin-left:0;
+}
+#pj-promotion-container .card .card-content-inner,#pj-promotion-info-container .card .card-content-inner{
+     font-size:0.6rem;
+     color:#999;
+}
+#pj-promotion-container .card .card-header,#pj-promotion-info-container .card-header{
+    padding:0;
+}
+#pj-promotion-container .card,#pj-promotion-info-container .card{
+    margin:0;
+}
+#pj-promotion-info-container{
+
+}
+#pj-promotion-info-container .list-block .item-title{
+    color:#000;
+}
+#pj-promotion-info-container .content-block{
+    background: #fff;
+    padding:0.75rem;
+    margin:10px 0 0 0;
+}
+#pj-promotion-info-container .content-block table{
+    width:100%;
+    margin:10px 0;
+}
+#pj-promotion-info-container .content-block p{
+    line-height: 20px;
+}
+.pj-promotion-join-state{
+    position: fixed;
+    width:100%;
+    left:50%;
+    margin-left:-50%;
+    bottom:2.5rem;
+    z-index: 99;
+    height:44px!important;
+    line-height: 44px!important;
+    font-size: 0.6rem!important;
+    background: #007aff!important;
+    border-radius: 0!important;
+}

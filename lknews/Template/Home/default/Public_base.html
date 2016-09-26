@@ -1,0 +1,45 @@
+<include file="Public:header" title="ThinkPHP框架" keywords="开源WEB开发框架" />
+<block name="menu">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">移动端切换</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="__ROOT__">随风新闻</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		      <li class="active"><a href="__SELF__">首页</a></li>
+		      {// 获取导航栏位 }
+		      {:$navs=W('Nav/nav')}
+		      <foreach name="navs" item="nav" key="index">
+			        <elt name="index" value="4">
+			        	<li ><a href="{$nav.url}">{$nav.name}</a></li>
+			        </elt>
+			  </foreach>
+		      </ul>
+		      
+               <form class="navbar-form navbar-right" role="search">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="请输入关键字">
+		        </div>
+		        <button type="submit" class="btn btn-default">搜索</button>
+		      </form>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+</block>
+<block name="left">左边分栏</block>
+<block name="main">主内容</block>
+<block name="right">右边分栏</block>
+<block name="footer">
+	
+</block>
+<include file="Public:footer"/>

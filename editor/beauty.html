@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>优惠活动定制编辑器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link href="js/flatui/css/flat-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/iconfont.css"/>
+    <script type="text/javascript" src="js/jquery.js" ></script>
+</head>
+<body>
+  <style>
+         #result{
+           width:100%;
+           min-height: 800px;
+
+         }
+  </style>
+<form action="" method="post" name="beautiform">
+  <div class="login-form">
+              <div class="control-group">
+                <h6>请粘贴html代码</h6>
+              </div>
+
+              <div class="control-group">
+                <textarea class="form-control" rows="20" name="txt" ></textarea>
+                <label class="login-field-icon fui-lock-16" for="login-pass"></label>
+              </div>
+
+              <input class="btn btn-primary btn-large btn-block" type="submit" value="格式化代码">
+  </div>
+</form>
+<div class="container">
+     <h6>生成的代码</h6>
+     <textarea id="result">
+       
+     </textarea>
+</div>
+<script>
+     var validate = function(){
+         var txt = $.trim($('textarea[name=txt]').val());
+         if(txt === ''){
+             alert('请粘贴代码进去！');
+             return false;
+         }
+     }
+     //是新添加的函数在旧函数之前执行
+      Function.prototype.before=function (beforefn) {
+          var _this= this;                               //保存旧函数的引用
+          return function () {                           //返回包含旧函数和新函数的“代理”函数
+              beforefn.apply(this,arguments);            //执行新函数,且保证this不被劫持,新函数接受的参数
+              // 也会被原封不动的传入旧函数,新函数在旧函数之前执行
+              return _this.apply(this,arguments);
+          };
+      };
+      var submitFn = function(){
+        var txt = $.trim($('textarea[name=txt]').val());
+        var param={
+           txt :txt
+        }
+        $.post('beauty.php',param,function(rs){
+          $('#result').val('');
+             $('#result').val(rs);
+        },'HTML');
+      }
+      submitFn=submitFn.before(validate);
+     $('form[name=beautiform]').submit(function(e){
+      e.stopPropagation();
+      e.preventDefault();
+      submitFn();
+     });
+</script>
+<!--<script src="show_own_source.js"></script>-->
+</body>
+</html>

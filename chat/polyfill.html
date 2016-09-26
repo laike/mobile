@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var users = [
+        {name:'shenyi',age:18},
+        {name:'laike',age:23}
+    ];
+    var getUser = users.find(function(finder){
+        return finder.name = 'laike';
+    });
+    alert(getUser.age);
+</script>
+</body>
+</html>

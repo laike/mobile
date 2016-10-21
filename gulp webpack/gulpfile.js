@@ -73,7 +73,7 @@ function entryArr() {
     plugins.forEach(function(item, index) {
         var pattern = /^jquery/i;
         if (pattern.test(item)) {
-            //这个属于是jQuery插 
+            //这个属于是jQuery插
             pluginArr.push(pluginroot + item);
             ret['jqueryplugin'] = pluginArr;
         }

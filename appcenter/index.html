@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>用户中心</title>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--是否引入主题-->
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>-->
+    <!--引入页面重置样式-->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <!--针对苹果设备的一些优化和功能体验-->
+    <link rel="apple-touch-icon" href="icon.png" ><!--添加至桌面-->
+    <meta name="apple-mobile-web-app-capable" content="yess"><!--是否允许全屏-->
+</head>
+<body class="m-bar-push" id="app-body" ng-app="myApp" ng-controller="lotteryCtrl">
+<!--遮罩-->
+<div class="mask">
+
+</div>
+<div class="mask1">
+
+</div>
+<div class="mask2">
+
+</div>
+<div class="mask3">
+
+</div>
+<!--头部-->
+<header class="rel header" >
+     <div class="logo-container">
+          <a href="index.html"><span><img src="images/ico_logo.png" alt="" /></span>澳门银河</a>
+     </div>
+     <div class="member-area abs">
+          <a href="#"><img src="images/ico_myicon.png" alt="" /></a>
+     </div>
+</header>
+<!--侧边栏目-->
+<nav class="m-right-push-bar">
+       <div class="inner">
+               <div class="info">
+                  <p>
+                     <span class="col-yellow">xlde_239839</span>
+                  </p>
+                  <p>
+                     <span class="icon-money"><img src="images/ico_my_money.png"/></span>余额<span class="col-orange">230038</span>元
+                  </p>
+               </div>
+               <div class="save-take-money">
+                   <div class="row">
+                       <div class="col-xs-6">
+                          <a href="#" class="bd-gray">充值</a>
+                       </div>
+                       <div class="col-xs-6">
+                           <a href="#">提款</a>
+                       </div>
+                   </div>
+               </div>
+               <ul class="list">
+                 <li><a href="#" ><span><img src="images/ico_my_01.png"/></span><span>交易状况</span></a></li>
+                 <li><a href="#"><span><img src="images/ico_my_02.png"/></span><span>账户历史</span></a></li>
+                 <li><a href="#" class="active"><span><img src="images/ico_my_03.png"/></span><span>开奖结果</span></a></li>
+                 <li><a href="#"><span><img src="images/ico_my_04.png"/></span><span>规则</span></a></li>
+                 <li><a href="#"><span><img src="images/ico_my_05.png"/></span><span>在线客服</span></a></li>
+               </ul>
+       </div>
+</nav>
+<!--首页头部banner-->
+<div class="bs-example">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+          <img src="images/img_banner.jpg" alt="Second slide">
+      </div>
+      <div class="item">
+        <img src="images/img_banner.jpg" alt="Second slide">
+      </div>
+      <div class="item">
+          <img src="images/img_banner.jpg" alt="Second slide">
+      </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div><!-- /example -->
+
+<!--公告部分-->
+<div class="m-announce" id="m-announce">
+    <ul>
+      <li>中秋充值大优惠，充满1000返10%，多充多返！</li>
+      <li>敬请留意：LEBO新厅视讯2号桌（百家乐）局号：10253916，场次： 27-1，游戏ID：ae6aac5ea9a25822，该局由于荷官操作失误，取消注单，给您带来不便，请谅解！</li>
+      <li>尊敬的会员，我们将对广东快乐十分进行系统升级，升级期间暂时停止下注，请留意最新公告开放时间，给您造成不便请谅解！</li>
+      <li>最新公告：LEBO视讯旧厅每天将于（北京时间）08:00~08:10进行短暂的固定维护，给您带来不便，请谅解！</li>
+      <li>支付宝扫一扫最新操作流程：登入会员账号 → 点击线上存款 → 点击【方式C：支付宝在线支付】（支持2-50000元） → 选择支付宝 → 点击确认→ 扫一扫！</li>
+      <li>第十期现金回馈彩金已送出，最高可获120913元，请会员登入查收（无需申请 无需打码 即可出款）如未领取到的会员请联系在线客服领取！</li>
+      <li>电子游艺&lt;竞技榜&gt;,第十三周投注排行榜最高可得4499元,无需打码即可提款(彩金已派送)请会员登入查收</li>
+    </ul>
+</div>
+<div class="indexlist" style="display:block;">
+           <div class="row">
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_01.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_02.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_03.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_04.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_05.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_06.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_07.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_08.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_09.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_10.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_11.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_12.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_13.png" alt=""></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="touzhu.html"><img src="images/img_game_14.png" alt=""></a>
+                  </div>
+           </div>
+      </div>
+<script src="iscroll/build/iscroll.js"></script>
+<script src="lib/jquery-1.10.0.min.js"></script>
+<script src="lib/hammer.min.js" charset="utf-8"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+<script src="http://cdn.bootcss.com/angular.js/1.4.6/angular-animate.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

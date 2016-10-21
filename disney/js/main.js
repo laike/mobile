@@ -63,7 +63,7 @@ var popWindow = (function(){
         winbody.className = 'ed-ui-pop-content';
         //向winbody 添加内容
         winbody.innerHTML = cfg.content;
-        //底部 
+        //底部
         var winfooter = document.createElement('div');
         winfooter.className = 'ed-ui-pop-footer';
         //添加到win
@@ -74,7 +74,7 @@ var popWindow = (function(){
 
         //添加到页面上面
         document.body.appendChild(win);
-         //出发oncomplete事件 
+         //出发oncomplete事件
         if(cfg.oncomplete){
             var args = {id:id,target:win}
             cfg.oncomplete.call(createWin,args);
@@ -109,7 +109,7 @@ var popWindow = (function(){
             $(win).fadeIn(500);
             $('.ed-ui-mask').fadeIn(500);
         }
-        
+
         return win;
 
     }
@@ -185,7 +185,7 @@ $(document).ready(function(){
         _self.toggleClass('dn-bet-active');
         _self.find('.dn-bet-active-arrow').toggle();
     });
-    
+
     orderPopWin = popWindow.createPopWin('orderPopPanel',{
         spantitle:' <div class="l pdl5 ">金额'+
         '</div>'+
@@ -255,7 +255,7 @@ $(document).ready(function(){
            //这里先点击确定后关闭窗口
            alert('下注成功！');
            orderPopWin.hide(popWin);
-          
+
     });
     //绑定下单
     $('.dn-bet-order').click(function(event){

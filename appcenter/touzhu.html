@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>用户中心</title>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--是否引入主题-->
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>-->
+    <!--引入页面重置样式-->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <!--针对苹果设备的一些优化和功能体验-->
+    <link rel="apple-touch-icon" href="icon.png" ><!--添加至桌面-->
+    <meta name="apple-mobile-web-app-capable" content="yess"><!--是否允许全屏-->
+</head>
+<body class="m-bar-push" id="app-body" ng-app="myApp" ng-controller="lotteryCtrl">
+  <!--首页加载效果-->
+  <div class="loader">
+
+      <div class="logo text-center">
+          <img src="images/ico_logo.png" alt="" />
+      </div>
+      <div class="loading text-center">
+          <div class="loading-progress"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
+          <div class="text">LOADING</div>
+          <div class="version">版本1.0</div>
+      </div>
+
+  </div>
+<!--遮罩-->
+<div class="mask">
+
+</div>
+<div class="mask1">
+
+</div>
+<div class="mask2">
+
+</div>
+<div class="mask3">
+
+</div>
+<!--头部-->
+<header class="rel header">
+     <div class="logo-container">
+          <a href="index.html"><span><img src="images/ico_logo.png" alt="" /></span>澳门银河</a>
+     </div>
+     <div class="member-area abs">
+          <a href="#"><img src="images/ico_myicon.png" alt="" /></a>
+     </div>
+</header>
+<nav class="header-nav rel">
+      <ul>
+        <li>
+          <a href="#" data-rel="list1">重庆时时彩 <span class="arrow"></span></a>
+        </li>
+        <li>
+          <a href="#" data-rel="list2">整合 <span class="arrow"></span></a>
+        </li>
+        <li>
+          <a href="#" data-rel="list3">三级菜单 <span class="arrow"></span></a>
+        </li>
+      </ul>
+      <!--下拉列表-->
+      <div class="downlist" data-rel="list1">
+           <div class="row">
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_01.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_02.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_03.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_04.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_05.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_06.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_07.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_08.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_09.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_10.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_11.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_12.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_13.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_14.png" alt="" /></a>
+                  </div>
+           </div>
+      </div>
+      <div class="downlist" data-rel="list2">
+           <div class="row">
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_01.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_02.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_03.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_05.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_06.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_07.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_08.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_09.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_10.png" alt="" /></a>
+                  </div>
+
+           </div>
+      </div>
+      <div class="downlist" data-rel="list3">
+           <div class="row">
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_01.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_02.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_03.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_04.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_05.png" alt="" /></a>
+                  </div>
+                  <div class="col-xs-3 bd-blue">
+                        <a href="#"><img src="images/img_game_06.png" alt="" /></a>
+                  </div>
+           </div>
+      </div>
+      <div class="message-new abs">
+         <a href="#">
+            <img src="images/ico_order.png" alt="" />
+         </a>
+         <span class="bullet bullet-red">22</span>
+      </div>
+</nav>
+<!--侧边栏目-->
+<nav class="m-right-push-bar">
+       <div class="inner">
+               <div class="info">
+                  <p>
+                     <span class="col-yellow">xlde_239839</span>
+                  </p>
+                  <p>
+                     <span class="icon-money"><img src="images/ico_my_money.png"/></span>余额<span class="col-orange">230038</span>元
+                  </p>
+               </div>
+               <div class="save-take-money">
+                   <div class="row">
+                       <div class="col-xs-6">
+                          <a href="#" class="bd-gray">充值</a>
+                       </div>
+                       <div class="col-xs-6">
+                           <a href="#">提款</a>
+                       </div>
+                   </div>
+               </div>
+               <ul class="list">
+                 <li><a href="#" ><span><img src="images/ico_my_01.png"/></span><span>交易状况</span></a></li>
+                 <li><a href="#"><span><img src="images/ico_my_02.png"/></span><span>账户历史</span></a></li>
+                 <li><a href="#" class="active"><span><img src="images/ico_my_03.png"/></span><span>开奖结果</span></a></li>
+                 <li><a href="#"><span><img src="images/ico_my_04.png"/></span><span>规则</span></a></li>
+                 <li><a href="#"><span><img src="images/ico_my_05.png"/></span><span>在线客服</span></a></li>
+               </ul>
+       </div>
+</nav>
+<!--主要内容区域-->
+<div class="app-body" id="wrapper" >
+
+  <div id="scroller">
+        <div class="lottery-top">
+            <div class="top">
+              <a href="#">
+                <span class="num">{{week1}}</span>
+                <span class="week">期</span>
+                <span class="ball">7</span>
+                <span class="ball">1</span>
+                <span class="ball">9</span>
+                <span class="ball">4</span>
+                <span class="ball">2</span>
+                <span class="pull-right">
+                   <img src="images/ico_arrow_right.png" alt="" />
+                </span>
+              </a>
+            </div>
+            <div class="bottom">
+              <a href="#">
+                <span class="num" >{{week2}}</span>
+                <span class="week">期</span>
+                <span class="num">距离封盘</span>
+                <span class="warning" ng-bind='time'></span>
+                <span class="pull-right">
+                   <img src="images/ico_refresh.png" alt=""  ng-click="rotate()" ng-class="rotateClass"/>
+                   <span ng-bind="cutdowntime"></span>秒
+                </span>
+              </a>
+            </div>
+        </div>
+        <!--下单内容区域-->
+        <div class="order-container">
+            <div class="order-list clearfix" ng-repeat="data in lotteryData">
+               <span class="pull-left title">总和-龙虎和</span>
+               <span class="pull-right">
+                  <img type="image" src="images/ico_tips.png"/>
+                  <span   ng-click="toggle($event)"></span>
+               </span>
+               <div class="clearfix">
+               </div>
+               <div class="order-area" style="margin:0;" ng-hide="isshow">
+                   <div class=" item" ng-repeat="lottery in data" ng-click="toggleItem($event)">
+                      <span class="text" >{{lottery.name}}</span>
+                      <span class="num" >{{lottery.num}}</span>
+                   </div>
+               </div>
+            </div>
+
+        </div>
+  </div>
+</div>
+
+<!--这里是弹出的下注单窗口-->
+<div class="m-pop-window" id="touzhuPanel">
+    <h2 class="title">注单列表</h2>
+    <table class="table text-center m-lottery-list">
+      <thead>
+        <tr>
+          <th>号码</th>
+          <th>赔率</th>
+          <th>金额</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="data in touzhuData">
+          <td >
+            <span class="lottery-title">总和-龙虎和</span>
+            <br/>
+            <span class="lottery-name">{{data.name}}</span>
+          </td>
+          <td>
+            <span class="warning">{{data.num}}</span>
+          </td>
+          <td>
+            <input type="number" class="input"  placeholder="" value="{{data.default}}" ng-model="presetNums" required min="0" max="1000" ng-keyup="onkeyup($event)" data-index="{{data.index}}">
+            <span><img src="images/ico_delete.png" alt="" width="19" ng-click="deleteItem($event)" data-index="{{data.index}}"/></span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pre-set text-center">
+      <input checked="checked" id="check_1" name="check" type="checkbox">
+      <label class="check" for="check_1">
+          <i class="fa fa-check"></i>
+      </label>
+      <span>预设金额</span>
+      <input type="text" class="input"  placeholder="" ng-model="presetNums" >
+    </div>
+    <div class="total-result">
+        注单数:<span class="total-nums warning" >{{ totalNums() }}</span>
+        总金额:<span class="total-cost warning">{{ total() }}</span>
+        <a href="#" class="m-btn m-btn-yellow" ng-click="submitData()">投注</a>
+    </div>
+</div>
+
+<div class="m-pop-window" id="resultPanel">
+    <h2 class="title">注单列表</h2>
+    <table class="table text-center m-lottery-list">
+      <thead>
+        <tr>
+          <th>号码</th>
+          <th>赔率</th>
+          <th>金额</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="data in touzhuData">
+          <td >
+            <span class="lottery-title">总和-龙虎和</span>
+            <br/>
+            <span class="lottery-name">{{data.name}}</span>
+          </td>
+          <td>
+            <span class="warning">{{data.num}}</span>
+          </td>
+          <td>
+            <span class="warning">{{data.default}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pre-set text-center">
+      注单数:<span class="total-nums warning" >{{ totalNums() }}</span>
+      总金额:<span class="total-cost warning">{{ total() }}</span>
+    </div>
+    <div class="total-result">
+        <a href="#" class="m-btn m-btn-yellow" ng-click="closeResultPanel()">确定</a>
+    </div>
+</div>
+<!--投注按钮-->
+<div class="foot-touzhu">
+     <a href="javascript:void(0);" ng-click="touZhuBtnClick()">投注</a>
+</div>
+<script src="iscroll/build/iscroll.js"></script>
+<script src="lib/jquery-1.10.0.min.js"></script>
+<script src="lib/hammer.min.js" charset="utf-8"></script>
+<script src="http://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+<script src="http://cdn.bootcss.com/angular.js/1.4.6/angular-animate.min.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

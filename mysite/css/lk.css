@@ -752,14 +752,17 @@ body {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1); }
+  .lk-right-controller.active {
+    background: #969689; }
+  .lk-right-controller.active:hover {
+    background: #2c2c27; }
 
 .mask, .navbar {
   width: 100%;
   height: 100%;
-  position: absolute;
-  left: 0;
+  position: fixed;
   top: 0;
-  background: rgba(0, 0, 0, 0.8);
+  right: -100%;
   z-index: 99;
   -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
           transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
@@ -767,6 +770,18 @@ body {
           backface-visibility: hidden;
   overflow: hidden; }
 
+.mask {
+  right: 0;
+  visibility: false;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.8); }
+
+.mask.active {
+  opacity: 1;
+  visibility: true; }
+
+.navbar.active {
+  right: 0; }
 .navbar::before {
   content: '';
   display: block;
@@ -788,17 +803,20 @@ body {
   .navbar .inner ul {
     width: 100%;
     list-style-type: none;
-    margin: 100px 0 0 0;
+    margin: 300px 0 0 0;
     padding: 0; }
     .navbar .inner ul li {
       text-align: right; }
       .navbar .inner ul li a:before {
         -webkit-transition: all .3s linear;
                 transition: all .3s linear;
-        -webkit-transform: scale(0.5);
-            -ms-transform: scale(0.5);
-                transform: scale(0.5);
-        width: 100%; }
+        content: '';
+        display: block;
+        position: absolute;
+        left: 15px;
+        right: 105px;
+        top: 20px;
+        height: 2px; }
       .navbar .inner ul li a {
         display: inline-block;
         font-family: Microsoft YaHei;
@@ -814,15 +832,7 @@ body {
                 transition: all .6s linear;
         position: relative; }
         .navbar .inner ul li a:hover::before {
-          content: '';
-          display: block;
-          position: absolute;
-          left: 0;
-          top: 20px;
-          -webkit-transform: scale(1);
-              -ms-transform: scale(1);
-                  transform: scale(1);
-          height: 2px;
+          right: 15px;
           background-color: #ae4744; }
         .navbar .inner ul li a:hover {
           color: #ae4744; }

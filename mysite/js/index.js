@@ -74,3 +74,7 @@ pause_control.addEventListener('click',function(e){
     audio.play();
     return false;
 });
+$('.lk-right-controller').click(function(){
+  $(this).toggleClass('active');
+  $('.navbar,.mask').toggleClass('active');
+});

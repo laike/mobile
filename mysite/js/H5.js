@@ -54,7 +54,7 @@ var H5 = function(){
      });
      //启动第一页中的组件动作
      this.pages[0].trigger('onLoad');
-     this.ele.show();
+     this.ele.fadeIn(800);
      if(page){
         this.ele.fullpage.moveTo(page);
      }

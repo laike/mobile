@@ -5,27 +5,38 @@
     <title>赖家大院首页</title>
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
-    <link rel="shortcut icon" href="favicon.icon"/>
+      <link rel="shortcut icon" type="image/ico" href="favicon.ico?version=6.0.8">
     <script src="lib/jquery.js"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href='//cdn.webfont.youziku.com/webfonts/nomal/18402/46758/58097c07f629dc16e0c10a08.css' rel='stylesheet' type='text/css' />
-    <link href="css/jquery.fullPage.css" rel="stylesheet">
     <script src="lib/jquery.fullPage.js"></script>
     <script src="lib/jquery.easing.min.js"></script>
+    <script src="lib/jquery.transition.min.js"></script>
+    <script src="lib/RGBaster.js"></script>
+    <!--lkmusic-->
     <link rel="stylesheet" href="css/lk.css">
+    <script src="js/musicList.js"></script>
+    <script src="js/wavesurfer.js"></script>
+    <!--引入工具库-->
+    <script src="js/util.js"></script>
+    <!--引入webaudio封装js-->
+    <script src="js/webaudio.js"></script>
+    <!--引入音频可视化js-->
+    <script src="js/lkmusic_visualizer.js"></script>
     <script src="js/H5.js"></script>
     <script src="js/tips.js"></script>
     <script src="js/H5_loading.js"></script>
     <script src="js/H5ComponentBase.js"></script>
+
   </head>
   <body>
   <div class="H5_loading">
 
   </div>
   <!--audio 标签背景音乐-->
-  <audio src="images/laopengyou.mp3" loop="loop" autoplay="autoplay" id="site_bg_music"></audio>
-  <!-- <div style="position:absolute;width:100px;height:100px;background:green;z-index:99;left:200px;top:500px;" class="tips" data-title="欢迎来到dddddddd" data-direction="top">
-  </div> -->
+  <!-- <audio src="images/laopengyou.mp3" loop="loop" autoplay="autoplay" id="site_bg_music"></audio>-->
+   <!-- <div style="position:absolute;width:100px;height:100px;background:green;z-index:99;left:200px;top:500px;" class="tips" data-title="欢迎来到dddddddd" data-direction="top">
+   </div> -->
   <div class="caption">
        <h3>The Most Simple Lk</h3>
        <h5> Conduct of writing code</h5>
@@ -38,21 +49,71 @@
           </div>
           <a href="http://laijiadayuan.com" target="_self" class="btn btn-large"><span>进入博客</span></a>
   </div>
+  <!--blog文章列表-->
+  <div class="lk-blog-item lk-blog-item1">
+          <h2 class="title tc rel">
+              <i class="fa fa-chevron-left l" aria-hidden="true"></i>
+              最新博文
+              <i class="fa fa-align-justify r" aria-hidden="true"></i>
+          </h2>
+          <div class="title-img">
+              <img src="images/blog_cover1.jpg" alt="">
+          </div>
+          <ul class="list">
+              <li><a href="" class="tips"  data-title="理解 JavaScript 中的 this 关键字">理解 JavaScript 中的 this 关键字</a></li>
+              <li><a href="" class="tips"  data-title="SMusic移动版发布">SMusic移动版发布</a></li>
+              <li><a href="" data-title="开大你的音响，感受HTML5 Audio API带来的视听盛宴" class="tips">开大你的音响，感受HTML5 Audio API带来的视听盛宴</a></li>
+              <li><a href="" class="tips" data-title="微信web开发者工具">微信web开发者工具</a></li>
+          </ul>
+         <div class="btn-group tc">
+             <a href="http://laijiadayuan.com" target="_self" class="btn btn-blog"><span>进入博客</span></a>
+         </div>
+  </div>
+  <!--网站运行时间-->
+  <div class="lk-blog-about">
+        <h1>About Smohan</h1>
+        <p>
+            水墨寒，90后双鱼座普通男青年！毕业于成都一所普通大学的电子信息专业，<br>
+            思维欠发达，差点迷失于错综复杂的电路与多维空间信号中……遂改行，从事于WEB设计与开发。喜欢敲代码的感觉，相信编程是一门艺术，<br>
+            自诩为游弋在代码里的人生。
+        </p>
+      <!--运行时间组件，这里暂时先放在这里-->
+      <div class="lk-runtime-cp">
+          <div class="lk-runtime-content">
+              <div class="run-total"></div>
+              <span>03</span>
+              <span>11</span>
+              <span>17</span>
+              <span>20</span>
+              <span>54</span>
+              <span>15</span>
+              <div class="run-now"></div>
+          </div>
+          <div class="lk-runtime-points">
+              <span>年</span>
+              <span>个月</span>
+              <span>天</span>
+              <span>小时</span>
+              <span>分钟</span>
+              <span>秒</span>
+          </div>
+          <p class="lk-runtime-start">从2012年10月25日00:00开始</p>
+      </div>
+  </div>
   <!--右边侧栏-->
   <aside class="lk-right-sidebar">
              <div class="inner">
-
                   <ul class="lk-right-dots">
                       <li class="active"></li>
                       <li></li>
                       <li></li>
                       <li></li>
                       <li></li>
-                      <li><span id="bg_musc_pause">&#xe603;</span></li>
+                      <li class="rotate tips" id="bg_musc_pause" data-title="导航" data-direction="top"><span  >&#xe603;</span></li>
                   </ul>
              </div>
   </aside>
-  <span class="fa fa-align-justify lk-right-controller tips " aria-hidden="true" data-title="导航" data-direction="top"></span>
+  <span class="fa fa-align-justify  lk-right-controller tips " aria-hidden="true" data-title="导航" data-direction="top"></span>
   <!--遮罩-->
   <div class="mask">
 
@@ -70,5 +131,53 @@
           <a href="" class="logo"></a>
         </div>
   </nav>
-  </body><script src="js/index.js"></script>
+  <!--音乐播放器组件-->
+  <div class="grid-music-container-3d">
+      <div class="grid-music-container f-usn">
+          <div class="m-music-play-wrap">
+              <div class="u-cover"></div>
+              <div class="m-now-info">
+                  <h1 class="u-music-title" ><strong>标题</strong><small>歌手</small></h1>
+                  <div class="m-now-controls">
+                      <div class="u-control u-process tips" data-title="0" data-direction="top">
+                          <span class="buffer-process"></span>
+                          <span class="current-process"></span>
+                      </div>
+                      <div class="u-control u-time">00:00/00:00</div>
+                      <div class="u-control u-volume">
+                          <div class="volume-process tips" data-volume="0.50" data-title="调节音量" data-direction="top">
+                              <span class="volume-current"></span>
+                              <span class="volume-bar"></span>
+                              <span class="volume-event"></span>
+                          </div>
+                          <a class="volume-control"></a>
+                      </div>
+                  </div>
+                  <div class="m-play-controls">
+                      <a class="u-play-btn prev tips"  data-title="上一曲" data-direction="top"></a>
+                      <a class="u-play-btn ctrl-play play tips"  data-title="暂停" data-direction="top"></a>
+                      <a class="u-play-btn next tips"  data-title="下一曲" data-direction="top"></a>
+                      <a class="u-play-btn mode mode-list current tips"  data-title="列表循环" data-direction="top"></a>
+                      <a class="u-play-btn mode mode-random tips"  data-title="随机播放" data-direction="top"></a>
+                      <a class="u-play-btn mode mode-single tips"  data-title="单曲循环" data-direction="top"></a>
+                  </div>
+              </div>
+          </div>
+          <div class="f-cb">&nbsp;</div>
+          <div class="m-music-list-wrap"></div>
+          <div class="cl"></div>
+          <div class="m-music-lyric-wrap">
+              <div class="inner-bg"></div>
+              <div class="inner">
+                  <ul class="js-music-lyric-content">
+                      <li class="eof">暂无歌词...</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="music-container-blur-bg"></div>
+      </div>
+  </div>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+  </body>
 </html>

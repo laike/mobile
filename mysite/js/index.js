@@ -45,7 +45,20 @@ H5.addPage('page1',{
    }
 })
 .addPage('page2',{
-  text:'测试第二屏'
+  text:''
+})
+.addComponent('base',{
+    name:'blog',
+    type:'base',
+    text:'',
+    width:1200,
+    height:'100%',
+    center:true,
+    //html标签模板
+    tpls:['.lk-blog-item,.lk-blog-about'],
+    css:{
+        top:157
+    }
 })
 .addPage('page3',{
   text:'测试第三屏'
@@ -56,25 +69,16 @@ H5.addPage('page1',{
 .addPage('page5',{
   text:'测试第五屏'
 })
-.loader(['images/logo.png']);
+.loader(['images/logo.png'],2);
 
-//初始化插件
-$('.tips').tips();
 
-//这里我们新增一个音乐播放器
-var volume = 0.5;
-var audio = document.getElementById('site_bg_music');
-var pause_control = document.getElementById('bg_musc_pause');
-audio.volume = volume;
-pause_control.addEventListener('click',function(e){
-    if(!audio.paused){
-        audio.pause();
-        return false;
-    }
-    audio.play();
-    return false;
-});
 $('.lk-right-controller').click(function(){
-  $(this).toggleClass('active');
-  $('.navbar,.mask').toggleClass('active');
+    $(this).toggleClass('active');
+    if($(this).hasClass('fa-align-justify')){
+       $(this).removeClass('fa-align-justify').addClass('fa-close');
+    }else{
+        $(this).removeClass('fa-close').addClass('fa-align-justify');
+    }
+    $('.grid-music-container').toggleClass('active');
+    $('.navbar,.mask').toggleClass('active');
 });

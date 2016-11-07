@@ -31,14 +31,13 @@ var H5_loading =function(images,page){
           $(this).find('.h5_component').trigger('onLeave');
        },
        afterLoad:function(anchorLink,index){
-          console.log(anchorLink,index);
           $('.lk-right-dots li').removeClass('active').eq(index-1).addClass('active');
           $(this).find('.h5_component').trigger('onLoad');
        }
      });
      //启动第一页中的组件动作
      this.pages[0].trigger('onLoad');
-     this.ele.show();
+     this.ele.fadeIn(800);
      if(page){
         this.ele.fullpage.moveTo(page);
      }
@@ -46,9 +45,13 @@ var H5_loading =function(images,page){
    var _this = this;
    //否则我们就显示loader
    $('.H5_loading').addClass('H5_loading_effect').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-
-       $(this).removeClass('H5_loading_effect').fadeOut(500,initPage.bind(_this));//这里使用bind 改变函数作用域中this的指向
-
+       $(this).removeClass('H5_loading_effect').transition({
+           opacity: 0.1,
+           scale: 0.3,
+           duration: 500,
+           easing: 'easeOutQuad',
+           complete:initPage.bind(_this) //这里使用bind 改变函数作用域中this的指向
+       });
    });
 
 

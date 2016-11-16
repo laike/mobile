@@ -1,0 +1,17 @@
+body {
+  background: #eef1eb;
+  overflow-y: visible;
+  font: 12px/1 Tahoma, Helvetica, Arial, sans-serif; }
+
+/*reset player position to fixed mode*/
+.grid-music-container-3d {
+  position: fixed; }
+
+.lk-header-show .desc {
+  padding: 10px; }
+  .lk-header-show .desc h1 {
+    font-size: 30px; }
+  .lk-header-show .desc p {
+    line-height: 24px; }
+
+/*# sourceMappingURL=works.css.map */

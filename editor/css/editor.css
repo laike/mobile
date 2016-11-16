@@ -58,12 +58,13 @@ body{
 }
 
 #ed-body-left{
-    min-height:950px;
-
+    height:100%;
+    width: 100%;
 }
 #ed-body-right{
     min-height:950px;
-
+    width: 50%;
+    display: none;
 }
 /*ÑÕÉ«ÏÂÀ­ÁÐ±í*/
 #ed-color-panel-list{
@@ -102,9 +103,9 @@ body{
     transition:all 2s ease-in;
 }
 .color-swatch {
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
     font-size: 12px;
     margin: 10px 5px;
     border-radius: 3px;
@@ -187,17 +188,17 @@ body{
 }
 
 /*±à¼­Æ÷²¿·ÖÑùÊ½*/
+body,html{
+  width: 100%;
+  height: 100%;
+}
 #ed-editor{
-
-    position: absolute;
-    top: 71px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border: none;
-    border-radius: none;
-    margin: 0;
-    padding: 0;
+  height: 1200px;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   overflow: scroll;
+   border: 0;
 }
 .ed-body-right-reslut{
     width:100%;
@@ -219,6 +220,7 @@ body{
     transform:translate(-30%,-20%);
     background: #fff;
     z-index: 99;
+    padding: 15px;
 
 }
 .ed-ui-pop-content{

@@ -9,10 +9,10 @@ let editorOnlineUrl = 'http://192.168.199.139:808/editor/index.php?version='+Mat
 
 function createEditor(){
     editorWin = new BrowserWindow({
-      width:1600,
-      height:1000,
+      width:1920,
+      height:1080,
       frame:false,
-      backgroundColor:'#00ffff',
+      backgroundColor:'rgba(0,0,0,0.8)',
       modal:true,
       scrollBounce:true,
   })
@@ -21,7 +21,7 @@ function createEditor(){
         editorWin = null
     })
     if(debugMode){
-        editorWin.webContents.openDevTools()
+        //editorWin.webContents.openDevTools()
     }
     ipcMain.on('ctrlbar-message', (event, arg) => {
         switch(arg.type){

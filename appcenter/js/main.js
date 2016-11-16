@@ -363,3 +363,6 @@ var marquee = new Marquee('m-announce','24');
 						loading.fadeOut(500);
 				}, 3000);
   }
+
+
+

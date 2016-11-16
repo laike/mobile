@@ -1,0 +1,251 @@
+.lk-message-container {
+  width: 100%;
+  min-height: 200px;
+  background-color: #fff;
+  margin: 20px 0 0 0;
+  letter-spacing: 1px;
+  color: #b2b2b2; }
+  .lk-message-container .lk-message-title {
+    height: 45px;
+    line-height: 45px;
+    margin: 0 15px 0 0; }
+    .lk-message-container .lk-message-title .title {
+      display: inline-block;
+      width: 180px;
+      height: 45px;
+      line-height: 45px;
+      background-color: #92cade;
+      color: #fff;
+      text-indent: 15px;
+      position: relative;
+      overflow: hidden;
+      font-size: 18px; }
+      .lk-message-container .lk-message-title .title::after {
+        content: '';
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: #fff;
+        -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+                transform: rotate(135deg);
+        right: -25px;
+        top: 0;
+        position: absolute; }
+    .lk-message-container .lk-message-title .comment-count {
+      display: inline-block;
+      padding: 0 0 0 40px; }
+  .lk-message-container .send-area .ctr-item {
+    margin-right: 10px; }
+  .lk-message-container .lk-message-textarea {
+    border: 1px solid #e8e9e7;
+    min-height: 200px;
+    padding: 10px;
+    margin: 15px; }
+    .lk-message-container .lk-message-textarea textarea {
+      width: 100%;
+      border: none;
+      resize: none; }
+    .lk-message-container .lk-message-textarea .input-number {
+      right: 10px;
+      bottom: 10px;
+      font-style: italic; }
+  .lk-message-container .lk-message-footer {
+    margin: 15px;
+    font-size: 16px;
+    line-height: 44px; }
+    .lk-message-container .lk-message-footer .btn-send {
+      width: 90px;
+      height: 35px;
+      line-height: 35px;
+      border: none;
+      border-radius: 0;
+      margin: 5px 0 0 0; }
+    .lk-message-container .lk-message-footer .ctr-item {
+      display: inline-block; }
+      .lk-message-container .lk-message-footer .ctr-item input {
+        text-indent: 30px; }
+      .lk-message-container .lk-message-footer .ctr-item i {
+        font-size: 16px;
+        position: absolute;
+        left: 10px;
+        top: 12px; }
+
+.chk_1 {
+  display: none; }
+
+.chk_1 + label {
+  display: inline-block;
+  min-width: 47px;
+  line-height: 26px;
+  height: 26px;
+  background-color: #f1f2f0;
+  border-radius: 15px;
+  color: #fff;
+  position: relative;
+  -webkit-transition: all .5s linear;
+          transition: all .5s linear;
+  cursor: pointer;
+  vertical-align: middle; }
+
+.chk_1 + label:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  vertical-align: text-top;
+  background-color: #fff;
+  -webkit-transition: all .5s linear;
+          transition: all .5s linear; }
+
+.chk_1 + label:active {
+  background-color: #ae4744; }
+
+.chk_1:checked + label {
+  background-color: #ae4744; }
+
+@-webkit-keyframes chekboxanimation {
+  0% {
+    -webkit-transform: skew(10deg);
+            transform: skew(10deg); }
+  100% {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg); } }
+
+@keyframes chekboxanimation {
+  0% {
+    -webkit-transform: skew(10deg);
+            transform: skew(10deg); }
+  100% {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg); } }
+.chk_1:checked + label:after {
+  right: 0px;
+  -webkit-animation: chekboxanimation .5s linear;
+          animation: chekboxanimation .5s linear; }
+
+/*test timeline css style */
+.timeline-container {
+  position: relative;
+  width: 100%;
+  -webkit-transition: all 1s linear;
+          transition: all 1s linear; }
+
+#timeline {
+  position: relative;
+  min-height: 660px;
+  margin-top: 20px;
+  width: 100%; }
+
+#timeline .line {
+  width: 2px;
+  height: 0;
+  background-color: #c8c8c8;
+  position: absolute;
+  top: -20px; }
+
+#timeline .item {
+  background-color: #fff;
+  overflow: hidden;
+  position: absolute;
+  min-height: 80px;
+  clear: both;
+  visibility: hidden;
+  -webkit-transition: all 1s linear;
+          transition: all 1s linear; }
+  #timeline .item:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); }
+
+#timeline .item .container {
+  padding: 15px;
+  overflow: hidden;
+  line-height: 28px; }
+  #timeline .item .container .subcomment-list {
+    padding: 10px;
+    background-color: #f8f9f7;
+    margin: 10px 0 0 0; }
+  #timeline .item .container span {
+    display: inline-block;
+    padding: 0 5px; }
+  #timeline .item .container .nickname {
+    font-size: 18px; }
+  #timeline .item .container .content {
+    padding: 40px;
+    position: relative;
+    border-bottom: 1px solid #d1d1d0; }
+    #timeline .item .container .content a {
+      text-decoration: none;
+      color: red; }
+    #timeline .item .container .content::before {
+      font-family: iconfont;
+      font-size: 20px;
+      color: #9e9f9c;
+      content: '\e642';
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 40px; }
+    #timeline .item .container .content::after {
+      font-family: iconfont;
+      font-size: 20px;
+      color: #9e9f9c;
+      content: '\e643';
+      display: block;
+      position: absolute;
+      right: 40px;
+      top: calc(100% - 65px); }
+
+#timeline .item .point, #timeline .item .corner {
+  display: block;
+  position: absolute;
+  z-index: 2; }
+
+#timeline .item .point {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #fff; }
+
+#timeline .item .point:before {
+  display: block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #70ca10;
+  position: absolute;
+  top: 3px;
+  left: 3px; }
+
+#timeline .item.isLeft .corner {
+  top: 27px; }
+
+#timeline .item.isLeft .point {
+  top: 30px; }
+
+#timeline .item.isRight .corner {
+  top: 37px; }
+
+#timeline .item.isRight .point {
+  top: 40px; }
+
+#timeline .item .corner {
+  border: 12px solid transparent; }
+
+#timeline .item.isLeft .corner {
+  border-left-color: #fff;
+  left: 100%; }
+
+#timeline .item.isRight .corner {
+  border-right-color: #fff;
+  right: 100%; }
+
+#timeline .item img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+/*# sourceMappingURL=message.css.map */

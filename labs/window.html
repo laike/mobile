@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>弹窗组件</title>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--是否引入主题-->
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>-->
+    <!--引入页面重置样式-->
+    <link href="http://cdn.bootcss.com/highlight.js/9.7.0/styles/monokai.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/highlight.js/9.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="css/lk.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <!--针对苹果设备的一些优化和功能体验-->
+    <link rel="apple-touch-icon" href="icon.png" ><!--添加至桌面-->
+    <meta name="apple-mobile-web-app-capable" content="yess"><!--是否允许全屏-->
+</head>
+<body>
+<section>
+    <div class="global lk-content mgt50">
+        <div class="h100 w1280 rel mc clearfix lk-grid-container">
+
+            <style>
+                .lk-blog-content{
+                    width: 100%;
+                }
+                .lk-blog-content .lk-blog-list-item .header h1{
+                    line-height: 30px;
+                }
+                .lk-blog-content .lk-blog-list-item .header .date-time{
+                    top:10px;
+                }
+            </style>
+            <div class="lk-blog-content clearfix">
+                <article>
+                    <div class="lk-blog-list-item clearfix">
+                        <header>
+                            <div class="rel header clearfix">
+                                <h1>
+                                    <a href="/Blog/id/id/325.html" >HTML5列表音乐播放器SMusic</a>
+                                    <p>作者：<a href="http://laijiadayuan.com" target="_blank">laijiadayuan</a> 阅读:0 w 更新于2016-11-01 07:26:48</p>
+                                </h1>
+                                <div class="date-time">
+                                    <span class="day">6739</span>
+                                    <span class="date" style="text-align: center;">人气</span>
+                                </div>
+                            </div>
+                        </header>
+                        <section>
+                            <div class="rel content clearfix">
+
+                              <p class="col-red">原创作品，版权归Smohan所有，使用请保留出处.</p>
+                              <h2>组件信息</h2>
+                                <pre><code>
+                                     this.widgetInfo = {
+                                        fileName   : "window",
+                                        version    : "1.0.0",
+                                        author     : "windKe",
+                                        createTime : "2016 10 5",
+                                        updateTime : "2016 11 2"
+                                     };
+                                </code></pre>
+                                <h2>版本记录</h2>
+                                <p> 2016-10-5 1.0.0创建版本</p>
+                                <p>
+                                    这一版修复了连续滚动切换多页的bug，新增了滚动后回调接口，开放了上一屏（moveDown），下一屏（moveUp）,以及滚动到指定索引位置（moveTo）三个接口，内置了swipeEvents用来对触屏的支持。重写了样式定义，不再依赖absolute定位，添加了浏览器对CSS3支持的判断，以便于支持Css3的浏览器使用css3 Translate渲染，而不支持的浏览器使用Jquery的animate方法渲染。 对DOM结构进行了缓存，提高了性能。
+                                </p>
+                                <h2>参数配置</h2>
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>参数名</th>
+                                        <th>类型</th>
+                                        <th>默认值</th>
+                                        <th>可选值</th>
+                                        <th>说明</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                   <tr><td>width</td><td>Number  </td> <td> 350</td> <td> 自定义</td> <td> 弹窗宽度</td></tr>
+                                   <tr><td>height</td><td> Number</td> <td> 400</td> <td> 自定义</td> <td> 弹窗高度</td></tr>
+                                   <tr><td>title</td><td>String </td> <td> 提示信息</td> <td> 自定义</td> <td> 弹窗标题</td></tr>
+                                   <tr><td>content</td><td> String</td> <td> 弹出框内容</td> <td> 自定义</td> <td> 弹窗内容</td></tr>
+                                   <tr><td>skinClassName</td><td> String </td> <td>window_skin_a </td> <td> 自定义</td> <td>弹窗样式 </td></tr>
+                                   <tr><td>maxlenth</td><td> Number</td> <td>20 </td> <td>自定义 </td> <td> confirm 弹出框的时候能够输入的最大字数</td></tr>
+                                   <tr><td>inputype</td><td>String </td> <td> text</td> <td> text,image,submit,radio,checkbox</td> <td> confirm弹出框 输入框的类型</td></tr>
+                                   <tr><td>hasCloseBtn</td><td> Boolean</td> <td>true </td> <td> true,false</td> <td> 是否显示关闭按钮</td></tr>
+                                   <tr><td>okText</td><td> String</td> <td> 确定</td> <td> 自定义</td> <td> 确定按钮的文字 </td></tr>
+                                   <tr><td>cancleText</td><td> String</td> <td>取消 </td> <td> 自定义</td> <td> 取消按钮的文字</td></tr>
+                                   <tr> <td>showBtns</td><td> Boolean</td> <td>true </td> <td> true,false</td> <td> 是否显示按钮</td></tr>
+                                   <tr><td>hasMask</td><td>Boolean </td> <td> true</td> <td> true,false </td> <td> 是否显示遮罩</td></tr>
+                                   <tr><td>dragHandler</td><td>String </td> <td>.window_box_title </td> <td>自定义 </td> <td>拖动区域类名</td></tr>
+                                   <tr><td>close</td><td>Function </td> <td> function(){}</td> <td> 自定义</td> <td>默认close回调函数 </td></tr>
+                                   <tr><td>ok</td><td> Function</td> <td> function(){}</td> <td>自定义 </td> <td> 点击确定后的回调函数</td></tr>
+                                   <tr><td>cancel</td><td>Function </td> <td>function(){} </td> <td>自定义 </td> <td> 点击取消后的回调函数</td></tr>
+                                   <tr><td>confirm</td><td>Function </td> <td> function(){}</td> <td>自定义 </td> <td> prompt框以后执行的回调函数</td></tr>
+                                   <tr><td>minsize</td><td> Number</td> <td> </td> <td> </td> <td> 当敞口这个宽度的时候会进行80%显示窗口</td></tr>
+                                   <tr><td>callback</td><td> Function</td> <td>function(){} </td> <td> 自定义</td> <td>默认关闭窗口后执行的处理函数 </td></tr>
+                                    </tbody>
+                                    <tfoot>
+                                    
+                                    </tfoot>
+                                </table>
+                                <h2>基础属性和方法</h2>
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>参数名</th>
+                                        <th>类型</th>
+                                        <th>默认值</th>
+                                        <th>示例</th>
+                                        <th>说明</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr><td> widgetInfo</td><td>Object </td><td> - </td><td> - </td><td> 组件信息</td></tr>
+                                    <tr><td> alert</td><td>Function </td><td> 继承组件cfg </td><td> {width:100,height:100} </td><td> 警告框</td></tr>
+                                    <tr><td> prompt</td><td>Function </td><td> 继承组件cfg </td><td> {width:100,height:100} </td><td> 输入框确认</td></tr>
+                                    <tr><td> confirm</td><td>Function </td><td> 继承组件cfg </td><td> {width:100,height:100} </td><td> 确认框</td></tr>
+                                    </tbody>
+                                    <tfoot>
+
+                                    </tfoot>
+                                </table>
+                                <h2>
+                                    CSS样式
+                                </h2>
+                                <pre>
+                                    <code class="css">
+                                        /*box pop up*/
+                                        .window_box{
+                                          background-color: #fff;
+                                          box-shadow:0 0 25px rgba(0,0,0,0.3);
+                                          position: fixed;
+                                          top:100px;
+                                          left: 500px;
+                                          z-index: 999;
+                                          padding:10px;
+                                        }
+                                        .window_box_content{
+                                          width:100%;
+                                          padding:10px 0;
+                                          position: relative;
+                                        }
+                                        .window_box_title{
+
+                                        }
+                                        .window_box_close{
+                                          display: block;
+                                          position: absolute;
+                                          right:10px;
+                                          top:10px;
+                                          z-index: 3;
+                                          width:20px;
+                                          height:20px;
+                                          line-height: 20px;
+                                          text-align: center;
+                                          font-size:20px;
+                                          color:#6ccc62;
+                                          cursor: pointer;
+                                          opacity: 1;
+                                          transition: all .3s linear;
+                                          &:hover{
+                                            opacity: 0.6;
+                                          }
+                                        }
+                                        .window_skin_a.window_box{
+                                          border:10px solid rgba(0,0,0,0.3);
+                                        }
+                                        .window_skin_a {
+                                          .window_box_content{
+                                            input{
+                                               max-width:100%;
+                                            }
+                                            p{
+                                              line-height: 50px;
+                                              font-family: "Microsoft Yahei", "Helvetica Neue", "Hiragino Sans GB", Helvetica, Tahoma, sans-serif;
+                                              font-size: 14px;
+                                              text-align: center;
+                                            }
+
+                                          }
+                                          .window_box_title{
+
+                                          }
+                                          .window_box_close{
+
+                                          }
+                                          .window_box_footer{
+                                             display: flex;
+                                             justify-content: space-around;
+                                             .btn{
+                                               width:150px;
+                                             }
+                                          }
+                                        }
+                                        .window_box_mask{
+                                          background-color: rgba(0,0,0,0.2);
+                                          width:100%;
+                                          height:100%;
+                                          position: fixed;
+                                          left:0;
+                                          top:0;
+                                          z-index: 99;
+                                        }
+
+                                    </code>
+                                </pre>
+                                <h2>
+                                    HTML结构
+                                </h2>
+                                <p>无需html结构，只需给dom元素绑定事件</p>
+                                <h2>页面调用</h2>
+                                <pre><code>
+                                    require(['jquery', 'underscore', 'backbone',"window"],function ($, _, Backbone, w,){
+                                                    var pop = new w.Window();
+                                                    //调用警告框
+                                                    pop.alert({title:'警告框',content:'我是一个警告框！',width:200,height:150}).on('ok',function(){
+                                                        alert('ok');
+                                                    }).on('cancel',function(){
+                                                        alert('cancel');
+                                                    });
+                                                    //调用确认警告框
+                                                    pop.confirm({title:'确认警告框',content:'我是一个确认警告框！',width:200,height:150}).on('ok',function(){
+                                                        alert('ok');
+                                                    }).on('cancel',function(){
+                                                        alert('cancel');
+                                                    });
+                                                    //调用输入弹出框
+                                                    pop.prompt({title:'输入弹出框',content:'我是一个输入弹出框！',width:200,height:150}).on('ok',function(){
+                                                        alert('ok');
+                                                    }).on('cancel',function(){
+                                                        alert('cancel');
+                                                    });
+                                    });
+                                </code></pre>
+
+                            </div>
+                        </section>
+                        <footer>
+                            <div class="footer">
+                                <div class="copyright">
+                                    <ul>
+                                        <li>非特殊说明，本文版权归laijiadayuan.com所有，转载请注明出处.</li>
+                                        <li> 本文标题：<a href="{:U('Blog/id',array(id=>$winfo['ID']))}">{$winfo['post_title']}</a></li>
+                                        <li>本文网址：<a href="{:U('Blog/id@laijiadayuan.com',array(id=>$winfo['ID']))}">{:U('Blog/id@laijiadayuan.com',array(id=>$winfo['ID']))}</a>.</li>
+                                        <li>本文标签：
+                                            <foreach name="winfo['tags']" item="tag">
+                                                <a>{$tag['name']}</a>.
+                                            </foreach>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="col-red">如在使用中有任何问题，请参考demo或者在评论中说明.</p>
+                                <div class="share">
+                                    <a href="" type="like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                    <a href="" type="weixin" class="tips" data-type="image" data-src="__PUBLIC__/images/weixin.png" data-direction="down" data-width="150"><i class="fa fa-weixin" aria-hidden="true"></i></a>
+                                    <a href="" type="weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+                                    <a href="" type="renren"><i class="fa fa-renren" aria-hidden="true"></i></a>
+                                    <a href="" type="tencent_weibo"><i class="fa fa-tencent-weibo" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </footer>
+                        <section>
+                            <div class="lk-preview">
+                                <div class="inner">
+                                    <a href="" class="btn btn-preview"><span><i class="fa fa-eye"></i>演示</span></a>
+                                    <a href="" class="btn btn-download"><span><i class="fa fa-cloud"></i>下载(123次)</span></a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </article>                    </div>
+
+
+
+        </div>
+    </div>
+</section>
+<!--音乐播放器组件-->
+<div class="grid-music-container-3d" id="grid-music-container-3d">
+
+    <div class="grid-music-container f-usn">
+        <span class="expand-music-player tips" data-title="展开和缩小播放器" data-direction="top"><i class="fa fa-expand" aria-hidden="true"></i></span>
+        <div class="m-music-play-wrap">
+            <div class="u-cover"></div>
+            <div class="m-now-info">
+                <h1 class="u-music-title" ><strong>标题</strong><small>歌手</small></h1>
+                <div class="m-now-controls">
+                    <div class="u-control u-process tips" data-title="0" data-direction="top">
+                        <span class="buffer-process"></span>
+                        <span class="current-process"></span>
+                    </div>
+                    <div class="u-control u-time">00:00/00:00</div>
+                    <div class="u-control u-volume">
+                        <div class="volume-process tips" data-volume="0.50" data-title="调节音量" data-direction="top">
+                            <span class="volume-current"></span>
+                            <span class="volume-bar"></span>
+                            <span class="volume-event"></span>
+                        </div>
+                        <a class="volume-control"></a>
+                    </div>
+                </div>
+                <div class="m-play-controls">
+                    <a class="u-play-btn prev tips"  data-title="上一曲" data-direction="top"></a>
+                    <a class="u-play-btn ctrl-play play tips"  data-title="暂停" data-direction="top"></a>
+                    <a class="u-play-btn next tips"  data-title="下一曲" data-direction="top"></a>
+                    <a class="u-play-btn mode mode-list current tips"  data-title="列表循环" data-direction="top"></a>
+                    <a class="u-play-btn mode mode-random tips"  data-title="随机播放" data-direction="top"></a>
+                    <a class="u-play-btn mode mode-single tips"  data-title="单曲循环" data-direction="top"></a>
+                </div>
+            </div>
+        </div>
+        <div class="f-cb">&nbsp;</div>
+        <div class="m-music-list-wrap"></div>
+        <div class="cl"></div>
+        <div class="m-music-lyric-wrap">
+            <div class="inner-bg"></div>
+            <div class="inner">
+                <ul class="js-music-lyric-content">
+                    <li class="eof">暂无歌词...</li>
+                </ul>
+            </div>
+        </div>
+        <div class="music-container-blur-bg"></div>
+    </div>
+</div>
+<!--移动端音乐样式-->
+<a class="myMusic tips" title="让我们荡起双桨" data-title="点击隐藏和显示播放器" data-direction="top">
+    <span class="circle play"></span>
+</a>
+<script src="lib/require.min.js" data-main="main.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>音乐播放器组件</title>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/lk.css">
+    <!--针对苹果设备的一些优化和功能体验-->
+    <link rel="apple-touch-icon" href="icon.png" ><!--添加至桌面-->
+    <meta name="apple-mobile-web-app-capable" content="yess"><!--是否允许全屏-->
+</head>
+<body>
+
+<!--音乐播放器组件-->
+<div class="grid-music-container-3d" id="grid-music-container-3d">
+
+    <div class="grid-music-container f-usn ">
+        <div class="m-music-play-wrap">
+            <div class="u-cover"></div>
+            <div class="m-now-info">
+                <h1 class="u-music-title" ><strong>标题</strong><small>歌手</small></h1>
+                <div class="m-now-controls">
+                    <div class="u-control u-process tips" data-title="0" data-direction="top">
+                        <span class="buffer-process"></span>
+                        <span class="current-process"></span>
+                    </div>
+                    <div class="u-control u-time">00:00/00:00</div>
+                    <div class="u-control u-volume">
+                        <div class="volume-process tips" data-volume="0.50" data-title="调节音量" data-direction="top">
+                            <span class="volume-current"></span>
+                            <span class="volume-bar"></span>
+                            <span class="volume-event"></span>
+                        </div>
+                        <a class="volume-control"></a>
+                    </div>
+                </div>
+                <div class="m-play-controls">
+                    <a class="u-play-btn prev tips"  data-title="上一曲" data-direction="top"></a>
+                    <a class="u-play-btn ctrl-play play tips"  data-title="暂停" data-direction="top"></a>
+                    <a class="u-play-btn next tips"  data-title="下一曲" data-direction="top"></a>
+                    <a class="u-play-btn mode mode-list current tips"  data-title="列表循环" data-direction="top"></a>
+                    <a class="u-play-btn mode mode-random tips"  data-title="随机播放" data-direction="top"></a>
+                    <a class="u-play-btn mode mode-single tips"  data-title="单曲循环" data-direction="top"></a>
+                </div>
+            </div>
+        </div>
+        <div class="f-cb">&nbsp;</div>
+        <div class="m-music-list-wrap"></div>
+        <div class="cl"></div>
+        <div class="m-music-lyric-wrap">
+            <div class="inner-bg"></div>
+            <div class="inner">
+                <ul class="js-music-lyric-content">
+                    <li class="eof">暂无歌词...</li>
+                </ul>
+            </div>
+        </div>
+        <div class="music-container-blur-bg"></div>
+    </div>
+</div>
+<style>
+    .grid-music-container-3d{
+        visibility: visible;
+    }
+    .grid-music-container-3d{
+        width:100%;
+        height:100%;
+    }
+    .grid-music-container-3d .grid-music-container{
+        width:100%;
+        height:100%;
+        padding:0;
+    }
+
+</style>
+<!--移动端音乐样式-->
+<a class="myMusic tips" title="让我们荡起双桨" data-title="点击隐藏和显示播放器" data-direction="top">
+    <span class="circle play"></span>
+</a>
+<script src="lib/require.min.js" data-main="music_m.js"></script>
+</body>
+</html>

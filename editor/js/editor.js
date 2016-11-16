@@ -1282,7 +1282,7 @@ var lkeditor = function(id){
 };
 lkeditor.prototype={
     init:function(id){
-        verticalSpilt.init();
+       // verticalSpilt.init();
         var ge=new Geolocation($('#ed-body-right'),'google');
         //ge.getLocation();
         var _that = this;
@@ -1809,7 +1809,7 @@ lkeditor.prototype={
     frameResize:function(){
              
              //启动自动分屏功能
-             verticalSpilt.init();
+            // verticalSpilt.init();
              var _width = $('#ed-body-right').width();
              var _height = $('#ed-body-left').height();
              $(this.resultFrameWindow).css({

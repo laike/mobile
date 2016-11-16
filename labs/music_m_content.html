@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>弹窗组件</title>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--是否引入主题-->
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>-->
+    <!--引入页面重置样式-->
+    <link href="http://cdn.bootcss.com/highlight.js/9.7.0/styles/monokai.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/highlight.js/9.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="css/lk.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <!--针对苹果设备的一些优化和功能体验-->
+    <link rel="apple-touch-icon" href="icon.png" ><!--添加至桌面-->
+    <meta name="apple-mobile-web-app-capable" content="yess"><!--是否允许全屏-->
+</head>
+<body>
+<section>
+    <div class="global lk-content mgt50">
+        <div class="h100 w1280 rel mc clearfix lk-grid-container">
+
+            <style>
+                .lk-blog-content{
+                    width: 100%;
+                }
+                .lk-blog-content .lk-blog-list-item .header h1{
+                    line-height: 30px;
+                }
+                .lk-blog-content .lk-blog-list-item .header .date-time{
+                    top:10px;
+                }
+            </style>
+            <div class="lk-blog-content clearfix">
+                <article>
+                    <div class="lk-blog-list-item clearfix">
+                        <header>
+                            <div class="rel header clearfix">
+                                <h1>
+                                    <a href="/Blog/id/id/325.html" >HTML5列表音乐播放器Lmusic</a>
+                                    <p>作者：<a href="http://laijiadayuan.com" target="_blank">laijiadayuan</a> 阅读:0 w 更新于2016-11-01 07:26:48</p>
+                                </h1>
+                                <div class="date-time">
+                                    <span class="day">6739</span>
+                                    <span class="date" style="text-align: center;">人气</span>
+                                </div>
+                            </div>
+                        </header>
+                        <section>
+                            <div class="rel content clearfix">
+
+                                <p class="col-red">原创作品，版权归laijiadayuan.com所有，使用请保留出处.</p>
+                                <h2>组件信息</h2>
+                                <pre><code>
+                                     this.widgetInfo = {
+                                        fileName   : "lkmusic_visualizer",
+                                        version    : "1.0.0",
+                                        author     : "windKe",
+                                        createTime : "2016 10 5",
+                                        updateTime : "2016 11 2"
+                                     };
+                                </code></pre>
+                                <h2>版本记录</h2>
+                                <p> 2016-10-5 1.0.0创建版本</p>
+                                <p>
+                                    新增音乐可视化，通过配置lkmusic.appcache可以实现离线缓存功能，修复播放模式错乱，以及音乐播放完成以后，点击播放按钮失效的问题。
+                                    新增移动端自适应。新播放器弃用像素px布局，采用全新的rem布局，实现移动端自适应。以及其他一些bug修复。
+                                </p>
+                                <h2>参数配置</h2>
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>参数名</th>
+                                        <th>类型</th>
+                                        <th>默认值</th>
+                                        <th>可选值</th>
+                                        <th>说明</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr><td>musicList</td><td>Array  </td> <td> musicList.js(项目目录里面需要引入音乐播放器组件之前引入)</td> <td> 自定义</td> <td> 歌曲列表</td></tr>
+                                    <tr><td>defaultVolume</td><td>Number  </td> <td> 0.5</td> <td> 0-1</td> <td> 默认音量</td></tr>
+                                    <tr><td>autoPlay</td><td>Boolean  </td> <td> false</td> <td> true or false</td> <td> 是否自动播放</td></tr>
+                                    <tr><td>defaultMode</td><td>Number  </td> <td> 1</td> <td> 1,2,3</td> <td> //播放模式 随机播放 按顺序播放 还是循环播放</td></tr>
+                                    <tr><td>offlineMode</td><td>Boolean  </td> <td>false</td> <td> true or false</td> <td> 是否支持离线缓存（此功能暂时不能使用）</td></tr>
+                                    <tr><td>showrightmenu</td><td>Boolean  </td> <td>false</td> <td> true or false</td> <td> 是否禁用播放器上面的右键功能</td></tr>
+                                    <tr><td>gradientleft</td><td>String  </td> <td>#52b228</td> <td> 颜色字符串能够支持hsl、rgba、rgb等格式</td> <td>自行测试 </td></tr>
+                                    <tr><td>gradientmiddle</td><td>String  </td> <td>#55bd27</td> <td> 颜色字符串能够支持hsl、rgba、rgb等格式</td> <td> 自行测试</td></tr>
+                                    <tr><td>gradientright</td><td>String  </td> <td>#52b228</td> <td> 颜色字符串能够支持hsl、rgba、rgb等格式</td> <td> 自行测试</td></tr>
+                                    <tr><td>gradienttop</td><td>String  </td> <td>#f5f325</td> <td> 颜色字符串能够支持hsl、rgba、rgb等格式</td> <td> 自行测试</td></tr>
+                                    <tr><td>callback</td><td>Function  </td> <td>function(muicObjec){}</td> <td> 自定义</td> <td> 播放器组件初始化成功之后的毁掉函数返回实例对象</td></tr>
+                                    </tbody>
+                                    <tfoot>
+
+                                    </tfoot>
+                                </table>
+                                <h2>基础属性和方法</h2>
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>参数名</th>
+                                        <th>类型</th>
+                                        <th>默认值</th>
+                                        <th>示例</th>
+                                        <th>说明</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr><td> widgetInfo</td><td>Object </td><td> - </td><td> - </td><td> 组件信息</td></tr>
+                                    <tr><td> setVolume</td><td>Function </td><td> - </td><td> - </td><td> 设置音量</td></tr>
+                                    <tr><td> play</td><td>Function </td><td> - </td><td> - </td><td> 播放</td></tr>
+                                    <tr><td> pause</td><td>Function </td><td> - </td><td> - </td><td> 暂停播放</td></tr>
+                                    </tbody>
+                                    <tfoot>
+
+                                    </tfoot>
+                                </table>
+                                <h2>
+                                    CSS样式
+                                </h2>
+                                <pre>
+                                    <code class="css">
+                                        /**
+                                         * lkmusic
+                                         * Author:lk
+                                         * Version:1.0.0
+                                         * url: http://laijiadayuan.com/project/lkmusic/index.html
+                                         */
+                                        .f-cb {
+                                          height: 0; }
+
+                                        .f-cb:after {
+                                          display: block;
+                                          content: " ";
+                                          height: 0;
+                                          visibility: hidden;
+                                          clear: both; }
+
+                                        .f-ib {
+                                          display: inline-block; }
+
+                                        .f-din {
+                                          display: inline; }
+
+                                        .f-dn {
+                                          display: none; }
+
+                                        .f-db {
+                                          display: block; }
+
+                                        .f-fl {
+                                          float: left; }
+
+                                        .f-fr {
+                                          float: right; }
+
+                                        .f-fwn {
+                                          font-weight: normal; }
+
+                                        .f-fwb {
+                                          font-weight: bold; }
+
+                                        .f-tal {
+                                          text-align: left; }
+
+                                        .f-tac {
+                                          text-align: center; }
+
+                                        .f-tar {
+                                          text-align: right; }
+
+                                        .f-oh {
+                                          overflow: hidden;
+                                          zoom: 1;
+                                          clear: both; }
+
+                                        .f-tdn {
+                                          text-decoration: none !important; }
+
+                                        .f-vam, .f-vama * {
+                                          vertical-align: middle; }
+
+                                        .f-wsn {
+                                          word-wrap: normal;
+                                          white-space: nowrap; }
+
+                                        .f-pre {
+                                          overflow: hidden;
+                                          text-align: left;
+                                          white-space: pre-wrap;
+                                          word-wrap: break-word;
+                                          word-break: break-all; }
+
+                                        .f-wwb {
+                                          white-space: normal;
+                                          word-wrap: break-word;
+                                          word-break: break-all; }
+
+                                        .f-ti {
+                                          overflow: hidden;
+                                          text-indent: -30000px; }
+
+                                        .f-lhn {
+                                          line-height: normal; }
+
+                                        .f-toe {
+                                          overflow: hidden;
+                                          word-wrap: normal !important;
+                                          white-space: nowrap;
+                                          text-overflow: ellipsis; }
+
+                                        .f-usn {
+                                          -webkit-user-select: none;
+                                          -moz-user-select: none;
+                                           -ms-user-select: none;
+                                               user-select: none; }
+
+                                        .f-bsb {
+                                          box-sizing: border-box; }
+
+                                        .f-cp {
+                                          cursor: pointer; }
+
+                                        /*SMusic*/
+                                        .grid-music-container .music-container-spectrum {
+                                          width: 100%;
+                                          height: 100%;
+                                          position: absolute;
+                                          left: 0;
+                                          top: 0;
+                                          z-index: 2; }
+
+                                        .grid-music-container .music-container-blur-bg {
+                                          width: 100%;
+                                          height: 100%;
+                                          position: absolute;
+                                          left: 0;
+                                          top: 0;
+                                          z-index: 1;
+                                          background: url(../images/music_bg.jpg);
+                                          background-size: cover;
+                                          -webkit-filter: saturate(5) contrast(1);
+                                                  filter: saturate(5) contrast(1); }
+
+                                        .grid-music-container .m-music-play-wrap {
+                                          height: 8.5rem;
+                                          position: relative;
+                                          padding-left: 7rem;
+                                          z-index: 3; }
+
+                                        .grid-music-container .u-cover {
+                                          width: 6.05rem;
+                                          height: 6.05rem;
+                                          overflow: hidden;
+                                          background: url(../images/music_icons_white.png) 0 0 no-repeat;
+                                          position: absolute;
+                                          top: 0;
+                                          left: 0;
+                                          border-radius: 50%; }
+
+                                        .grid-music-container .u-cover img {
+                                          display: block;
+                                          width: 100%;
+                                          height: auto;
+                                          max-height: 100%;
+                                          border: 2px solid #eee; }
+
+                                        .grid-music-container .u-cover.play {
+                                          -webkit-animation: Circle 10s linear infinite 0s forwards;
+                                                  animation: Circle 10s linear infinite 0s forwards; }
+
+                                        .grid-music-container .u-cover.paused {
+                                          -webkit-animation-play-state: paused;
+                                                  animation-play-state: paused; }
+
+                                        @-webkit-keyframes Circle {
+                                          from {
+                                            -webkit-transform: rotate(0deg);
+                                                    transform: rotate(0deg); }
+                                          to {
+                                            -webkit-transform: rotate(360deg);
+                                                    transform: rotate(360deg); } }
+                                        @keyframes Circle {
+                                          from {
+                                            -webkit-transform: rotate(0deg);
+                                                    transform: rotate(0deg); }
+                                          to {
+                                            -webkit-transform: rotate(360deg);
+                                                    transform: rotate(360deg); } }
+                                        .grid-music-container .m-now-info {
+                                          height: 100%; }
+
+                                        .grid-music-container .m-now-info h1 {
+                                          font-weight: normal;
+                                          text-overflow: ellipsis;
+                                          white-space: nowrap;
+                                          overflow: hidden; }
+
+                                        .grid-music-container .m-now-info h1 strong {
+                                          font-size: 0.9rem;
+                                          color: #fff;
+                                          font-weight: normal; }
+
+                                        .grid-music-container .m-now-info h1 small {
+                                          margin-left: 1rem;
+                                          font-size: 0.7rem;
+                                          color: #fff; }
+
+                                        .grid-music-container .m-now-controls {
+                                          position: relative; }
+
+                                        .grid-music-container .m-now-controls .u-control {
+                                          display: inline-block;
+                                          vertical-align: middle;
+                                          font-size: 0;
+                                          overflow: hidden; }
+
+                                        .grid-music-container .m-now-controls .u-process {
+                                          width: calc(100% - 6.5rem);
+                                          height: 0.2rem;
+                                          position: relative;
+                                          background-color: #cecfd4;
+                                          cursor: pointer; }
+
+                                        .grid-music-container .m-now-controls .u-process .buffer-process, .grid-music-container .m-now-controls .u-process .current-process {
+                                          display: block;
+                                          width: 0;
+                                          height: 0.2rem;
+                                          position: absolute;
+                                          top: 0;
+                                          left: 0;
+                                          background-color: #efa05b;
+                                          z-index: 1; }
+
+                                        .grid-music-container .m-now-controls .u-process .buffer-process {
+                                          z-index: 0;
+                                          background-color: #c1c2c0; }
+
+                                        .grid-music-container .m-now-controls .u-time {
+                                          margin-left: 0.5rem;
+                                          font-size: 0.6rem;
+                                          color: #fff; }
+
+                                        .grid-music-container .m-now-controls .u-volume {
+                                          overflow: visible;
+                                          text-align: center;
+                                          position: relative;
+                                          margin-left: 1rem;
+                                          float: right; }
+
+                                        .grid-music-container .u-volume .volume-process {
+                                          width: 0.15rem;
+                                          height: 2.5rem;
+                                          background: #cecfd4;
+                                          position: absolute;
+                                          top: -2.7rem;
+                                          left: 0.3rem;
+                                          cursor: pointer;
+                                          visibility: hidden; }
+
+                                        .grid-music-container .u-volume .volume-process.show {
+                                          visibility: visible; }
+
+                                        .grid-music-container .u-volume .volume-process .volume-current,
+                                        .grid-music-container .u-volume .volume-process .volume-event {
+                                          display: inline-block;
+                                          width: 0.15rem;
+                                          height: 50%;
+                                          background-color: #efa05b;
+                                          position: absolute;
+                                          left: 0;
+                                          bottom: 0;
+                                          -webkit-transition: height .2s linear;
+                                                  transition: height .2s linear; }
+
+                                        .grid-music-container .u-volume .volume-process .volume-event {
+                                          width: 1.05rem;
+                                          left: -0.5rem;
+                                          background: none;
+                                          height: 100%;
+                                          z-index: 1; }
+
+                                        .grid-music-container .u-volume .volume-process .volume-bar {
+                                          display: inline-block;
+                                          width: 0.4rem;
+                                          height: 0.4rem;
+                                          border-radius: 100%;
+                                          background-color: #fff;
+                                          border: 1px solid #a8a9a7;
+                                          position: absolute;
+                                          left: -0.15rem;
+                                          bottom: 50%;
+                                          -webkit-transition: bottom .2s linear;
+                                                  transition: bottom .2s linear; }
+
+                                        .grid-music-container .u-volume .volume-process .volume-bar:hover,
+                                        .grid-music-container .u-volume .volume-process .volume-bar:active {
+                                          background-color: #f1f2f0; }
+
+                                        .grid-music-container .u-volume .volume-control {
+                                          display: inline-block;
+                                          width: 0.9rem;
+                                          height: 0.9rem;
+                                          background-image: url(../images/music_icons_white.png);
+                                          background-repeat: no-repeat;
+                                          background-position: -7rem -4rem;
+                                          background-size: 15.5rem 6.05rem;
+                                          cursor: pointer; }
+
+                                        .grid-music-container .u-volume .volume-control:hover {
+                                          background-position: -7.9rem -4rem; }
+
+                                        .grid-music-container .u-volume .volume-control.muted {
+                                          background-position: -7rem -4.9rem; }
+
+                                        .grid-music-container .u-volume .volume-control.muted:hover {
+                                          background-position: -7.9rem -4.9rem; }
+
+                                        .grid-music-container .m-music-list-wrap {
+                                          margin-left: 0;
+                                          margin-right: 0;
+                                          height: 6rem;
+                                          border: 1px solid rgba(255, 255, 255, 0.7);
+                                          overflow-x: hidden;
+                                          overflow-y: auto;
+                                          position: relative;
+                                          z-index: 3;
+                                          background-color: rgba(0, 0, 0, 0.3); }
+
+                                        .grid-music-container .m-music-list-wrap li {
+                                          display: block;
+                                          line-height: 1.5rem;
+                                          height: 1.5rem;
+                                          overflow: hidden;
+                                          text-overflow: ellipsis;
+                                          padding: 0 10px;
+                                          cursor: pointer;
+                                          color: #fff;
+                                          font-size: 0.8rem;
+                                          -webkit-transition: all 0.5s ease-in;
+                                                  transition: all 0.5s ease-in; }
+
+                                        .grid-music-container .m-music-list-wrap li strong {
+                                          font-size: 0.8rem;
+                                          font-weight: normal; }
+
+                                        .grid-music-container .m-music-list-wrap li:hover, .grid-music-container .m-music-list-wrap li.current {
+                                          background-color: rgba(255, 255, 255, 0.7);
+                                          color: #efa05b; }
+
+                                        .grid-music-container .m-music-list-wrap li.current {
+                                          background-color: transparent; }
+
+                                        .grid-music-container .m-play-controls {
+                                          margin: 0.5rem 0; }
+
+                                        .grid-music-container .m-play-controls a {
+                                          display: inline-block;
+                                          vertical-align: middle; }
+
+                                        .grid-music-container .m-play-controls .u-play-btn {
+                                          display: inline-block;
+                                          width: 1.5rem;
+                                          height: 1.5rem;
+                                          margin-right: 0.75rem;
+                                          cursor: pointer; }
+
+                                        .u-play-btn {
+                                          background-image: url(../images/music_icons_white.png);
+                                          background-repeat: no-repeat;
+                                          background-position: -220px 0;
+                                          background-size: 15.5rem 6.05rem; }
+
+                                        /*310 121*/
+                                        .u-play-btn.prev, .u-play-btn.next {
+                                          background-position: -11rem 0; }
+
+                                        .u-play-btn.prev:hover, .u-play-btn.next:hover {
+                                          background-position: -11rem -1.8rem; }
+
+                                        .u-play-btn.prev {
+                                          -webkit-transform: rotate(-180deg);
+                                              -ms-transform: rotate(-180deg);
+                                                  transform: rotate(-180deg); }
+
+                                        .u-play-btn.play {
+                                          background-position: -12.5rem 0; }
+
+                                        .u-play-btn.play:hover {
+                                          background-position: -12.5rem -1.8rem; }
+
+                                        .u-play-btn.paused {
+                                          background-position: -14rem 0; }
+
+                                        .u-play-btn.paused:hover {
+                                          background-position: -14rem -1.8rem; }
+
+                                        .u-play-btn.mode {
+                                          width: 1rem !important;
+                                          height: 0.9rem !important;
+                                          margin-right: 0.5rem !important; }
+
+                                        .u-play-btn.mode-list {
+                                          background-position: -9.05rem -4.9rem;
+                                          margin-left: calc(100% - 16rem); }
+
+                                        .u-play-btn.mode-list.current {
+                                          background-position: -11.05rem -4.9rem; }
+
+                                        .u-play-btn.mode-random {
+                                          background-position: -10.05rem -4rem; }
+
+                                        .u-play-btn.mode-random.current {
+                                          background-position: -12.05rem -4rem; }
+
+                                        .u-play-btn.mode-single {
+                                          background-position: -9.05rem -4rem; }
+
+                                        .u-play-btn.mode-single.current {
+                                          background-position: -11.05rem -4rem; }
+
+                                        /*姝岃瘝*/
+                                        .grid-music-container .m-music-lyric-wrap {
+                                          width: 100%;
+                                          height: 12.5rem;
+                                          position: relative;
+                                          right: 0;
+                                          top: 1rem;
+                                          overflow: hidden;
+                                          z-index: 9; }
+
+                                        .grid-music-container .m-music-lyric-wrap .inner-bg {
+                                          width: 100%;
+                                          height: 100%;
+                                          position: absolute;
+                                          left: 0;
+                                          top: 0;
+                                          z-index: 2; }
+
+                                        .grid-music-container .m-music-lyric-wrap .inner {
+                                          position: absolute;
+                                          top: 1rem;
+                                          left: 1rem;
+                                          right: 1rem;
+                                          bottom: 1rem;
+                                          overflow-x: hidden;
+                                          overflow-y: auto;
+                                          z-index: 3; }
+
+                                        .grid-music-container .m-music-lyric-wrap .inner ul {
+                                          position: absolute;
+                                          width: 100%;
+                                          top: 0;
+                                          left: 0;
+                                          overflow: hidden;
+                                          -webkit-transition: all .5s ease-in;
+                                                  transition: all .5s ease-in; }
+
+                                        .grid-music-container .m-music-lyric-wrap ul li {
+                                          display: block;
+                                          line-height: 1.5rem;
+                                          height: 1.5rem;
+                                          overflow: hidden;
+                                          text-align: center;
+                                          font-size: 0.9rem;
+                                          color: #fff;
+                                          -webkit-transition: all 0.5s ease-in;
+                                                  transition: all 0.5s ease-in;
+                                          text-shadow: 0.1rem 0.15rem 0.25rem rgba(228, 175, 129, 0.6); }
+
+                                        .grid-music-container .m-music-lyric-wrap ul li.current {
+                                          color: #efa05b;
+                                          font-size: 1rem;
+                                          font-weight: bold;
+                                          -webkit-transform: scale(1.3);
+                                              -ms-transform: scale(1.3);
+                                                  transform: scale(1.3); }
+
+                                        .grid-music-container .m-music-lyric-wrap ul li.eof {
+                                          height: 100%;
+                                          line-height: 12.5rem;
+                                          font-size: 1rem;
+                                          color: #999; }
+                                    </code>
+                                </pre>
+                                <h2>
+                                    HTML结构
+                                </h2>
+                               <pre><code class="html">
+                                   &lt;!--音乐播放器组件--&gt;
+                                    &lt;div class=&quot;grid-music-container-3d&quot; id=&quot;grid-music-container-3d&quot;&gt;
+
+                                        &lt;div class=&quot;grid-music-container f-usn &quot;&gt;
+                                            &lt;div class=&quot;m-music-play-wrap&quot;&gt;
+                                                &lt;div class=&quot;u-cover&quot;&gt;&lt;/div&gt;
+                                                &lt;div class=&quot;m-now-info&quot;&gt;
+                                                    &lt;h1 class=&quot;u-music-title&quot; &gt;&lt;strong&gt;标题&lt;/strong&gt;&lt;small&gt;歌手&lt;/small&gt;&lt;/h1&gt;
+                                                    &lt;div class=&quot;m-now-controls&quot;&gt;
+                                                        &lt;div class=&quot;u-control u-process tips&quot; data-title=&quot;0&quot; data-direction=&quot;top&quot;&gt;
+                                                            &lt;span class=&quot;buffer-process&quot;&gt;&lt;/span&gt;
+                                                            &lt;span class=&quot;current-process&quot;&gt;&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class=&quot;u-control u-time&quot;&gt;00:00/00:00&lt;/div&gt;
+                                                        &lt;div class=&quot;u-control u-volume&quot;&gt;
+                                                            &lt;div class=&quot;volume-process tips&quot; data-volume=&quot;0.50&quot; data-title=&quot;调节音量&quot; data-direction=&quot;top&quot;&gt;
+                                                                &lt;span class=&quot;volume-current&quot;&gt;&lt;/span&gt;
+                                                                &lt;span class=&quot;volume-bar&quot;&gt;&lt;/span&gt;
+                                                                &lt;span class=&quot;volume-event&quot;&gt;&lt;/span&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;a class=&quot;volume-control&quot;&gt;&lt;/a&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class=&quot;m-play-controls&quot;&gt;
+                                                        &lt;a class=&quot;u-play-btn prev tips&quot;  data-title=&quot;上一曲&quot; data-direction=&quot;top&quot;&gt;&lt;/a&gt;
+                                                        &lt;a class=&quot;u-play-btn ctrl-play play tips&quot;  data-title=&quot;暂停&quot; data-direction=&quot;top&quot;&gt;&lt;/a&gt;
+                                                        &lt;a class=&quot;u-play-btn next tips&quot;  data-title=&quot;下一曲&quot; data-direction=&quot;top&quot;&gt;&lt;/a&gt;
+                                                        &lt;a class=&quot;u-play-btn mode mode-list current tips&quot;  data-title=&quot;列表循环&quot; data-direction=&quot;top&quot;&gt;&lt;/a&gt;
+                                                        &lt;a class=&quot;u-play-btn mode mode-random tips&quot;  data-title=&quot;随机播放&quot; data-direction=&quot;top&quot;&gt;&lt;/a&gt;
+                                                        &lt;a class=&quot;u-play-btn mode mode-single tips&quot;  data-title=&quot;单曲循环&quot; data-direction=&quot;top&quot;&gt;&lt;/a&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;f-cb&quot;&gt;&amp;nbsp;&lt;/div&gt;
+                                            &lt;div class=&quot;m-music-list-wrap&quot;&gt;&lt;/div&gt;
+                                            &lt;div class=&quot;cl&quot;&gt;&lt;/div&gt;
+                                            &lt;div class=&quot;m-music-lyric-wrap&quot;&gt;
+                                                &lt;div class=&quot;inner-bg&quot;&gt;&lt;/div&gt;
+                                                &lt;div class=&quot;inner&quot;&gt;
+                                                    &lt;ul class=&quot;js-music-lyric-content&quot;&gt;
+                                                        &lt;li class=&quot;eof&quot;&gt;暂无歌词...&lt;/li&gt;
+                                                    &lt;/ul&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;music-container-blur-bg&quot;&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                  &lt;!--移动端音乐样式--&gt;
+                                  &lt;a class=&quot;myMusic tips&quot; title=&quot;让我们荡起双桨&quot; data-title=&quot;点击隐藏和显示播放器&quot; data-direction=&quot;top&quot;&gt;
+                                    &lt;span class=&quot;circle play&quot;&gt;&lt;/span&gt;
+                                  &lt;/a&gt;
+                               </code></pre>
+                                <h2>页面调用</h2>
+                                <pre><code>
+                                    require(['lkmusic'],function (lkmusic){
+                                                           调用音乐播放器函数
+                                                             var lkmusicplayer = null;
+                                                              new lkmusic.LMusic({
+                                                                  musicList : musicList,
+                                                                  autoPlay  : true,  //是否自动播放
+                                                                  defaultMode : 2,   //默认播放模式，随机
+                                                                  offlineMode:true,
+                                                                  callback   : function (obj) {  //返回当前播放歌曲信息
+                                                                      lkmusicplayer = obj;
+                                                                      //初始化插件
+                                                                      $('.tips').tips();
+                                                                  }
+                                                              });
+                                    });
+                                </code></pre>
+                                <h2>效果预览</h2>
+                                <div class="preview-container">
+                                    <div class="preview-samsung">
+                                        <iframe src="music_m.html" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                        <footer>
+                            <div class="footer">
+                                <div class="copyright">
+                                    <ul>
+                                        <li>非特殊说明，本文版权归laijiadayuan.com所有，转载请注明出处.</li>
+                                        <li> 本文标题：<a href="{:U('Blog/id',array(id=>$winfo['ID']))}">{$winfo['post_title']}</a></li>
+                                        <li>本文网址：<a href="{:U('Blog/id@laijiadayuan.com',array(id=>$winfo['ID']))}">{:U('Blog/id@laijiadayuan.com',array(id=>$winfo['ID']))}</a>.</li>
+                                        <li>本文标签：
+                                            <foreach name="winfo['tags']" item="tag">
+                                                <a>{$tag['name']}</a>.
+                                            </foreach>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="col-red">如在使用中有任何问题，请参考demo或者在评论中说明.</p>
+                                <div class="share">
+                                    <a href="" type="like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                    <a href="" type="weixin" class="tips" data-type="image" data-src="__PUBLIC__/images/weixin.png" data-direction="down" data-width="150"><i class="fa fa-weixin" aria-hidden="true"></i></a>
+                                    <a href="" type="weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+                                    <a href="" type="renren"><i class="fa fa-renren" aria-hidden="true"></i></a>
+                                    <a href="" type="tencent_weibo"><i class="fa fa-tencent-weibo" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </footer>
+                        <section>
+                            <div class="lk-preview">
+                                <div class="inner">
+                                    <a href="" class="btn btn-preview"><span><i class="fa fa-eye"></i>演示</span></a>
+                                    <a href="" class="btn btn-download"><span><i class="fa fa-cloud"></i>下载(123次)</span></a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </article>                    </div>
+
+
+
+        </div>
+    </div>
+</section>
+<!--音乐播放器组件-->
+<div class="grid-music-container-3d" id="grid-music-container-3d">
+
+    <div class="grid-music-container f-usn">
+        <span class="expand-music-player tips" data-title="展开和缩小播放器" data-direction="top"><i class="fa fa-expand" aria-hidden="true"></i></span>
+        <div class="m-music-play-wrap">
+            <div class="u-cover"></div>
+            <div class="m-now-info">
+                <h1 class="u-music-title" ><strong>标题</strong><small>歌手</small></h1>
+                <div class="m-now-controls">
+                    <div class="u-control u-process tips" data-title="0" data-direction="top">
+                        <span class="buffer-process"></span>
+                        <span class="current-process"></span>
+                    </div>
+                    <div class="u-control u-time">00:00/00:00</div>
+                    <div class="u-control u-volume">
+                        <div class="volume-process tips" data-volume="0.50" data-title="调节音量" data-direction="top">
+                            <span class="volume-current"></span>
+                            <span class="volume-bar"></span>
+                            <span class="volume-event"></span>
+                        </div>
+                        <a class="volume-control"></a>
+                    </div>
+                </div>
+                <div class="m-play-controls">
+                    <a class="u-play-btn prev tips"  data-title="上一曲" data-direction="top"></a>
+                    <a class="u-play-btn ctrl-play play tips"  data-title="暂停" data-direction="top"></a>
+                    <a class="u-play-btn next tips"  data-title="下一曲" data-direction="top"></a>
+                    <a class="u-play-btn mode mode-list current tips"  data-title="列表循环" data-direction="top"></a>
+                    <a class="u-play-btn mode mode-random tips"  data-title="随机播放" data-direction="top"></a>
+                    <a class="u-play-btn mode mode-single tips"  data-title="单曲循环" data-direction="top"></a>
+                </div>
+            </div>
+        </div>
+        <div class="f-cb">&nbsp;</div>
+        <div class="m-music-list-wrap"></div>
+        <div class="cl"></div>
+        <div class="m-music-lyric-wrap">
+            <div class="inner-bg"></div>
+            <div class="inner">
+                <ul class="js-music-lyric-content">
+                    <li class="eof">暂无歌词...</li>
+                </ul>
+            </div>
+        </div>
+        <div class="music-container-blur-bg"></div>
+    </div>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

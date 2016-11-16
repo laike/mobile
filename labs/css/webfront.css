@@ -1,0 +1,51 @@
+#webfront .lk-grid-item {
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  position: relative; }
+  #webfront .lk-grid-item:hover {
+    background-color: #ae4744; }
+    #webfront .lk-grid-item:hover .front-show {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+      opacity: 0; }
+    #webfront .lk-grid-item:hover .back-show {
+      opacity: 1;
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg); }
+#webfront h2 {
+  text-align: center;
+  padding: 30px 0 0 0;
+  font-size: 14px; }
+#webfront img {
+  width: auto;
+  vertical-align: middle;
+  height: 25px; }
+#webfront p {
+  padding: 5px 10px;
+  line-height: 22px;
+  text-align: center; }
+#webfront .back-show, #webfront .front-show {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  height: 130px;
+  overflow: hidden;
+  -webkit-transition: all .5s linear;
+          transition: all .5s linear;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
+#webfront .back-show {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  background-color: #ae4744;
+  color: #fff;
+  width: 100%; }
+  #webfront .back-show h2 {
+    color: #fff;
+    padding: 15px 0 0 0;
+    font-size: 14px; }
+
+/*# sourceMappingURL=webfront.css.map */

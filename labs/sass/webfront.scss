@@ -1,0 +1,55 @@
+#webfront{
+  .lk-grid-item{
+    perspective: 300px;
+    position: relative;
+    &:hover{
+      background-color: #ae4744;
+      .front-show{
+        transform:rotateY(180deg);
+        opacity: 0;
+      }
+      .back-show{
+        opacity: 1;
+        transform:rotateY(0deg);
+      }
+    }
+  }
+  h2{
+    text-align: center;
+    padding:30px 0 0 0;
+    font-size: 14px;
+  }
+  img{
+    width:auto;
+    vertical-align: middle;
+    height: 25px;
+  }
+  p{
+    padding:5px 10px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .back-show,.front-show{
+    transform-style: preserve-3d;
+    height: 130px;
+    overflow: hidden;
+    transition: all .5s linear;
+    backface-visibility: hidden;
+  }
+  .back-show{
+    position: absolute;
+    left:0;
+    top:0;
+    opacity: 0;
+    transform:rotateY(-180deg);
+    background-color: #ae4744;
+    color:#fff;
+    width: 100%;
+    h2{
+      color:#fff;
+      padding:15px 0 0 0;
+      font-size: 14px;
+    }
+  }
+
+}

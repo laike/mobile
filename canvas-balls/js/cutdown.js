@@ -3,7 +3,7 @@
 //定义一些个常量
 var WINDOW_WIDTH = 1024;
 var WINDOW_HEIGHT = 720;
-var RADIUS = 20;
+var RADIUS = 8;
 var MARGIN_LEFT = 0;
 var MARGIN_TOP = 0;
 var RAND_COLOR_NUMS = 100;
